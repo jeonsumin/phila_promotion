@@ -1,0 +1,16 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="25" height="24" fill="#1E1E1E"/>
+<g id="Frame 2085662667">
+<rect x="-1871.5" y="-899.5" width="13426" height="23860" stroke="white" stroke-width="17"/>
+</g>
+<g id="bottom menu_&#234;&#184;&#176;&#235;&#179;&#184;">
+<mask id="path-2-inside-1_475_345" fill="white">
+<path d="M-35.6084 -10H339.392V50H-35.6084V-10Z"/>
+</mask>
+<path d="M-35.6084 -10H339.392V50H-35.6084V-10Z" fill="white"/>
+<path d="M-35.6084 -10V-9H339.392V-10V-11H-35.6084V-10Z" fill="#F0F0F0" mask="url(#path-2-inside-1_475_345)"/>
+<g id="home_outline">
+<path id="Vector" d="M6.1748 19H9.1748V13H15.1748V19H18.1748V10L12.1748 5.5L6.1748 10V19ZM4.1748 21V9L12.1748 3L20.1748 9V21H13.1748V15H11.1748V21H4.1748Z" fill="black"/>
+</g>
+</g>
+</svg>

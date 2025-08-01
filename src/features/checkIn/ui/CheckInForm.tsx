@@ -1,0 +1,97 @@
+import {Input} from "shared/ui/input";
+import {cn} from "shared/utils";
+import {isMobile} from "react-device-detect";
+import {useCheckIn} from "features/checkIn/lib/useCheckIn";
+import {CheckBoxField} from "shared/ui/checkBoxField";
+import {TERMS} from "shared/constant/terms";
+import {TermsDetail} from "components/checkIn";
+
+export const CheckInForm = () => {
+
+    const { checkInForm, currentTerms,  setCheckInFrom, validation, handleAllCheck, onDetailTerms, onSubmit} = useCheckIn()
+
+
+    return (
+        <>
+            <div className="flex flex-col justify-center px-5 gap-6 ">
+                <div className={cn(
+                    "w-full",
+                    isMobile ? 'space-y-4 mt-[20px]' : 'flex gap-5 justify-center items-center mt-[30px]'
+                )}>
+                    <Input
+                        label={"닉네임"}
+                        value={checkInForm.nick_name}
+                        placeholder={"Up to 8 characters (Kor/Eng/Num)"}
+                        onChange={(e: any) => setCheckInFrom('nick_name', e.target.value)}
+                    />
+
+                    <div className="flex flex-col justify-center items-start gap-2">
+                        <label className="text-sm font-bold text-[var(--subTxt)]">연락처</label>
+                        <div className="flex justify-start items-center gap-2">
+                            <Input
+                                type={"text"}
+                                maxLength={3}
+                                value={checkInForm.phone1}
+                                onChange={(e: any) => setCheckInFrom('phone1', e.target.value)}
+                            />
+                            -
+                            <Input
+                                type={"text"}
+                                maxLength={4}
+                                value={checkInForm.phone2}
+                                onChange={(e: any) => setCheckInFrom('phone2', e.target.value)}
+                            />
+                            -
+                            <Input
+                                type={"text"}
+                                maxLength={4}
+                                value={checkInForm.phone3}
+                                onChange={(e: any) => setCheckInFrom('phone3', e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="flex flex-col w-full gap-2">
+                    <h1 className="text-start text-sm font-bold text-[var(--subTxt)]">개인정보 수집 및 처리 동의</h1>
+                    <div
+                        className="flex flex-col justify-center w-full border-1 border-[var(--termsBd)] rounded-lg p-5 gap-2">
+                        <CheckBoxField
+                            label="전체 동의"
+                            className="!font-bold"
+                            checked={checkInForm.allChecked}
+                            onChange={(e: any) => handleAllCheck(e.target.checked)}
+                        />
+
+                        {TERMS.map((item: any, index: number) =>
+                            <CheckBoxField
+                                key={index}
+                                label={item.title}
+                                require={true}
+                                checked={checkInForm[`terms${item.id}`]}
+                                onChange={(e: any) => setCheckInFrom(`terms${item.id}`, e.target.checked)}
+                                onLabelClick={() => onDetailTerms(item.id)}
+                            />
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            <div className={cn(
+                "flex"
+                , !isMobile && 'py-5 px-20 justify-center items-center'
+            )}>
+                <button
+                    onClick={onSubmit}
+                    disabled={!validation()}
+                    className={cn(
+                        "h-[60px] font-bold text-[var(--white)] bg-[var(--point)] justify-center items-center disabled:bg-[var(--subTxt)]"
+                        , isMobile ? 'w-full fixed bottom-0' : 'rounded-full w-full'
+                    )}>등록하기
+                </button>
+            </div>
+            <TermsDetail terms={currentTerms}  onClose={() => onDetailTerms(null)}/>
+        </>
+    )
+}

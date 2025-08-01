@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+
+@theme inline {
+    --color-DDX : var(--DDX-Color-Primary);
+}
+:root {
+    --point: #db4061;
+    --white: #fff;
+    --bk: #000;
+    --txt:#454545;
+    --disabled: #828282;
+    --subTxt: #666;
+    --grayBg: #f4f4f4;
+    --lightGrayBg: #f0f0f0;
+    --disabledBtn: #666;
+    --pinkBg: #ffe8ee;
+    --listBd: #e0e0e0;
+    --bkBlur: rgba(0, 0, 0, 0.8);
+    --darkgrayBg: #808080;
+    --termsBd: #c2c2c2;
+    --maxWidth: 600px;
+    --maxFixedWidth: 560px;
+    --pcContentWidth: 680px;
+    --dimm: rgba(0, 0, 0, 0.3);
+    --pinkBd:#FFC1D1;
+    --subWhite:rgba(255, 255, 255, 0.70);
+    --blue: #0671e0;
+    --phliaBlue: #107CBA;
+    --yellow: #FECA6E;
+    --primary: #D93657;
+}
+
+
+@layer utilities {
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        scrollbar-width: none;
+        -ms-overflow-style: none; /* IE */
+    }
+    .form_chk {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .form_chk input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .chk_mark {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        background-color: #F0F0F0;
+        transition: background-color 0.2s, border-color 0.2s;
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .form_chk input:checked + .chk_mark {
+        background-color: var(--point);
+        border-color: var(--point);
+    }
+
+    .form_chk input:checked + .chk_mark::after {
+        content: '';
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 6px;
+        height: 11px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+    }
+
+    input:focus-visible {
+        outline: none;
+    }
+}

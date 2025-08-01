@@ -1,0 +1,120 @@
+import {useEffect, useState} from "react";
+import {TERMS} from "shared/constant/terms";
+import {ROUTES} from "shared/config/routes";
+import {joinUser} from "entities/user";
+import {useNavigate} from "react-router-dom";
+import {useModal} from "shared/config/ModalProvider";
+import {getCookie} from "shared/utils";
+import {useSelector} from "react-redux";
+
+export const useCheckIn = () => {
+    const isPreRegistration = useSelector((state: RootState) => state.period.isEventPeriod);
+
+    const modal = useModal();
+    const navigate = useNavigate();
+
+    const [currentTerms, setCurrentTerms] = useState<any>(null)
+    const [checkInForm, setCheckInForm] = useState<any>({
+        nick_name: '',
+        phone1: '',
+        phone2: '',
+        phone3: '',
+        allChecked: false,
+        terms1: false,
+        terms2: false,
+    })
+
+    /**
+     * 체크인
+     */
+    const onSubmit = async () => {
+        const ph = [checkInForm.phone1, checkInForm.phone2, checkInForm.phone3].join('-')
+        const user = {...checkInForm, phone_num: ph, step: 1};
+
+        if (isPreRegistration == 0) {
+            modal.showAlert({
+                title: "사전등록",
+                message: `사전등록을 완료했습니다. 입력하신 휴대폰번호를 사용해 체크인해 주세요.`
+            })
+            return
+        }
+
+        const checkIn = await joinUser(user);
+
+        if(checkIn == 2){
+            modal.showAlert({
+                message: '체크인한 이력이 있습니다. 계속하시겠습니까?',
+                isCancel: true,
+                onConfirm : () => {
+                    const alreadyCheckIn = {...user, step: 2}
+                    joinUser(alreadyCheckIn)
+                    modal.allClear();
+                    navigate(ROUTES.HOME);
+                }
+            })
+        }
+
+
+        navigate(ROUTES.HOME);
+    }
+
+    // const PreRegistrationPeriod
+
+    /**
+     * 체크인 정보 설정
+     */
+    const setCheckInFrom = (key: string, value: any) => {
+        setCheckInForm((prev: any) => ({...prev, [key]: value}));
+    }
+
+    /**
+     * 전체 동의 핸들러
+     * @param isChecked
+     */
+    const handleAllCheck = (isChecked: boolean) => {
+        setCheckInFrom('terms1', isChecked);
+        setCheckInFrom('terms2', isChecked);
+        setCheckInFrom('allChecked', isChecked);
+    };
+
+    /**
+     * 약관 상세보기 액션
+     */
+    const onDetailTerms = (target: number | null) => {
+        if (target == null) return setCurrentTerms(null)
+
+        setCurrentTerms(TERMS.find(f => f.id === target)!)
+    }
+
+    /**
+     * 유효성 검사
+     */
+    const validation = () => {
+        const {
+            nick_name, phone1, phone2, phone3, terms1, terms2
+        } = checkInForm
+
+        return (
+            nick_name !== '' &&
+            phone1 !== '' &&
+            phone2 !== '' &&
+            phone3 !== '' &&
+            terms1 &&
+            terms2
+        )
+    }
+
+    useEffect(() => {
+        setCheckInFrom('allChecked', checkInForm.terms1 && checkInForm.terms2)
+    }, [checkInForm.terms1, checkInForm.terms2]);
+
+    return {
+        checkInForm
+        , currentTerms
+        , onSubmit
+        , setCheckInFrom
+        , validation
+        , handleAllCheck
+        , onDetailTerms
+    }
+}

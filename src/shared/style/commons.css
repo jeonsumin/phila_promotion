@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+html,
+body {
+  box-sizing: border-box;
+  scroll-behavior: auto;
+  font-family: Paperlogy, sans-serif;
+}
+
+html {
+  overflow: hidden;
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 700;
+  src:
+    local("Paperlogy-Bold"),
+    local("Paperlogy-Bold"),
+    url("fonts/Paperlogy-Bold.woff2") format("woff2"),
+    url("fonts/Paperlogy-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 500;
+  src:
+    local("Paperlogy Regular"),
+    local("Paperlogy-Medium"),
+    url("fonts/Paperlogy-Medium.woff2") format("woff2"),
+    url("fonts/Paperlogy-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 400;
+  src:
+    local("Paperlogy-Regular"),
+    local("Paperlogy-Regular"),
+    url("fonts/Paperlogy-Regular.woff2") format("woff2"),
+    url("fonts/Paperlogy-Regular.ttf") format("ttf");
+}
+
+button {
+  cursor: pointer;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+em {
+  font-style: normal;
+}
+html, body {
+  line-height: 1.3;
+}
