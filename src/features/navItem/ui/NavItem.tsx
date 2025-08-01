@@ -1,4 +1,6 @@
 import {NavLink} from "react-router-dom";
+import {currentTranslation} from "features/changeLang/model/slice";
+import {useSelector} from "react-redux";
 
 type Props = {
     to: string;
@@ -7,6 +9,7 @@ type Props = {
 }
 export const NavItem = (props: Props) => {
     const {to, label, icon} = props
+    const t = useSelector(currentTranslation);
     return (
         <NavLink
             to={to}
@@ -22,7 +25,7 @@ export const NavItem = (props: Props) => {
                         src={`/assets/images/icon/${isActive ? `${icon}_on` : icon}.svg`}
                         alt={`${label} icon`}
                     />}
-                    <p className="flex w-full justify-center items-center text-[12px]">{label}</p>
+                    <p className="flex w-full justify-center items-center text-[12px]">{t(label)}</p>
                 </div>
             )}
         </NavLink>

@@ -1,8 +1,10 @@
 import {ChangeLangButton} from "features/changeLang";
 import {cn} from "shared/utils";
+import {currentTranslation} from "features/changeLang/model/slice";
+import {useSelector} from "react-redux";
 
 export const PreRegistration = () => {
-
+    const t = useSelector(currentTranslation);
     return (
         <main
             className={cn(
@@ -21,7 +23,7 @@ export const PreRegistration = () => {
             </div>
 
             <div className="flex flex-col items-center gap-10 text-center">
-                <h2 className="text-3xl text-[var(--white)] font-bold leading-none">사전등록</h2>
+                <h2 className="text-3xl text-[var(--white)] font-bold leading-none">{t('pre_main_mo_001')}</h2>
                 <p
                     className="text-6xl text-[var(--white)] font-bold leading-none [text-shadow:_0px_0px_10px_rgb(16_124_186_/_1.00)]"
                 >OPEN</p>

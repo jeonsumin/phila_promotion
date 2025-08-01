@@ -1,7 +1,8 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {getInitialLang, translations} from "../model/langAction";
 
 const initialState: any = {
-    currentLang: "KR",
+    currentLang: getInitialLang()
 }
 
 export const langSlice = createSlice({
@@ -10,9 +11,14 @@ export const langSlice = createSlice({
     reducers: {
         changeLang: (state: any, action: PayloadAction<any>) => {
             state.currentLang = action.payload;
+            localStorage.setItem('lang', action.payload);
         }
     }
 })
 
-export const currentLang = (state: any) => state.lang.currentLang;
+export const currentLang = (state: RootState) => state.lang.currentLang;
 export const {changeLang} = langSlice.actions;
+export const currentTranslation = createSelector([currentLang], (lang: any) => {
+    const translation = translations[lang];
+    return (key:any) => translation[key] || key;
+})

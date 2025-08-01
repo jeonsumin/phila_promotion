@@ -1,11 +1,14 @@
 import {useEffect, useState} from 'react'
 import {updateSurvey} from "entities/survey/api/surveyApi";
 import {transformToQKeys} from "shared/utils/utils";
+import {useNavigate} from "react-router-dom";
+import {ROUTES} from "shared/config/routes";
 
 export const useSelectOption = (survey: any[], type: string) => {
     const [selectedOption, setSelectedOption] = useState<any>({})
     const [isDescriptive, setIsDescriptive] = useState<any>({})
     const [descriptiveText, setDescriptiveText] = useState<any>({});
+    const navigate = useNavigate();
 
     const handleSelect = (question: number, index: number) => {
         const current = selectedOption[question] || []
@@ -35,11 +38,14 @@ export const useSelectOption = (survey: any[], type: string) => {
     const setDescriptive = (question: number, value: string) => {
 
         setDescriptiveText((prev: any)=> ({...prev, [question] : value}))
+        setSelectedOption((prev:any) => ({...prev, [question] : [value]}))
     }
 
     const onSubmitSurvey = async () => {
         const result = transformToQKeys(selectedOption);
+        console.log(result)
         await updateSurvey(result);
+        navigate(ROUTES.HOME)
     }
 
     const isSubmit = Object.keys(selectedOption).length > 14

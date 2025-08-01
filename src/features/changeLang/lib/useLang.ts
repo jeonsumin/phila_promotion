@@ -9,7 +9,6 @@ export const useLang = () => {
 
 
     const changeAction = useCallback((lang: ChangeEvent<HTMLSelectElement>) => {
-        console.log(lang)
         dispatch(changeLang(lang.target.value))
     }, [])
 
