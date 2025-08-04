@@ -1,5 +1,5 @@
 export {PreRegistration, CheckInView, CheckIn} from './checkIn'
-export {Header} from './header'
+export {MobileHeader} from './header'
 export {NavigationBar} from './navigationBar'
 export {MissionList} from './mission'
 export {TopicList} from './topic'

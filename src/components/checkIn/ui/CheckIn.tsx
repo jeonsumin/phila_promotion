@@ -1,11 +1,11 @@
-import {UseCheckInPeriod} from "features/checkIn";
+import {useCheckInPeriod} from "features/checkIn";
 import {PreRegistration} from "components/checkIn/ui/PreRegistration";
 import {CheckInView} from "components/checkIn/ui/CheckInView";
 import {CheckInButton} from "features/checkIn/ui/CheckInButton";
 
 export const CheckIn = () => {
 
-    const {isPreRegistration} = UseCheckInPeriod();
+    const {isPreRegistration} = useCheckInPeriod();
 
     return (
         <div className="w-full min-h-[100dvh] text-[var(--bk)] bg-[var(--bk)]">

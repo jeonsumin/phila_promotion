@@ -11,7 +11,7 @@ export const Desktop = (props: Props) => {
     return (
         <div className="w-full h-[100dvh] scrollbar">
             {headerSlot}
-            <main>
+            <main className={`overflow-y-auto scrollbar `} style={{height: "calc(100dvh - 56px)"}}>
                 <Outlet/>
             </main>
             {isFooter && footerSlot}

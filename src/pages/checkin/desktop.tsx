@@ -1,58 +1,90 @@
-import {ChangeLangButton} from "features/changeLang";
+import {useCheckInPeriod} from "features/checkIn";
+import {DesktopCheckIn} from "components/checkIn";
+import {useSelector} from "react-redux";
+import {currentLang, currentTranslation} from "features/changeLang/model/slice";
+import {useExhibition} from "components/place";
 import {Button} from "shared/ui";
-import {useNavigate} from "react-router-dom";
-import {ROUTES} from "shared/config/routes";
-import {useModal} from "shared/config/ModalProvider";
-import {CheckInForm} from "features/checkIn";
+import {SwiperView} from "shared/ui/swiper/SwiperView";
+import {PlaceCard} from "shared/ui/placeCard";
 
 export const BetaCheckInPage = () => {
 
-    const {showModal} = useModal();
+    const {isPreRegistration} = useCheckInPeriod();
+    const lang = useSelector(currentLang);
+    const t = useSelector(currentTranslation);
+    const {exhibition, currentExhibitionCode, selectedExhibition, onClick} = useExhibition()
 
-    const openModal = () => {
-        showModal({
-            title: '체크인',
-            body: <CheckInForm />,
-        })
-    }
+
+    if (isPreRegistration == 0) return <DesktopCheckIn/>
+
     return (
-        <div className="relative w-full min-h-[100dvh] text-[var(--bk)] flex flex-col items-center justify-center"
-             style={{
-                 backgroundImage: "url('/assets/images/betacheckin_bg_pc.png')",
-                 backgroundSize: "cover",
-                 backgroundPosition: "center",
-                 backgroundRepeat: "no-repeat",
-             }}
-        >
-            <main
-                className="w-[var(--pcContentWidth)] mx-auto;] relative pt-[60px] pb-[60px]"
-            >
-                <ChangeLangButton/>
-                <img src="/assets/images/checkin_logo_pc.svg" alt="" className="w-[293px] mb-[70px] mx-auto"/>
-                <div className="flex flex-col items-center">
-                    <h2 className="text-[50px] text-[var(--white)] mb-[28px] leading-none">사전등록</h2>
-                    <p
-                        className="text-[100px] text-[var(--white)] font-bold mb-[40px] leading-none"
-                        style={{textShadow: "0px 0px 20px #107CBA"}}
-                    >OPEN</p>
-                    <p className="text-[28px] text-[var(--subWhite)]">2025.9.17. ~ 9.21. / COEX 마곡</p>
-                </div>
+        <>
 
-                <div className="w-full relative  mt-[76px]">
-                    <span
-                        className="absolute top-[-30px] left-1/2 translate-x-[-50%] w-[200px] h-[60px] bg-[var(--blue)] text-[var(--white)] font-bold flex items-center justify-center rounded-[60px] text-[28px]">EVENT</span>
-                    <div className="pt-[70px] px-[20px] pb-[40px] bg-[var(--dimm)] text-center">
-                        <img src="/assets/images/icon/img_pre_gift.svg" alt="" className="w-[100px] mx-auto"/>
-                        <p className="font-bold mt-[40px] text-[28px] text-[var(--yellow)]">특별 리워드 증정!</p>
-                        <p className="text-[20px] text-[var(--subWhite)] mt-[12px]">사전등록 + 현장방문시</p>
+            <div className="flex flex-col justify-center items-center mx-auto overflow-y-auto">
+                <img src={`/assets/images/home/${lang}/bg_main_pc.png`} alt=""/>
+
+
+                <section className="flex flex-col text-center gap-10 mx-30 py-30">
+
+                    <h1 className="text-black text-4xl font-bold ">
+                        {t("main_pc_001")}
+                    </h1>
+
+                    <div className="flex flex-col gap-3.5">
+                        <p> {t("main_pc_002")} </p>
+                        <p> {t("main_pc_003")} </p>
                     </div>
-                    <Button variant="fixed" onClick={openModal}>
-                        사전등록하기
-                    </Button>
+
+                </section>
+
+                <section className="flex flex-col text-center gap-10 bg-[#FFEDF1] w-full py-[60px] px-30">
+
+                    <h1 className="text-3xl font-bold text-[var(--primary)]">
+                        {t("main_pc_004")}
+                    </h1>
+
+                    <img src={`/assets/images/home/${lang}/bg_operation_pc.png`} alt="opreration_pc"/>
+
+                    <h1 className="text-3xl font-bold text-[var(--primary)]">
+                        {t("main_pc_004")}
+                    </h1>
+
+                    <img src={`/assets/images/home/${lang}/timetable_pc.png`} alt="opreration_pc"/>
+                </section>
+
+                <section className="flex flex-col text-center gap-10 w-full py-[60px] px-30">
+
+                    <div className="flex flex-col w-full justify-center items-center gap-[14px] px-[20px]">
+                        <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold"> {t("main_pc_005")}</h2>
+
+                        <div className="grid grid-cols-3 w-full gap-[6px] text-white">
+                            {
+                                exhibition.map((place, index) =>
+                                    <Button
+                                        key={index}
+                                        color={place.isActive ? 'default' : 'light'}
+                                        onClick={() => onClick(place.code)}
+                                        className="font-normal"
+                                    >
+                                        {t(place.title)}
+                                    </Button>
+                                )
+                            }
+                        </div>
+                    </div>
+
+                </section>
+                <div className="flex flex-col py-10 w-full h-[370px]">
+                    <SwiperView
+                        pagination={true}
+                        className={"h-full"}
+                        slidesPerView={3}
+                        data={selectedExhibition}
+                        target={currentExhibitionCode}
+                        renderItem={PlaceCard}
+                    />
                 </div>
-
-            </main>
-
-        </div>
-    );
+            </div>
+        </>
+    )
 };

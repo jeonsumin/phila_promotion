@@ -2,9 +2,11 @@ import {selectStamp} from "entities/stamp/api/stampApi";
 import {useNavigate} from "react-router-dom";
 import {ROUTES} from "shared/config/routes";
 import {useModal} from "shared/config/ModalProvider";
+import {useSelector} from "react-redux";
+import {currentLang} from "features/changeLang/model/slice";
 
 export const useSurvey = () => {
-
+    const lang = useSelector(currentLang);
     const navigate = useNavigate();
     const {showAlert} = useModal();
 
@@ -20,5 +22,5 @@ export const useSurvey = () => {
             })
         }
     }
-    return {checkSurvey}
+    return {checkSurvey,lang}
 }

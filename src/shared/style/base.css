@@ -2,13 +2,13 @@
 
 
 @theme inline {
-    --color-DDX : var(--DDX-Color-Primary);
+    --color-DDX: var(--DDX-Color-Primary);
 }
 :root {
     --point: #db4061;
     --white: #fff;
     --bk: #000;
-    --txt:#454545;
+    --txt: #454545;
     --disabled: #828282;
     --subTxt: #666;
     --grayBg: #f4f4f4;
@@ -23,8 +23,8 @@
     --maxFixedWidth: 560px;
     --pcContentWidth: 680px;
     --dimm: rgba(0, 0, 0, 0.3);
-    --pinkBd:#FFC1D1;
-    --subWhite:rgba(255, 255, 255, 0.70);
+    --pinkBd: #FFC1D1;
+    --subWhite: rgba(255, 255, 255, 0.70);
     --blue: #0671e0;
     --phliaBlue: #107CBA;
     --yellow: #FECA6E;
@@ -36,10 +36,12 @@
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
     }
+
     .scrollbar-hide {
         scrollbar-width: none;
         -ms-overflow-style: none; /* IE */
     }
+
     .form_chk {
         display: flex !important;
         align-items: center;
@@ -86,4 +88,9 @@
     input:focus-visible {
         outline: none;
     }
+
+    .swiper-pagination-bullet-active {
+        background-color: #db4061 !important;
+    }
 }
+

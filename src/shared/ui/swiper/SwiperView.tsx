@@ -7,7 +7,7 @@ import SwiperCore from "swiper";
 type SwiperViewProps<T> = {
     data: T[];
     target?: string;
-    idx?: string ;
+    idx?: string;
     renderItem: ComponentType<{ item: T; index: number, target?: string }>;
     spaceBetween?: number;
     slidesPerView?: number | 'auto';
@@ -41,8 +41,7 @@ export const SwiperView = <T, >({
     useEffect(() => {
         if (!swiperRef.current || !idx) return;
 
-        console.log('idx :: ', idx)
-        const targetIndex = data.findIndex((_, index: number) => index === Number(idx) );
+        const targetIndex = data.findIndex((_, index: number) => index === Number(idx));
         if (targetIndex >= 0) {
             swiperRef.current.slideTo(targetIndex);
         }
@@ -65,7 +64,7 @@ export const SwiperView = <T, >({
             {data.map((item, index) => (
                 <SwiperSlide
                     key={`swiper_slide_${index}`}
-                    className={`${data.length > 1 ? slideClassName : '!w-full'}`}>
+                    className={`${data.length > 1 ? slideClassName : '!w-sm !mx-auto'}`}>
                     <ItemComponent item={item} index={index} target={target}/>
                 </SwiperSlide>
             ))}

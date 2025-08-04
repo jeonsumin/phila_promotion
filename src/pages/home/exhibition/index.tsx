@@ -3,13 +3,16 @@ import {SwiperView} from "shared/ui/swiper/SwiperView";
 import {ExhibitionDetailView} from "components/ExhibitionItem";
 import {useParams} from "react-router-dom";
 import {EXHIBITION} from "shared/constant/place";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const ExhibitionDetailPages = () => {
     const {target, id} = useParams();
+    const t = useSelector(currentTranslation);
     const exhibition = EXHIBITION.find(ex => ex.code === target)!;
 
     useLayout({
-        routeName: exhibition.title,
+        routeName: t(exhibition.title),
         hasFooter: false
     })
 

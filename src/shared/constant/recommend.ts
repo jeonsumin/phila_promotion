@@ -1,56 +1,56 @@
 export const RECOMMEND = [
     {
-        question: '필라코리아2025를 어떻게 알게 되셨나요?',
+        question: 'reco_detail_002',
         options: [
-            {type: 'A', label: "SNS", point: 0},
-            {type: 'B', label: "지인 추천",point: 0},
-            {type: 'C', label: "온라인 기사/광고",point: 0},
-            {type: 'D', label: "현장 포스터/홍보물",point: 0},
+            {type: 'A', label: "reco_detail_003", point: 0},
+            {type: 'B', label: "reco_detail_004",point: 0},
+            {type: 'C', label: "reco_detail_005",point: 0},
+            {type: 'D', label: "reco_detail_006",point: 0},
         ]
     },
     {
-        question: '이번 전시에서 가장 기대되는 분야는 무엇인가요?',
+        question: 'reco_detail_007',
         options: [
-            {type: 'A', label: "다양한 디지털 체험",point: 0},
-            {type: 'B', label: "전 세계 우표 이야기",point: 0},
-            {type: 'C', label: "우표 작품 감상",point: 0},
-            {type: 'D', label: "이벤트나 경품", point: 0},
+            {type: 'A', label: "reco_detail_008",point: 0},
+            {type: 'B', label: "reco_detail_009",point: 0},
+            {type: 'C', label: "reco_detail_010",point: 0},
+            {type: 'D', label: "reco_detail_011", point: 0},
         ]
     },
     {
-        question: '전시에서 어떤 활동을 가장 선호하시나요?',
+        question: 'reco_detail_012',
         options: [
-            {type: 'A', label: "직접 참여하고 즐긴다",point: 1},
-            {type: 'B', label: "새로운 지식을 알아간다",point: 1},
-            {type: 'C', label: "창의적으로 표현해본다",point: 1},
-            {type: 'D', label: "기념품이나 스탬프를 모은다",point: 1},
+            {type: 'A', label: "reco_detail_013",point: 1},
+            {type: 'B', label: "reco_detail_014",point: 1},
+            {type: 'C', label: "reco_detail_015",point: 1},
+            {type: 'D', label: "reco_detail_016",point: 1},
         ]
     },
     {
-        question: '새로운 것을 배울 때 나는?',
+        question: 'reco_detail_017',
         options: [
-            {type: 'A', label: "체험하며 느낀다",point: 1},
-            {type: 'B', label: "자료를 찾아본다",point: 1},
-            {type: 'C', label: "만들어보면서 배운다",point: 1},
-            {type: 'D', label: "관련된 자료나 기념품을 모은다", point: 1},
+            {type: 'A', label: "reco_detail_018",point: 1},
+            {type: 'B', label: "reco_detail_019",point: 1},
+            {type: 'C', label: "reco_detail_020",point: 1},
+            {type: 'D', label: "reco_detail_021", point: 1},
         ]
     },
     {
-        question: '전시장에서 무엇을 가장 남기고 싶나요?',
+        question: 'reco_detail_022',
         options: [
-            {type: 'A', label: "즐거운 체험의 기억",point: 1},
-            {type: 'B', label: "흥미로운 이야기",point: 1},
-            {type: 'C', label: "나만의 결과물",point: 1},
-            {type: 'D', label: "기념품과 기록",point: 1},
+            {type: 'A', label: "reco_detail_023",point: 1},
+            {type: 'B', label: "reco_detail_024",point: 1},
+            {type: 'C', label: "reco_detail_025",point: 1},
+            {type: 'D', label: "reco_detail_026",point: 1},
         ]
     },
     {
-        question: '전시장 체험 후 가장 만족스러울 것 같은 순간은?',
+        question: 'reco_detail_027',
         options: [
-            {type: 'A', label: "직접 참여하며 몰입했을 때",point: 2},
-            {type: 'B', label: "새로운 이야기를 배우고 공유했을 때",point: 2},
-            {type: 'C', label: "나만의 결과물을 완성했을 때",point: 2},
-            {type: 'D', label: "모은 것들을 돌아볼 때",point: 2},
+            {type: 'A', label: "reco_detail_028",point: 2},
+            {type: 'B', label: "reco_detail_029",point: 2},
+            {type: 'C', label: "reco_detail_030",point: 2},
+            {type: 'D', label: "reco_detail_031",point: 2},
         ]
     }
 ]
