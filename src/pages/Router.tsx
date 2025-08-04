@@ -25,7 +25,7 @@ import {Commons} from "shared/utils/commons";
 export const Router = () => (
     <BrowserRouter>
         <ModalProvider>
-        <Commons/>
+            <Commons/>
             <BrowserView>
                 <Routes>
                     <Route element={<DesktopLayout/>} path={"/"}>
