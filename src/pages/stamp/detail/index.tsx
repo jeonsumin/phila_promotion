@@ -2,9 +2,12 @@ import {useLayout} from "shared/ui/layout/useLayout";
 import {useParams} from "react-router-dom";
 import {MISSION} from "shared/constant/mession";
 import {QrScannerButton} from "features/qrCodeScanner";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const MissionPage = () => {
     const {target} = useParams();
+    const t= useSelector(currentTranslation);
     const mission = MISSION.find(ex => ex.code === target);
 
     useLayout({
@@ -32,7 +35,7 @@ export const MissionPage = () => {
                 </div>
             </div>
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#FCEBEF] gap-5">
-                <h1 className="text-xl font-bold text-[var(--primary)] leading-10">체험 방법</h1>
+                <h1 className="text-xl font-bold text-[var(--primary)] leading-10">{t("stamp_detail_004")}</h1>
 
 
                 <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col px-[20px]">
@@ -44,7 +47,7 @@ export const MissionPage = () => {
                                         className="text-sm font-bold bg-[var(--primary)] text-center py-[10px] rounded-full text-white">STEP.{index + 1}
                                     </p>
                                 </div>
-                                <p>{step}</p>
+                                <p>{t(step)}</p>
                             </div>
                         )
                     }

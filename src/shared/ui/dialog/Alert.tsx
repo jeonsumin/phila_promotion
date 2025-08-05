@@ -1,4 +1,6 @@
 import {ReactNode} from "react";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 type Props = {
     title?: string;
@@ -10,6 +12,7 @@ type Props = {
     alertClose?: () => void;
 };
 export const Alert = (props: Props) => {
+    const t = useSelector(currentTranslation);
     const {title, message, children, isCancel,isConfirm, onConfirm, alertClose} = props;
     return (
         <>
@@ -32,13 +35,13 @@ export const Alert = (props: Props) => {
                         className="rounded-full bg-[#666] text-[var(--txt)] text-[20px] font-bold flex items-center justify-center min-h-[60px] w-full"
                         onClick={alertClose}
                     >
-                        아니오
+                        {t("common_02")}
                     </button>}
                     <button
                         className="rounded-full bg-[var(--point)] text-white text-[20px] font-bold flex items-center justify-center min-h-[60px] w-full"
                         onClick={onConfirm}
                     >
-                        확인
+                        {t("common_01")}
                     </button>
                 </div>}
             </div>

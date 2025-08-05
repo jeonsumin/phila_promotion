@@ -1,12 +1,12 @@
 export const TERMS = [
     {
         id: 1,
-        title: '개인정보 수집 및 이용 동의',
-        desc:''
+        title: 'pop_open_priv_mo_001',
+        desc:'pop_open_priv_mo_002'
     },
     {
         id: 2,
-        title: '개인정보 처리 위탁에 대한 고지',
-        desc: ''
+        title: 'pop_open_priv_mo_003',
+        desc: 'pop_open_priv_mo_004'
     }
 ]

@@ -3,8 +3,11 @@ import {RECOMMEND, RECOMMEND_RESULT} from "shared/constant/recommend";
 import {useNavigate} from "react-router-dom";
 import {routesBuilder} from "shared/config/routes";
 import {updateRecommend} from "entities/recommend/api/recommendApi";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const useRecommend = () => {
+    const t = useSelector(currentTranslation);
     const [selectedOption, setSelectedOption] = useState<any>({})
     const [result, setResult] = useState<any>({A: 0, B: 0, C: 0, D: 0})
     const navigate = useNavigate();
@@ -43,7 +46,7 @@ export const useRecommend = () => {
         const random = Math.floor(Math.random() * randomNum)
 
         const onSubmit = async () => {
-            await updateRecommend(recommendResult.title, recommendResult.recommend[random].title)
+            await updateRecommend(t(recommendResult.title), t(recommendResult.recommend[random].title))
             navigate(routesBuilder.recommendResult(top[0], random))
         }
         if (Object.keys(selectedOption).length == 6) {
@@ -52,5 +55,5 @@ export const useRecommend = () => {
 
     }, [result]);
 
-    return {selectedOption, handleSelect}
+    return {t, selectedOption, handleSelect}
 }

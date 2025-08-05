@@ -64,7 +64,7 @@ export const SwiperView = <T, >({
             {data.map((item, index) => (
                 <SwiperSlide
                     key={`swiper_slide_${index}`}
-                    className={`${data.length > 1 ? slideClassName : '!w-sm !mx-auto'}`}>
+                    className={`${data.length > 1 ? slideClassName : '!mx-auto'}`}>
                     <ItemComponent item={item} index={index} target={target}/>
                 </SwiperSlide>
             ))}

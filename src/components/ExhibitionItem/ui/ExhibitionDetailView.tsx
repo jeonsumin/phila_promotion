@@ -15,7 +15,7 @@ export const ExhibitionDetailView = (props: Props) => {
         <div className="flex flex-col w-full justify-center items-center gap-3.5 mb-10">
             <div className="w-full h-60 bg-[var(--grayBg)]">
                 <div className="flex justify-end items-end translate-y-45 translate-x-[-15px]">
-                    <ExhibitionLocationButton title="체험관 위치 안내" subTitle={t(item.positionInformation)}>
+                    <ExhibitionLocationButton title={t("pop_space_loc_001")} subTitle={t(item.positionInformation)}>
                         <img src="/assets/images/icon/icn_pin.svg" alt=""/>
                     </ExhibitionLocationButton>
                 </div>

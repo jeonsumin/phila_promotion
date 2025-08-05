@@ -3,11 +3,12 @@ import {useNavigate} from "react-router-dom";
 import {ROUTES} from "shared/config/routes";
 import {useModal} from "shared/config/ModalProvider";
 import {useSelector} from "react-redux";
-import {currentLang} from "features/changeLang/model/slice";
+import {currentLang, currentTranslation} from "features/changeLang/model/slice";
 
 export const useSurvey = () => {
     const lang = useSelector(currentLang);
     const navigate = useNavigate();
+    const t = useSelector(currentTranslation);
     const {showAlert} = useModal();
 
     const checkSurvey = async () => {
@@ -17,8 +18,8 @@ export const useSurvey = () => {
             navigate(ROUTES.SURVEY)
         } else{
             showAlert({
-                title:"설문에 이미 참여하셨습니다.",
-                message:"의견을 나눠주셔서 감사합니다."
+                title: t("pop_survey_cplt_001"),
+                message:t("pop_survey_cplt_002"),
             })
         }
     }

@@ -32,9 +32,7 @@ export const CheckBoxField = (props: Props) => {
                 <span className='chk_mark'></span>
                 <span className={`text-sm text-[var(--subTxt)] font-normal ${className}`} onClick={onLabelClick}>
                     {label}
-                    <label htmlFor='form_chk'>
-                        {require && <span className='text-sm text-[var(--subTxt)] font-normal'> (필수)</span>}
-                    </label>
+
                 </span>
             </label>
 

@@ -1,151 +1,153 @@
 export const SATISFACTION = [
     {
-        question: "귀하의 성별을 선택해 주세요.",
+        question: "survey_detail_q1",
         options: [
-            "남성 ",
-            "여성"
+            "survey_detail_q1_a_001",
+            "survey_detail_q1_a_002"
         ]
     },
 
     {
-        question: "귀하의 연령대를 선택해 주세요.",
+        question: "survey_detail_q2",
         options: [
-            "10대 이하",
-            "20대",
-            "30대",
-            "40대",
-            "50대 이상",
+            "survey_detail_q2_a_001",
+            "survey_detail_q2_a_002",
+            "survey_detail_q2_a_003",
+            "survey_detail_q2_a_004",
+            "survey_detail_q2_a_005",
         ]
     },
     {
-        question: "이번 전시회에서 우표를 구매하셨다면, 구매 목적은 무엇이었나요?",
+        question: "survey_detail_q3",
         options: [
-            '전시회 관람 목적',
-            '우편 발송용',
-            '문화·수집용',
+            'survey_detail_q3_a_001',
+            'survey_detail_q3_a_002',
+            'survey_detail_q3_a_003',
         ]
     },
     {
-        question: "관람 후, 우표 수집에 대한 관심이나 의향이 생기셨나요?",
+        question: "survey_detail_q4",
         options: [
-            "매우 그렇다",
-            "그렇다",
-            "보통이다",
-            "그렇지 않다",
-            "전혀 그렇지 않다"
+            "survey_detail_q4_a_001",
+            "survey_detail_q4_a_002",
+            "survey_detail_q4_a_003",
+            "survey_detail_q4_a_004",
+            "survey_detail_q4_a_005"
         ]
     },
     {
-        question: "과거에 우표전시회를 관람한 적이 있으신가요?",
+        question: "survey_detail_q5",
         options: [
-            "예",
-            "아니오",
+            "survey_detail_q5_a_001",
+            "survey_detail_q5_a_002",
         ]
     },
     {
-        question: "이번 전시회의 정보를 어디에서 접하셨나요?",
+        question: "survey_detail_q6",
         options: [
-            '공식 웹사이트',
-            'SNS(인스타그램, 유튜브 등)',
-            '포스터/배너',
-            '지인 추천',
-            '뉴스/기사',
+            'survey_detail_q6_a_001',
+            'survey_detail_q6_a_002',
+            'survey_detail_q6_a_003',
+            'survey_detail_q6_a_004',
+            'survey_detail_q6_a_005',
         ]
     },
     {
-        question: "흥미를 느낀 콘텐츠를 모두 선택해 주세요.",
+        question: "survey_detail_q7",
         options: [
-            "세계를 연결하다",
-            "편지 날리기 게임",
-            "스케처X",
-            "그래피티X",
-            "AI스탬프스튜디오",
-            "오늘의 감정, 한 장의 우표",
-            "스탬프투어",
-            "보물찾기",
-            "우표낙서ZONE",
-            "기념 우표 그리기ZONE",
+            "survey_detail_q7_a_001",
+            "survey_detail_q7_a_002",
+            "survey_detail_q7_a_003",
+            "survey_detail_q7_a_004",
+            "survey_detail_q7_a_005",
+            "survey_detail_q7_a_006",
+            "survey_detail_q7_a_007",
+            "survey_detail_q7_a_008",
+            "survey_detail_q7_a_009",
+            "survey_detail_q7_a_010",
         ],
         multi: 10,
     },
     {
-        question: "가장 만족스러웠던 전시관을 선택해 주세요.",
+        question: "survey_detail_q8",
         options: [
-            '테마관',
-            '디지털관',
-            '체험관',
-            '작품전시관',
+            'survey_detail_q8_a_001',
+            'survey_detail_q8_a_002',
+            'survey_detail_q8_a_003',
+            'survey_detail_q8_a_004',
         ]
     },
     {
-        question: "가장 만족스러웠던 이벤트 또는 프로그램을 선택해 주세요.",
+        question: "survey_detail_q9",
         options: [
-            '스탬프투어',
-            'AI스탬프스튜디오',
-            '편지 날리기 게임',
-            '보물찾기',
-            '기념 우표 그리기ZONE',
+            'survey_detail_q9_a_001',
+            'survey_detail_q9_a_002',
+            'survey_detail_q9_a_003',
+            'survey_detail_q9_a_004',
+            'survey_detail_q9_a_005',
 
         ]
     },
     {
-        question: "이번 전시회 전반에 만족하셨나요?",
+        question: "survey_detail_q10",
         options: [
-            "매우 그렇다",
-            "그렇다",
-            "보통이다",
-            "그렇지 않다",
-            "전혀 그렇지 않다"
+           "survey_detail_q10_a_001",
+           "survey_detail_q10_a_002",
+           "survey_detail_q10_a_003",
+           "survey_detail_q10_a_004",
+           "survey_detail_q10_a_005",
         ]
     },
     {
-        question: "전시장 관람 환경(쾌적성)은 어떠셨나요?",
+        question: "survey_detail_q11",
         options: [
-            "매우 그렇다",
-            "그렇다",
-            "보통이다",
-            "그렇지 않다",
-            "전혀 그렇지 않다"
+            "survey_detail_q11_a_001",
+            "survey_detail_q11_a_002",
+            "survey_detail_q11_a_003",
+            "survey_detail_q11_a_004",
+            "survey_detail_q11_a_005"
         ]
     },
     {
-        question: "전시장 내 안내표시 및 동선은 이해하기 쉬웠나요?",
+        question: "survey_detail_q12",
         options: [
-            "매우 그렇다",
-            "그렇다",
-            "보통이다",
-            "그렇지 않다",
-            "전혀 그렇지 않다"
+            "survey_detail_q12_a_001",
+            "survey_detail_q12_a_002",
+            "survey_detail_q12_a_003",
+            "survey_detail_q12_a_004",
+            "survey_detail_q12_a_005",
         ]
     },
     {
-        question: "전시회 장소의 접근성(교통편, 안내 등)은 편리하셨나요?",
+        question: "survey_detail_q13",
         options: [
-            "매우 그렇다",
-            "그렇다",
-            "보통이다",
-            "그렇지 않다",
-            "전혀 그렇지 않다"
+            "survey_detail_q13_a_001",
+            "survey_detail_q13_a_002",
+            "survey_detail_q13_a_003",
+            "survey_detail_q13_a_004",
+            "survey_detail_q13_a_005"
         ]
     },
     {
-        question: "누구와 함께 전시회를 관람하셨나요?",
-        options: ['혼자',
-            '가족',
-            '친구/지인',
-            '연인',
+        question: "survey_detail_q14",
+        options: [
+            "survey_detail_q14_a_001",
+            "survey_detail_q14_a_002",
+            "survey_detail_q14_a_003",
+            "survey_detail_q14_a_004"
         ],
     },
     {
-        question: " 이 전시회를 추천하고 싶은 연령대를 선택해 주세요.",
-        options: ['20대 이하',
-            '20-30대',
-            '40-50대',
-            '60대 이상',
+        question: "survey_detail_q15",
+        options: [
+            "survey_detail_q15_a_001",
+            "survey_detail_q15_a_002",
+            "survey_detail_q15_a_003",
+            "survey_detail_q15_a_004",
         ]
     },
     {
-        question: " 전시회에 대한 의견이나 바라는 점이 있다면 자유롭게 적어주세요.",
+        question: "survey_detail_q16",
         options: [],
         descriptive: true,
 

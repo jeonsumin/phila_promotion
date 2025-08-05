@@ -5,6 +5,7 @@ const initialState = {
     headerComponentName: undefined,
     routeName: undefined,
     hasFooter: true,
+    hasHeader: true,
     referrer: undefined,
     isAndroid: false,
     isApple: false,
@@ -26,6 +27,7 @@ export const layoutSlice = createSlice({
             state.headerComponentName = payload.headerComponentName;
             state.routeName = payload.routeName;
             state.hasFooter = payload.hasFooter !== undefined ? payload.hasFooter : true; // hasFooter가 payload에 없으면 기본값 true
+            state.hasHeader = payload.hasHeader !== undefined ? payload.hasHeader : true; // hasFooter가 payload에 없으면 기본값 true
             state.referrer = payload.referrer;
         }
     }

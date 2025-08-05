@@ -1,156 +1,156 @@
 export const TREASURE = [
     {
-        title: "전통",
+        title: "tre_detail_type_003",
         src: "/assets/images/treasure1.png",
         option: [
             {
-                hint: "단 하나의 우편료로 세계를 잇겠다는 이상, 제국의 바다를 건넌 ‘Zealandia’의 얼굴에서 뉴질랜드 우편 전통의 자부심을 찾아보세요.",
+                hint: "tre_detail_result_trd1_004",
                 number: "★NUMBER 150★",
             },
             {
-                hint: "오스만의 흔적 위에 덧입혀진 부족의 인장, 히자즈 땅에서 새롭게 세워진 전통의 시작을 기록한 우표를 따라가 보세요.",
+                hint: "tre_detail_result_trd2_004",
                 number: "★NUMBER 151★",
             },
             {
-                hint: "절제된 도안과 단단한 모서리 안에 담긴 덴마크 왕실의 질서와 권위. 북유럽 우편 전통의 시작점을 품은 고전 우표를 찾아보세요.",
+                hint: "tre_detail_result_trd3_004",
                 number: "★NUMBER 152★",
             },
             {
-                hint: "‘대한민국’ 네 글자가 처음 새겨졌던 그 시작점, 해방 이후 첫 발걸음이 머문 자리에 보물이 숨겨져 있습니다.",
+                hint: "tre_detail_result_trd4_004",
                 number: "★NUMBER 153★",
             },
             {
-                hint: "식민 시기를 지나 민족의 얼굴을 되찾은 인쇄 기술과 디자인. 볼리비아 우표 속 고유 전통의 재건 흔적을 따라가 보세요.",
+                hint: "tre_detail_result_trd5_004",
                 number: "★NUMBER 154★",
             },
         ]
     },
     {
-        title: "역사",
+        title: "tre_detail_type_004",
         src: "/assets/images/treasure2.png",
         option: [
             {
-                hint: "해방 직후 우표 발행이 시작된 1946년부터 1950년 전쟁 직전까지, 소중한 국가의 첫 소리를 엿볼 수 있는 기록을 우표 속에서 찾아보세요.",
+                hint: "tre_detail_result_hty1_004",
                 number: "★NUMBER 155★",
             },
             {
-                hint: "대서양을 횡단하는 항해 중에도 이어진 브라질-포르투갈 간 우편의 역사, 희망과 소식이 담긴 해상 경로를 우표에서 만나보세요.",
+                hint: "tre_detail_result_hty2_004",
                 number: "★NUMBER 156★",
             },
             {
-                hint: "두 차례의 세계대전과 식민 통치 시절, 검열 도장을 통과하며 전달된 한 통의 편지에 담긴 억눌림과 회복의 흔적을 우표 속에서 찾아보세요.",
+                hint: "tre_detail_result_hty3_004",
                 number: "★NUMBER 157★",
             },
             {
-                hint: " 제국 황혼의 시기, 변화하는 왕국의 권위와 감성이 깃든 편지들을 우표 속에서 만나보세요.",
+                hint: "tre_detail_result_hty4_004",
                 number: "★NUMBER 158★",
             },
             {
-                hint: "제국의 마지막 빛 아래, 수공 인쇄와 오버프린트에 깃든 왕국의 권위와 안간힘을 따라 20세기 초 헝가리 우편의 시간을 찾아보세요.",
+                hint: "tre_detail_result_hty5_004",
                 number: "★NUMBER 159★",
             },
         ]
     },
     {
-        title: "테마",
+        title: "tre_detail_type_005",
         src: "/assets/images/treasure1.png",
         option: [
             {
-                hint: "새들의 생태와 이유를 탐구한 기록, 깃털 아래 숨겨진 이야기와 자연의 경이로움을 담은 작품을 찾아보세요.",
+                hint: "tre_detail_result_thm1_004",
                 number: "★NUMBER 160★",
             },
             {
-                hint: "무대 위 백조처럼 우아하지만 날개 없이도 마음을 울리는 발레의 세계, 그 정수를 우표 속에서 만나보세요.",
+                hint: "tre_detail_result_thm2_004",
                 number: "★NUMBER 161★",
             },
             {
-                hint: "인류가 병을 이겨내기 위해 고른 쓴 약과 강한 방책들—약사의 시선으로 기록된 시대의 한 장면을 우표에서 찾아보세요.",
+                hint: "tre_detail_result_thm3_004",
                 number: "★NUMBER 162★",
             },
             {
-                hint: "작은 실수가 큰 재앙이 되던 시절, 사고를 막고 피해를 줄이려는 사회의 첫 노력들이 담긴 우표를 찾아보세요.",
+                hint: "tre_detail_result_thm4_004",
                 number: "★NUMBER 163★",
             },
             {
-                hint: "현실과 환상을 넘나드는 생명체들, 화려한 색감과 상상의 폭을 담은 우표 속 판타지의 순간을 발견해 보세요.",
+                hint: "tre_detail_result_thm5_004",
                 number: "★NUMBER 164★",
             },
         ]
     },
     {
-        title: "항공",
+        title: "tre_detail_type_006",
         src: "/assets/images/treasure2.png",
         option: [
             {
-                hint: "1920년대 네덜란드령 동인도에서 날개 아래 첫 우편의 시대가 열렸습니다. 본국과 식민지를 잇던 하늘길 위, 토착 문양과 비행기 실루엣 속 전통 항공의 흐름을 찾아보세요.",
+                hint: "tre_detail_result_avt1_004",
                 number: "★NUMBER 165★",
             },
             {
-                hint: "2차 세계대전 발발과 함께 아르헨티나 내외의 항공 우편은 더 빠르고 멀리 뻗어나갔습니다. 전쟁 속에도 이어진 비행 여정의 흔적을 우표 속에서 발견하세요.",
+                hint: "tre_detail_result_avt2_004",
                 number: "★NUMBER 166★",
             },
             {
-                hint: "1919년 설립된 라틴아메리카 최초 민간 항공사 SCADTA. 파나마 지협을 넘나드는 노선 위, 물결 따라 비행한 항공우편의 역사를 우표 속에서 만나보세요.",
+                hint: "tre_detail_result_avt3_004",
                 number: "★NUMBER 167★",
             },
             {
-                hint: "1911년 영국에서 전 세계 최초로 시작된 지속 항공 우편 서비스. 축제 속 비행과 주소지 날개 실루엣이 어우러진, 역사의 비상 순간을 찾아보세요.",
+                hint: "tre_detail_result_avt4_004",
                 number: "★NUMBER 168★",
             },
             {
-                hint: "온두라스에서 시작된 최초와 특수 항공편들. 중미의 하늘을 오르내리던 모험적 여정이 우표 위에 남긴 흔적을 따라보세요.",
+                hint: "tre_detail_result_avt5_004",
                 number: "★NUMBER 169★",
             },
         ]
     },
     {
-        title: "사진",
+        title: "tre_detail_type_007",
         src: "/assets/images/treasure1.png",
         option: [
             {
-                hint: "1881~1936년, 프랑스 식민지 시기 베트남 철도의 발전과 변화의 순간을 담은 여정을 기록한 작품을 찾아보세요.",
+                hint: "tre_detail_result_pht1_004",
                 number: "★NUMBER 170★",
             },
             {
-                hint: "향신료 내음 가득한 골목길과 붉은 문 너머, 잔지바르 사람들의 삶과 풍경이 우표 한 장에 고스란히 담긴 그 특별한 이야기를 찾아보세요.",
+                hint: "tre_detail_result_pht2_004",
                 number: "★NUMBER 171★",
             },
             {
-                hint: "낡은 사진엽서에 담긴 황금빛 풍경, 헤르체그노비 골목과 바닷가의 옛 모습이 고요히 인쇄된 그 시간을 찾아보세요.",
+                hint: "tre_detail_result_pht3_004",
                 number: "★NUMBER 172★",
             },
             {
-                hint: "강과 숲이 어우러진 방글라데시의 자연 속으로, 야생의 생명들이 남긴 흔적을 따라 그림 같은 풍경의 작품을 찾아보세요.",
+                hint: "tre_detail_result_pht4_004",
                 number: "★NUMBER 173★",
             },
             {
-                hint: "기찻길 따라 세워진 작은 도시, 노브스카의 첫 20년이 담긴 그리움 어린 장면들을 우표 속에서 찾아보세요.",
+                hint: "tre_detail_result_pht5_004",
                 number: "★NUMBER 174★",
             },
         ]
     },
     {
-        title: "청춘",
+        title: "tre_detail_type_008",
         src: "/assets/images/treasure2.png",
         option: [
             {
-                hint: "내 안에 숨어 있던 서툼과 상상이, 작고 귀여운 몬스터가 되어 나타났어요. 그 시절의 나를 닮은 우표를 찾아보세요.",
+                hint: "tre_detail_result_yth1_004",
                 number: "★NUMBER 175★",
             },
             {
-                hint: "모두가 달릴 때 천천히 걷는 선택, 당나귀 티탄처럼. 서툴지만 나답게 가는 길이 담긴 우표를 찾아보세요.",
+                hint: "tre_detail_result_yth2_004",
                 number: "★NUMBER 176★",
             },
             {
-                hint: "마음을 적어내던 손글씨의 시간, 말보다 진심이 묻어 있던 엽서 한 장을 찾아보세요.",
+                hint: "tre_detail_result_yth3_004",
                 number: "★NUMBER 177★",
             },
             {
-                hint: "용기를 주는 돌이 있다는 전설처럼, 말하지 못했던 진심을 꺼내게 만드는 우표를 찾아보세요.",
+                hint: "tre_detail_result_yth4_004",
                 number: "★NUMBER 178★",
             },
             {
-                hint: "반짝이는 트리보다 소중했던 건, 그 안의 기다림과 설렘. 잊고 있던 마음을 비추는 우표를 찾아보세요.",
+                hint: "tre_detail_result_yth5_004",
                 number: "★NUMBER 179★",
             },
         ]

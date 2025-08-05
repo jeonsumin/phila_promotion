@@ -6,9 +6,11 @@ import {useNavigate} from "react-router-dom";
 import {useModal} from "shared/config/ModalProvider";
 import {getCookie} from "shared/utils";
 import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const useCheckIn = () => {
     const isPreRegistration = useSelector((state: RootState) => state.period.isEventPeriod);
+    const t = useSelector(currentTranslation);
 
     const modal = useModal();
     const navigate = useNavigate();
@@ -33,8 +35,8 @@ export const useCheckIn = () => {
 
         if (isPreRegistration == 0) {
             modal.showAlert({
-                title: "사전등록",
-                message: `사전등록을 완료했습니다. 입력하신 휴대폰번호를 사용해 체크인해 주세요.`
+                title: t("pre_main_mo_001"),
+                message: t(`pop_preo_chk_mo_012`)
             })
             return
         }
@@ -43,7 +45,7 @@ export const useCheckIn = () => {
 
         if(checkIn == 2){
             modal.showAlert({
-                message: '체크인한 이력이 있습니다. 계속하시겠습니까?',
+                message: t('pop_preo_chk_mo_013'),
                 isCancel: true,
                 onConfirm : () => {
                     const alreadyCheckIn = {...user, step: 2}

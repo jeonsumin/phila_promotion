@@ -1,20 +1,23 @@
 import {Button} from "shared/ui";
 import {useModal} from "shared/config/ModalProvider";
 import {QrScanner} from "features/qrCodeScanner";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const QrScannerButton = () => {
+    const t = useSelector(currentTranslation)
     const modal = useModal();
 
     const onClick = () => {
         modal.showModal({
-            title:"QR 코드 스캔",
+            title: t("stamp_detail_031"),
             body: <QrScanner />
         })
     }
 
     return (
         <div className="w-full p-5">
-            <Button onClick={onClick}>QR코드 스캔</Button>
+            <Button onClick={onClick}>{t("stamp_detail_031")}</Button>
         </div>
     )
 }

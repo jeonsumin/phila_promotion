@@ -4,11 +4,12 @@ import {Button} from "shared/ui";
 import {CircleAlert} from "lucide-react";
 
 export const AlreadyCheckFrom = () => {
-    const {phoneNum, failedCheckIn,setForm, onSubmit} = useAlreadyCheckin();
+
+    const {t, phoneNum, failedCheckIn,setForm, onSubmit} = useAlreadyCheckin();
     return (
         <div className="flex flex-col px-5 gap-3.5">
-            <h1 className="text-xl font-bold ">사전 등록 체크인</h1>
-            <p>사전등록시 입력했던<br/> 휴대폰번호를 입력해주세요.</p>
+            <h1 className="text-xl font-bold ">{t("pop_preo_chk_mo_001")}</h1>
+            <p>{t("pop_preo_chk_mo_002")}</p>
             <div className="flex justify-start items-center gap-2">
                 <Input
                     type={"text"}
@@ -36,10 +37,10 @@ export const AlreadyCheckFrom = () => {
             </div>
             {failedCheckIn && <div className="flex gap-1 items-center text-xs text-[var(--primary)]">
                 <CircleAlert size="14"/>
-                <p>입력하신 번호로 등록된 정보가 없습니다.</p>
+                <p>{t("pop_preo_chk_mo_002")}</p>
             </div>}
             <div>
-                <Button onClick={onSubmit}>입장하기</Button>
+                <Button onClick={onSubmit}>{t("pop_preo_chk_mo_004")}</Button>
             </div>
         </div>
     )

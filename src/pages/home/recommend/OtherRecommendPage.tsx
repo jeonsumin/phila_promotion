@@ -3,10 +3,12 @@ import {ExhibitionDetailView} from "components/ExhibitionItem";
 import {RECOMMEND_RESULT} from "shared/constant/recommend";
 import {useParams} from "react-router-dom";
 import {useState} from "react";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const OtherRecommendPage = () => {
     const {target, id} = useParams();
-
+    const t = useSelector(currentTranslation);
     const [result, setResult] = useState(
         RECOMMEND_RESULT
             .filter(ex => ex.type == target).at(0)?.recommend
@@ -14,7 +16,7 @@ export const OtherRecommendPage = () => {
     )
 
     useLayout({
-        routeName: "다른 체험 추천",
+        routeName: t("reco_detail_type1_result1_alt_001"),
         hasFooter: false,
     })
     return (

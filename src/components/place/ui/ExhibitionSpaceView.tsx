@@ -15,7 +15,7 @@ export const ExhibitionSpaceView = () => {
             <div className="flex flex-col w-full justify-center items-center gap-[14px] px-[20px]">
                 <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold">{t("home_main_space_001")}</h2>
 
-                <ExhibitionLocationButton label={t('home_main_space_002')} title="전시공간 안내도" subTitle="입구에서 오른쪽으로 직진하시면 위치해 있습니다."/>
+                <ExhibitionLocationButton label={t('home_main_space_002')} title={t("home_main_space_000")} subTitle={t("pop_space_loc_016")}/>
 
                 <div className="grid grid-cols-2 w-full gap-[6px] text-white">
                     {

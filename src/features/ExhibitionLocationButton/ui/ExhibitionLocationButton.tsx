@@ -2,6 +2,8 @@ import {Button} from "shared/ui";
 import {useModal} from "shared/config/ModalProvider";
 import {PlaceLocationView} from "shared/ui/spaceView/PlaceLocationView";
 import {ReactNode} from "react";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 type Props = {
     label?: string;
@@ -11,7 +13,8 @@ type Props = {
     children?: ReactNode
 }
 export const ExhibitionLocationButton = (props: Props) => {
-    const {label = "위치보기", title = "", subTitle = "", children} = props;
+    const t = useSelector(currentTranslation);
+    const {label = t("stamp_main_010"), title = "", subTitle = "", children} = props;
     const {showAlert} = useModal();
     const openModal = () => {
         showAlert({

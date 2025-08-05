@@ -3,14 +3,16 @@ import {useCoupon} from "../lib/useCoupon";
 import {COUPON} from "shared/constant/coupon";
 import {useModal} from "shared/config/ModalProvider";
 import {RewardCodeView} from "components/rewardCode";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const CouponList = () => {
     const {coupon} = useCoupon();
-
+    const t = useSelector(currentTranslation);
     const modal = useModal();
     const onClick = (code: string) => {
         modal.showModal({
-            title: "리워드 코드 입력",
+            title: t("pop_reward_001"),
             body: <RewardCodeView couponCode={code}/>,
         })
     }

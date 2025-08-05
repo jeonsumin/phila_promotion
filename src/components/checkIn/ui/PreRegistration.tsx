@@ -27,7 +27,7 @@ export const PreRegistration = () => {
                 <p
                     className="text-6xl text-[var(--white)] font-bold leading-none [text-shadow:_0px_0px_10px_rgb(16_124_186_/_1.00)]"
                 >OPEN</p>
-                <p className="text-base text-[var(--subWhite)]">2025.9.17. ~ 9.21. <br/> COEX 마곡</p>
+                <p className="text-base text-[var(--subWhite)]">{t('pre_main_mo_003')} <br/> {t('pre_main_mo_004')}</p>
             </div>
 
             <div className="w-full relative px-5">
@@ -38,8 +38,8 @@ export const PreRegistration = () => {
 
                 <div className="pt-16.5 px-5 pb-[40px] bg-[var(--dimm)] text-center">
                     <img src="/assets/images/icon/img_pre_gift.svg" alt="" className="w-[100px] mx-auto"/>
-                    <p className="font-bold mt-[40px] text-[28px] text-[var(--yellow)]">특별 리워드 증정!</p>
-                    <p className="text-[20px] text-[var(--subWhite)] mt-[12px]">사전등록 + 현장방문시</p>
+                    <p className="font-bold mt-[40px] text-[28px] text-[var(--yellow)]">{t('pre_main_mo_006')}</p>
+                    <p className="text-[20px] text-[var(--subWhite)] mt-[12px]">{t('pre_main_mo_007')}</p>
                 </div>
             </div>
 

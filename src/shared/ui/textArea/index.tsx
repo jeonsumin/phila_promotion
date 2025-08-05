@@ -1,10 +1,13 @@
 import {useEffect, useRef, useState} from "react";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const TextArea = (props:any) => {
 
 
     const [lineCount, setLineCount] = useState<number>(1);
     const textareaRef = useRef<any>(null);
+    const t = useSelector(currentTranslation);
 
     useEffect(() => {
         const textarea = textareaRef.current;
@@ -31,7 +34,7 @@ export const TextArea = (props:any) => {
             }}
             rows={1} // 최소 행 수
             className={`px-[12px] py-[15px]  ${lineCount > 2 ? 'rounded-3xl' : 'rounded-full'} bg-[var(--lightGrayBg)] text-[14px] border-none  w-full`}
-            placeholder="내용을 입력하세요..."
+            placeholder={t("pop_survey_cplt_005")}
         />
     )
 }

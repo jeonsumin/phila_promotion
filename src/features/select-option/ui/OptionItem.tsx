@@ -9,6 +9,7 @@ type Props = {
 };
 
 export const OptionItem = ({label, active, isDescriptive, onClick }: Props) => {
+
     return (
         <>
             <Button
@@ -16,7 +17,7 @@ export const OptionItem = ({label, active, isDescriptive, onClick }: Props) => {
                 color={active ? "default" : "light"}
                 onClick={onClick}
             >
-                {label} {isDescriptive}
+                {label}
             </Button>
 
         </>

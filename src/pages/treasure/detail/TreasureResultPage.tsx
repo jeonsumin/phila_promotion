@@ -2,21 +2,24 @@ import {useLayout} from "shared/ui/layout/useLayout";
 import {useParams} from "react-router-dom";
 import {TREASURE} from "shared/constant/treasure";
 import {QrScannerButton} from "features/qrCodeScanner";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const TreasureResultPage = () => {
 
     const {id} = useParams();
     const randomHint = Math.floor(Math.random() * TREASURE[Number(id)].option.length);
+    const t = useSelector(currentTranslation);
 
     useLayout({
-        routeName: '보물찾기',
+        routeName: t('tre_detail_type_001'),
         hasFooter: false
     })
 
     return(
         <div className="flex flex-col justify-center items-center">
             <div className="py-10 px-5">
-                <h1 className="text-base font-normal text-[var(--subTxt)]">{TREASURE[Number(id)].title} 주제를 고르셨네요!</h1>
+                <h1 className="text-base font-normal text-[var(--subTxt)]">{t(TREASURE[Number(id)].title)} {t("tre_detail_result_trd1_002")}</h1>
             </div>
 
             <div className="w-full bg-[var(--listBd)] px-12 py-5">
@@ -33,7 +36,7 @@ export const TreasureResultPage = () => {
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5  border-[var(--lightGrayBg)] w-full">
                         <p className="text-base">
-                            {TREASURE[Number(id)].option[randomHint].hint}
+                            {t(TREASURE[Number(id)].option[randomHint].hint)}
                         </p>
                         <p className="text-[var(--phliaBlue)]">{TREASURE[Number(id)].option[randomHint].number}</p>
                     </div>

@@ -2,10 +2,12 @@ import OtpInput from 'react-otp-input';
 import {useOtp} from "features/otp/lib/useOtp";
 import {Button} from "shared/ui";
 import {Check} from "lucide-react";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const Otp = (props: any) => {
     const otp = useOtp();
-
+    const t = useSelector(currentTranslation);
     return (
         <div className="flex flex-col gap-2">
             <OtpInput
@@ -24,7 +26,7 @@ export const Otp = (props: any) => {
                     />
                 }
             />
-            {otp.isFailed && <div className="w-full text-center text-sm text-[var(--primary)]">※ 코드가 올바르지 않습니다. </div>}
+            {otp.isFailed && <div className="w-full text-center text-sm text-[var(--primary)]">{t("pop_reward_004")} </div>}
             <div className="absolute bottom-0 items-center w-full p-5">
                 <Button variant="rounded" color={otp.isActive && !otp.isFailed ? 'default' : 'gray'} disabled={otp.isActive && otp.isFailed}
                         className="mx-auto" onClick={() => otp.onSubmit(props.couponCode)}>

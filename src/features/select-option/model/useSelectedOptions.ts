@@ -3,8 +3,11 @@ import {updateSurvey} from "entities/survey/api/surveyApi";
 import {transformToQKeys} from "shared/utils/utils";
 import {useNavigate} from "react-router-dom";
 import {ROUTES} from "shared/config/routes";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const useSelectOption = (survey: any[], type: string) => {
+    const t = useSelector(currentTranslation);
     const [selectedOption, setSelectedOption] = useState<any>({})
     const [isDescriptive, setIsDescriptive] = useState<any>({})
     const [descriptiveText, setDescriptiveText] = useState<any>({});
@@ -50,5 +53,5 @@ export const useSelectOption = (survey: any[], type: string) => {
 
     const isSubmit = Object.keys(selectedOption).length > 14
 
-    return {selectedOption, isDescriptive, descriptiveText,isSubmit, handleSelect, setDescriptive, onSubmitSurvey}
+    return {t, selectedOption, isDescriptive, descriptiveText,isSubmit, handleSelect, setDescriptive, onSubmitSurvey}
 }

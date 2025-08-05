@@ -5,10 +5,13 @@ import {useCheckIn} from "features/checkIn/lib/useCheckIn";
 import {CheckBoxField} from "shared/ui/checkBoxField";
 import {TERMS} from "shared/constant/terms";
 import {TermsDetail} from "components/checkIn";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const CheckInForm = () => {
 
     const { checkInForm, currentTerms,  setCheckInFrom, validation, handleAllCheck, onDetailTerms, onSubmit} = useCheckIn()
+    const t = useSelector(currentTranslation);
 
 
     return (
@@ -19,14 +22,14 @@ export const CheckInForm = () => {
                     isMobile ? 'space-y-4 mt-[20px]' : 'flex gap-5 justify-center items-center mt-[30px]'
                 )}>
                     <Input
-                        label={"닉네임"}
+                        label={t("pop_open_chk_mo_002")}
                         value={checkInForm.nick_name}
                         placeholder={"Up to 8 characters (Kor/Eng/Num)"}
                         onChange={(e: any) => setCheckInFrom('nick_name', e.target.value)}
                     />
 
                     <div className="flex flex-col justify-center items-start gap-2">
-                        <label className="text-sm font-bold text-[var(--subTxt)]">연락처</label>
+                        <label className="text-sm font-bold text-[var(--subTxt)]">{t("pop_open_chk_mo_004")}</label>
                         <div className="flex justify-start items-center gap-2">
                             <Input
                                 type={"text"}
@@ -54,11 +57,11 @@ export const CheckInForm = () => {
                 </div>
 
                 <div className="flex flex-col w-full gap-2">
-                    <h1 className="text-start text-sm font-bold text-[var(--subTxt)]">개인정보 수집 및 처리 동의</h1>
+                    <h1 className="text-start text-sm font-bold text-[var(--subTxt)]">{t("pop_open_chk_mo_006")}</h1>
                     <div
                         className="flex flex-col justify-center w-full border-1 border-[var(--termsBd)] rounded-lg p-5 gap-2">
                         <CheckBoxField
-                            label="전체 동의"
+                            label={t("pop_open_chk_mo_007")}
                             className="!font-bold"
                             checked={checkInForm.allChecked}
                             onChange={(e: any) => handleAllCheck(e.target.checked)}
@@ -67,7 +70,7 @@ export const CheckInForm = () => {
                         {TERMS.map((item: any, index: number) =>
                             <CheckBoxField
                                 key={index}
-                                label={item.title}
+                                label={t(item.title)}
                                 require={true}
                                 checked={checkInForm[`terms${item.id}`]}
                                 onChange={(e: any) => setCheckInFrom(`terms${item.id}`, e.target.checked)}
@@ -88,7 +91,7 @@ export const CheckInForm = () => {
                     className={cn(
                         "h-[60px] font-bold text-[var(--white)] bg-[var(--point)] justify-center items-center disabled:bg-[var(--subTxt)]"
                         , isMobile ? 'w-full fixed bottom-0' : 'rounded-full w-full'
-                    )}>등록하기
+                    )}>{t('pop_open_chk_mo_011')}
                 </button>
             </div>
             <TermsDetail terms={currentTerms}  onClose={() => onDetailTerms(null)}/>

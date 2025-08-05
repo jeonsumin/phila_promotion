@@ -82,7 +82,7 @@ export const HomePage = () => {
             </div>
 
             <div className="flex flex-col gap-[20px] py-[20px] bg-[var(--lightGrayBg)] w-full items-center">
-                <h2 className="text-[16px] text-[var(--subTxt)]">필라코리아2025가 더 궁금하다면?</h2>
+                <h2 className="text-[16px] text-[var(--subTxt)]">{t("footer_mo")}</h2>
                 <div className="flex gap-[16px]">
                     <button onClick={() => {
                         window.open("http://kr.philakorea2025.kr/ ", "_blank")

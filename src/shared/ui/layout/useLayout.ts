@@ -7,6 +7,7 @@ type Props = {
     headerComponentName?: string;
     routeName?: string;
     hasFooter?: boolean
+    hasHeader?: boolean
 }
 export const useLayout = (props?: Props) => {
 
@@ -17,6 +18,7 @@ export const useLayout = (props?: Props) => {
             headerComponentName: props?.headerComponentName,
             routeName: props?.routeName,
             hasFooter: props?.hasFooter,
+            hasHeader: props?.hasHeader,
         }))
     }, []);
 

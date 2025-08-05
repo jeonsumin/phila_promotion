@@ -1,8 +1,10 @@
 import {cn} from "shared/utils";
-import {ChangeLangButton} from "features/changeLang";
+import {ChangeLangButton, currentTranslation} from "features/changeLang";
 import {AlreadyCheckInButton} from "features/checkIn/ui/AlreadyCheckInButton";
+import {useSelector} from "react-redux";
 
 export const CheckInView = () => {
+    const t = useSelector(currentTranslation);
     return (
         <main
             className={cn(
@@ -20,12 +22,12 @@ export const CheckInView = () => {
             </div>
 
 
-            <div className="p-10 text-white text-center space-y-10">
+            <div className="flex flex-col justify-center items-center p-10 text-white text-center space-y-10 ">
                 <div className="flex flex-col gap-2">
-                    <p>2025.9.17 ~ 9.21.COEX 마곡</p>
+                    <p> {t("pre_main_mo_003")} {t("pre_main_mo_004")}</p>
 
                     <div className="flex justify-center w-full mx-auto text-3xl font-bold">
-                        <p>필라코리아</p>
+                        <p>{t('open_main_mo_005')}</p>
                         <p className="text-[#32833A]">2</p>
                         <p className="text-[#D93657]">0</p>
                         <p className="text-[#D3A117]">2</p>

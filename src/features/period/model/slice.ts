@@ -11,7 +11,7 @@ export const eventPeriodSlice = createSlice({
     reducers: {
         updatePeriod: (state) => {
             const now = moment();
-            const start = moment("2025-06-17");
+            const start = moment("2025-09-17");
             const end = moment("2025-09-21");
 
             if(now.isBefore(start,'day')) state.isEventPeriod = 0

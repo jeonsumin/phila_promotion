@@ -14,15 +14,15 @@ export const Survey = (props: any) => {
                         <div className="flex flex-col">
                             <div className="flex gap-2.5 font-bold">
                                 <h1>Q{index + 1}.</h1>
-                                <h1 className="">{item.question}</h1>
+                                <h1 className="">{options.t(item.question)}</h1>
                             </div>
-                            {item.multi && <p className="font-sm ml-10">※중복 선택 가능 </p>}
+                            {item.multi && <p className="font-sm ml-10">{options.t('pop_survey_cplt_003')}</p>}
                         </div>
                         <div className="flex flex-col gap-3.5">
                             {item.options.map((option: string, optionNum: number) => (
                                     <OptionItem
                                         key={optionNum}
-                                        label={option}
+                                        label={options.t(option)}
                                         active={options.selectedOption[index]?.includes(optionNum) || false}
                                         isDescriptive={options.selectedOption[index] === item.options.lastIndexOf()}
                                         onClick={() => options.handleSelect(index, optionNum)}
@@ -44,7 +44,7 @@ export const Survey = (props: any) => {
                     disabled={!options.isSubmit}
                     onClick={options.onSubmitSurvey}
                 >
-                    제출하기
+                    {options.t('pop_survey_cplt_004')}
                 </Button>
             </div>
         </div>

@@ -3,8 +3,11 @@ import {checkInUserCheck} from "entities/user/api/userApi";
 import {ROUTES} from "shared/config/routes";
 import {useNavigate} from "react-router-dom";
 import {useModal} from "shared/config/ModalProvider";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
 export const useAlreadyCheckin = () => {
+    const t = useSelector(currentTranslation);
     const [failedCheckIn, setFailedCheckIn] = useState(false);
     const navigate = useNavigate();
     const modal = useModal();
@@ -34,5 +37,5 @@ export const useAlreadyCheckin = () => {
     useEffect(() => {
         setFailedCheckIn(false);
     }, [phoneNum]);
-    return {phoneNum, failedCheckIn, setForm, onSubmit}
+    return {t, phoneNum, failedCheckIn, setForm, onSubmit}
 }
