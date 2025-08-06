@@ -14,7 +14,7 @@ export const CheckInButton = (props: Props) => {
 
     const openModal = () => {
         showModal({
-            title: isPreRegistration == 0 ? t('chk_001') : t('open_main_mo_004'),
+            title: isPreRegistration == 0 ? t('pre_main_pc_007') : t('open_main_mo_004'),
             body: <CheckInForm/>,
         })
     }
@@ -23,7 +23,7 @@ export const CheckInButton = (props: Props) => {
 
     return (
         <Button variant="fixed" onClick={openModal}>
-            {isPreRegistration == 0 ? t('chk_001') : t('open_main_mo_004')}
+            {isPreRegistration == 0 ? t('pre_main_pc_007') : t('open_main_mo_004')}
         </Button>
     )
 }

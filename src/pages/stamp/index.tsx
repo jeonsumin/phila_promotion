@@ -23,7 +23,7 @@ export const StampPage = () => {
             <h1 className="text-xl font-bold text-[var(--primary)] leading-10">{t("stamp_main_003")}</h1>
 
 
-                <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col p-5">
+                <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col p-5 text-center">
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">

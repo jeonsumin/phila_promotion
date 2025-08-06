@@ -11,7 +11,7 @@ export const MissionPage = () => {
     const mission = MISSION.find(ex => ex.code === target);
 
     useLayout({
-        routeName: mission?.contents,
+        routeName: t(mission?.contents),
         hasFooter: false,
     })
 
@@ -29,7 +29,7 @@ export const MissionPage = () => {
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">
-                        <p>{mission?.caption}</p>
+                        <p>{t(mission?.caption)}</p>
                     </div>
 
                 </div>

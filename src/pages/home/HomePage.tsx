@@ -30,7 +30,7 @@ export const HomePage = () => {
 
             <div className="px-[20px] py-[40px] flex flex-col gap-[40px] items-center bg-[var(--pinkBg)] w-full">
                 <div className="flex flex-col gap-[20px]">
-                    <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold"> {t("home_main_004")}</h2>
+                    <h1 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold text-center"> {t("home_main_004")}</h1>
                     <table className="w-full table-fixed border-collapse">
                         <thead>
                         <tr className="bg-[var(--point)] text-[var(--white)]">

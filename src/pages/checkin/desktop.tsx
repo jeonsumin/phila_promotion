@@ -29,12 +29,12 @@ export const BetaCheckInPage = () => {
                 <section className="flex flex-col text-center gap-10 mx-30 py-30  max-w-[960px]">
 
                     <h1 className="text-black text-4xl font-bold ">
-                        {t("main_pc_001")}
+                        {t("home_main_001")}
                     </h1>
 
                     <div className="flex flex-col gap-3.5">
-                        <p> {t("main_pc_002")} </p>
-                        <p> {t("main_pc_003")} </p>
+                        <p> {t("home_main_002")} </p>
+                        <p> {t("home_main_003")} </p>
                     </div>
 
                 </section>
@@ -49,7 +49,7 @@ export const BetaCheckInPage = () => {
                          className=" max-w-[960px] mx-auto"/>
 
                     <h1 className="text-3xl font-bold text-[var(--primary)]">
-                        {t("main_pc_004")}
+                        {t("home_main_004")}
                     </h1>
 
                     <div className=" max-w-[960px] mx-auto">
@@ -63,7 +63,7 @@ export const BetaCheckInPage = () => {
                 <section className="flex flex-col text-center gap-10 w-full py-[60px] px-30 max-w-[960px] mx-auto">
 
                     <div className="flex flex-col w-full justify-center items-center gap-[14px] px-[20px]">
-                        <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold"> {t("main_pc_005")}</h2>
+                        <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold"> {t("home_main_005")}</h2>
 
                         <div className="grid grid-cols-3 w-full gap-[6px] text-white">
                             {

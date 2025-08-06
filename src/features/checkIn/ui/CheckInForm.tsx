@@ -10,7 +10,7 @@ import {currentTranslation} from "features/changeLang";
 
 export const CheckInForm = () => {
 
-    const { checkInForm, currentTerms,  setCheckInFrom, validation, handleAllCheck, onDetailTerms, onSubmit} = useCheckIn()
+    const {input2,input3, checkInForm, currentTerms,  setCheckInFrom, validation, handleAllCheck, onDetailTerms, onSubmit} = useCheckIn()
     const t = useSelector(currentTranslation);
 
 
@@ -33,20 +33,34 @@ export const CheckInForm = () => {
                         <div className="flex justify-start items-center gap-2">
                             <Input
                                 type={"text"}
+                                id={"phone1"}
+                                inputMode={"decimal"}
                                 maxLength={3}
                                 value={checkInForm.phone1}
-                                onChange={(e: any) => setCheckInFrom('phone1', e.target.value)}
+                                onChange={(e: any) => {
+                                    setCheckInFrom('phone1', e.target.value)
+                                    e.target.value.length == 3 && input2.current?.focus()
+                                }}
                             />
                             -
                             <Input
                                 type={"text"}
+                                id={"phone2"}
+                                inputMode={"decimal"}
+                                inputRef={input2}
                                 maxLength={4}
                                 value={checkInForm.phone2}
-                                onChange={(e: any) => setCheckInFrom('phone2', e.target.value)}
+                                onChange={(e: any) => {
+                                    setCheckInFrom('phone2', e.target.value)
+                                    e.target.value.length == 4 && input3.current?.focus()
+                                }}
                             />
                             -
                             <Input
                                 type={"text"}
+                                id={"phone3"}
+                                inputMode={"decimal"}
+                                inputRef={input3}
                                 maxLength={4}
                                 value={checkInForm.phone3}
                                 onChange={(e: any) => setCheckInFrom('phone3', e.target.value)}

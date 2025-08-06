@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {TERMS} from "shared/constant/terms";
 import {ROUTES} from "shared/config/routes";
 import {joinUser} from "entities/user";
@@ -14,6 +14,9 @@ export const useCheckIn = () => {
 
     const modal = useModal();
     const navigate = useNavigate();
+
+    const input2 = useRef<HTMLInputElement>(null)
+    const input3 = useRef<HTMLInputElement>(null)
 
     const [currentTerms, setCurrentTerms] = useState<any>(null)
     const [checkInForm, setCheckInForm] = useState<any>({
@@ -113,6 +116,8 @@ export const useCheckIn = () => {
     return {
         checkInForm
         , currentTerms
+        , input2
+        , input3
         , onSubmit
         , setCheckInFrom
         , validation

@@ -11,7 +11,7 @@ export const TreasurePage = () => {
 
     return (
         <>
-            <div className="flex flex-col py-[40px] px-[20px] w-full justify-center items-center gap-3.5">
+            <div className="flex flex-col py-[40px] px-[20px] w-full justify-center items-center gap-3.5 text-center">
                 <p>{t('tre_main_001')}</p>
                 <h1 className="text-4xl font-bold leading-10">{t('tre_main_002')}</h1>
             </div>
