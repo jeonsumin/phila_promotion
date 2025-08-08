@@ -13,7 +13,7 @@ export const MISSION = [
         stamp:'mission2',
         title: 'stamp_main_016',
         caption:"stamp_detail_009",
-        step: ['stamp_detail_011',' stamp_detail_012'],
+        step: ['stamp_detail_011','stamp_detail_012'],
     },
     {
         contents: 'stamp_detail_013',

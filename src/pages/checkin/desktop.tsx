@@ -42,7 +42,7 @@ export const BetaCheckInPage = () => {
                 <section className="flex flex-col text-center gap-10 bg-[#FFEDF1] w-full py-[60px] ">
 
                     <h1 className="text-3xl font-bold text-[var(--primary)]">
-                        {t("main_pc_004")}
+                        {t("home_main_011")}
                     </h1>
 
                     <img src={`/assets/images/home/${lang}/bg_operation_pc.png`} alt="opreration_pc"
@@ -60,10 +60,10 @@ export const BetaCheckInPage = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col text-center gap-10 w-full py-[60px] px-30 max-w-[960px] mx-auto">
+                <section className="flex flex-col text-center gap-10 w-full py-[60px] max-w-[960px] mx-auto">
 
-                    <div className="flex flex-col w-full justify-center items-center gap-[14px] px-[20px]">
-                        <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold"> {t("home_main_005")}</h2>
+                    <div className="flex flex-col w-full justify-center items-center gap-5 px-[20px]">
+                        <h2 className="self-center text-3xl border-[var(--point)] text-[var(--point)] font-bold"> {t("home_main_space_001")}</h2>
 
                         <div className="grid grid-cols-3 w-full gap-[6px] text-white">
                             {
@@ -93,6 +93,8 @@ export const BetaCheckInPage = () => {
                     />
                 </div>
             </div>
+
+
             <footer className="flex w-full bg-[#F0F0F0] py-10 justify-center">
                 <div className="flex px-50 gap-2.5">
                     <div>

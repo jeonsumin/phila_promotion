@@ -34,7 +34,7 @@ export const TextArea = (props:any) => {
             }}
             rows={1} // 최소 행 수
             className={`px-[12px] py-[15px]  ${lineCount > 2 ? 'rounded-3xl' : 'rounded-full'} bg-[var(--lightGrayBg)] text-[14px] border-none  w-full`}
-            placeholder={t("pop_survey_cplt_005")}
+            placeholder={t("pop_survey_cplt_007")}
         />
     )
 }

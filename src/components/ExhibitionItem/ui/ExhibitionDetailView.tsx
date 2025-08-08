@@ -1,6 +1,7 @@
 import {ExhibitionLocationButton} from "features/ExhibitionLocationButton";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {useParams} from "react-router-dom";
 
 type Props = {
     item: any
@@ -9,13 +10,15 @@ type Props = {
 
 export const ExhibitionDetailView = (props: Props) => {
     const {item, index} = props;
+    const {target} = useParams();
+    const routeName = useSelector((state:RootState) => state.layout.routeName);
     const t = useSelector(currentTranslation);
 
     return (
         <div className="flex flex-col w-full justify-center items-center gap-3.5 mb-10">
             <div className="w-full h-60 bg-[var(--grayBg)]">
                 <div className="flex justify-end items-end translate-y-45 translate-x-[-15px]">
-                    <ExhibitionLocationButton title={t("pop_space_loc_001")} subTitle={t(item.positionInformation)}>
+                    <ExhibitionLocationButton title={routeName} subTitle={t(item.positionInformation)} className="px-2">
                         <img src="/assets/images/icon/icn_pin.svg" alt=""/>
                     </ExhibitionLocationButton>
                 </div>

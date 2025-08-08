@@ -59,7 +59,7 @@ export const useCheckIn = () => {
             })
         }
 
-
+        modal.allClear();
         navigate(ROUTES.HOME);
     }
 

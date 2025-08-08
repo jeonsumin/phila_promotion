@@ -8,7 +8,7 @@ import {currentTranslation} from "features/changeLang";
 export const MissionPage = () => {
     const {target} = useParams();
     const t= useSelector(currentTranslation);
-    const mission = MISSION.find(ex => ex.code === target);
+    const mission = MISSION.find(ex => ex.stamp === target);
 
     useLayout({
         routeName: t(mission?.contents),

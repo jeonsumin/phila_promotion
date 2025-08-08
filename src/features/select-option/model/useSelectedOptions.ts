@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {ROUTES} from "shared/config/routes";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {useModal} from "shared/config/ModalProvider";
 
 export const useSelectOption = (survey: any[], type: string) => {
     const t = useSelector(currentTranslation);
@@ -12,6 +13,7 @@ export const useSelectOption = (survey: any[], type: string) => {
     const [isDescriptive, setIsDescriptive] = useState<any>({})
     const [descriptiveText, setDescriptiveText] = useState<any>({});
     const navigate = useNavigate();
+    const modal = useModal();
 
     const handleSelect = (question: number, index: number) => {
         const current = selectedOption[question] || []
@@ -40,18 +42,25 @@ export const useSelectOption = (survey: any[], type: string) => {
 
     const setDescriptive = (question: number, value: string) => {
 
-        setDescriptiveText((prev: any)=> ({...prev, [question] : value}))
-        setSelectedOption((prev:any) => ({...prev, [question] : [value]}))
+        setDescriptiveText((prev: any) => ({...prev, [question]: value}))
+        setSelectedOption((prev: any) => ({...prev, [question]: [value]}))
     }
 
     const onSubmitSurvey = async () => {
         const result = transformToQKeys(selectedOption);
-        console.log(result)
         await updateSurvey(result);
-        navigate(ROUTES.HOME)
+        modal.showAlert({
+            title: t("pop_survey_cplt_003"),
+            message: t('pop_survey_cplt_004'),
+            onConfirm: () => {
+                modal.alertClose()
+                navigate(ROUTES.HOME)
+            }
+        })
+
     }
 
     const isSubmit = Object.keys(selectedOption).length > 14
 
-    return {t, selectedOption, isDescriptive, descriptiveText,isSubmit, handleSelect, setDescriptive, onSubmitSurvey}
+    return {t, selectedOption, isDescriptive, descriptiveText, isSubmit, handleSelect, setDescriptive, onSubmitSurvey}
 }

@@ -45,7 +45,16 @@ export const SwiperView = <T, >({
         if (targetIndex >= 0) {
             swiperRef.current.slideTo(targetIndex);
         }
-    }, [target, data]);
+
+
+    }, [target]);
+
+
+    useEffect(() => {
+        console.log(data);
+
+
+    }, [data]);
 
 
     return (

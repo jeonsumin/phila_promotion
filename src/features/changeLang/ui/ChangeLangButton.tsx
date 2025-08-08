@@ -4,7 +4,7 @@ export const ChangeLangButton = () => {
     const {lang, changeAction} = useLang();
 
     return (
-        <div className={`absolute right-[16px] top-[14px] z-11 `}>
+        <div className={`absolute right-[16px] z-11 `}>
             <div className="relative w-[100px] h-[30px]">
                 <select
                     value={lang}

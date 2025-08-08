@@ -1,7 +1,7 @@
 import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {updatePeriod} from "features/period";
+import {updatePeriod} from "shared/config/period";
 import {getCookie} from "shared/utils/cookies";
 import {ROUTES} from "shared/config/routes";
 

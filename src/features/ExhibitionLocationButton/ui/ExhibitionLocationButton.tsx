@@ -10,11 +10,12 @@ type Props = {
     title?: string;
     subTitle?: string;
     position?: string;
-    children?: ReactNode
+    children?: ReactNode;
+    className?: string;
 }
 export const ExhibitionLocationButton = (props: Props) => {
     const t = useSelector(currentTranslation);
-    const {label = t("stamp_main_010"), title = "", subTitle = "", children} = props;
+    const {label = t("stamp_main_010"), title = "", subTitle = "", children, className} = props;
     const {showAlert} = useModal();
     const openModal = () => {
         showAlert({
@@ -24,7 +25,7 @@ export const ExhibitionLocationButton = (props: Props) => {
         })
     }
     return (
-        <Button variant="label" color='white' onClick={openModal}>
+        <Button variant="label" color='white' onClick={openModal} className={className}>
             {children ? children : <>
                 <img src={'/assets/images/icon/icn_location.svg'} alt="location"/>
                 <span className="border-b">{label}</span>

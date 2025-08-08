@@ -5,6 +5,7 @@ import {SwiperView} from "shared/ui/swiper/SwiperView";
 import {PlaceCard} from "shared/ui/placeCard";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang/model/slice";
+import {cn} from "shared/utils";
 
 export const ExhibitionSpaceView = () => {
     const t = useSelector(currentTranslation);
@@ -32,7 +33,10 @@ export const ExhibitionSpaceView = () => {
                     }
                 </div>
             </div>
-            <div className="flex w-full">
+            <div className={cn(
+                "flex w-full",
+                selectedExhibition.length > 1 ? "pl-5" : "px-[23.7px]"
+            )}>
                 <SwiperView
                     slideClassName="!w-[93%]"
                     data={selectedExhibition}

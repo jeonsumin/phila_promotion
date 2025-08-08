@@ -22,6 +22,7 @@ export const ExhibitionDetailPages = () => {
             pagination={true}
             className={"h-full"}
             data={exhibition.item}
+            target={target}
             idx={id}
             renderItem={ExhibitionDetailView}
         />

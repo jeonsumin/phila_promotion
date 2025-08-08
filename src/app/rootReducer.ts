@@ -3,7 +3,7 @@ import {langSlice} from "features/changeLang";
 import {layoutSlice} from "app/layout/layout";
 import {stampReducer} from "entities/stamp";
 import { couponReducer } from "entities/coupon";
-import {eventPeriodSlice} from "features/period";
+import {eventPeriodSlice} from "shared/config/period";
 
 
 export const RootReducer = combineReducers({

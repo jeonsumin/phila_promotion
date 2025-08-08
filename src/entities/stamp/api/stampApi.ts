@@ -9,6 +9,7 @@ export const selectStamp = async () => {
     return res.data.data.stamp;
 }
 
+//TODO: QR 코드 입력시 스탬프 찍기
 export const checkStamp = async (mission: string) => {
     const res = await $axios.post<any>("/stamp_set", {mission: mission, user_code: getCookie("user")})
     console.log("check Stamp ::: ", res.data);
