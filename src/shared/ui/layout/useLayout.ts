@@ -6,8 +6,9 @@ import {setMobileHeader} from "app/layout/layout";
 type Props = {
     headerComponentName?: string;
     routeName?: string;
-    hasFooter?: boolean
-    hasHeader?: boolean
+    hasFooter?: boolean;
+    hasHeader?: boolean;
+    referrer?: string;
 }
 export const useLayout = (props?: Props) => {
 
@@ -19,6 +20,7 @@ export const useLayout = (props?: Props) => {
             routeName: props?.routeName,
             hasFooter: props?.hasFooter,
             hasHeader: props?.hasHeader,
+            referrer: props?.referrer,
         }))
     }, []);
 

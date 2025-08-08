@@ -6,7 +6,9 @@ export const CouponItem = (props: any) => {
     const t = useSelector(currentTranslation);
     return (
         <div className="flex flex-col relative w-full justify-center items-center gap-5  z-10">
+
             <SuccessDimed useYn={props.useYn} message={t("coupon_main_014")}/>
+
             <button onClick={() => (props.isActive && props.useYn == 'N') && props.onClick()}>
                 <div
                     className={`absolute h-55 left-0 right-0 rounded-2xl flex justify-center items-center ${!props.isActive ? "backdrop-grayscale" : ""} `}/>

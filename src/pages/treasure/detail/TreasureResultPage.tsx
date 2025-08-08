@@ -1,9 +1,11 @@
 import {useLayout} from "shared/ui/layout/useLayout";
-import {useParams} from "react-router-dom";
+import {useParams, useSearchParams} from "react-router-dom";
 import {TREASURE} from "shared/constant/treasure";
 import {QrScannerButton} from "features/qrCodeScanner";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {useEffect} from "react";
+import {ROUTES} from "shared/config/routes";
 
 export const TreasureResultPage = () => {
 
@@ -16,7 +18,7 @@ export const TreasureResultPage = () => {
         hasFooter: false
     })
 
-    return(
+    return (
         <div className="flex flex-col justify-center items-center">
             <div className="py-10 px-5">
                 <h1 className="text-base font-normal text-[var(--subTxt)]">{t(TREASURE[Number(id)].title)} {t("tre_detail_result_trd1_002")}</h1>
@@ -44,7 +46,7 @@ export const TreasureResultPage = () => {
                 </div>
             </div>
 
-            <QrScannerButton/>
+            <QrScannerButton treasure={id} hint={randomHint}/>
         </div>
     )
 }
