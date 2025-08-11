@@ -23,39 +23,43 @@ export const HomePage = () => {
             <div className="flex flex-col gap-[24px] text-center text-[var(--subTxt)]">
                 <h2 className="text-[22px] font-bold text-[var(--bk)] "> {t("home_main_001")}</h2>
                 <div className="flex flex-col gap-[14px] text-[16px] text-center font-light">
-                    <p> {t("home_main_002")} </p>
-                    <p> {t("home_main_003")} </p>
+                    <p> {t("home_main_002_1")} </p>
+                    <p> {t("home_main_003_1")} </p>
                 </div>
             </div>
 
             <div className="px-[20px] py-[40px] flex flex-col gap-[40px] items-center bg-[var(--pinkBg)] w-full">
                 <div className="flex flex-col gap-[20px]">
                     <h1 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold text-center"> {t("home_main_004")}</h1>
-                    <table className="w-full table-fixed border-collapse">
-                        <thead>
-                        <tr className="bg-[var(--point)] text-[var(--white)]">
-                            <th className="w-1/2 px-2 py-2 border text-[16px] border-[var(--pinkBd)]">{t("home_main_005")}</th>
-                            <th className="w-1/2 px-2 py-2 border text-[16px] border-[var(--pinkBd)]">{t("home_main_006")}</th>
-                        </tr>
-                        </thead>
-                        <tbody className="text-[var(--bk)] text-[14px] text-center">
-                        <tr>
-                            <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_007")}</td>
-                            <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_008")}</td>
-                        </tr>
-                        <tr>
-                            <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_009")}</td>
-                            <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_010")}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div className="bg-white">
+                        <table className="w-full table-fixed border-collapse">
+                            <thead>
+                            <tr className="bg-[var(--point)] text-[var(--white)]">
+                                <th className="w-1/2 px-2 py-2 border text-[16px] border-[var(--pinkBd)]">{t("home_main_005")}</th>
+                                <th className="w-1/2 px-2 py-2 border text-[16px] border-[var(--pinkBd)]">{t("home_main_006")}</th>
+                            </tr>
+                            </thead>
+                            <tbody className="text-[var(--bk)] text-[14px] text-center">
+                            <tr>
+                                <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_007")}</td>
+                                <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_008")}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_009")}</td>
+                                <td className="py-[12px] border border-[var(--pinkBd)]">{t("home_main_010")}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className="flex flex-col gap-[20px]">
                     <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold">{t("home_main_011")}</h2>
-                    <SwiperView
-                        data={TIME_TABLE(lang)}
-                        renderItem={Image}
-                    />
+                    <div className="bg-white">
+                        <SwiperView
+                            data={TIME_TABLE(lang, "mobile")}
+                            renderItem={Image}
+                        />
+                    </div>
                 </div>
             </div>
 

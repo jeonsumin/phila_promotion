@@ -37,5 +37,6 @@ export const useAlreadyCheckin = () => {
     useEffect(() => {
         setFailedCheckIn(false);
     }, [phoneNum]);
+
     return {t, phoneNum, failedCheckIn, setForm, onSubmit}
 }

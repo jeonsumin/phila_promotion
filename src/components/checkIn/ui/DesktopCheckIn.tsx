@@ -15,7 +15,7 @@ export const DesktopCheckIn = () => {
     const openModal = () => {
         showModal({
             title: t('open_main_mo_004'),
-            body: <CheckInForm />,
+            body: <CheckInForm/>,
         })
     }
     return (
@@ -30,6 +30,9 @@ export const DesktopCheckIn = () => {
             <main
                 className="w-[var(--pcContentWidth)] mx-auto;] relative pt-[60px] pb-[60px]"
             >
+                <div className="h-16">
+                    <ChangeLangButton/>
+                </div>
                 <img src="/assets/images/checkin_logo_pc.svg" alt="" className="w-[293px] mb-[70px] mx-auto"/>
                 <div className="flex flex-col items-center">
                     <h2 className="text-[50px] text-[var(--white)] mb-[28px] leading-none">{t("pre_main_mo_001")}</h2>

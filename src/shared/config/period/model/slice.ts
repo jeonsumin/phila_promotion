@@ -21,4 +21,5 @@ export const eventPeriodSlice = createSlice({
     },
 })
 
+export const selectedEventPeriod = (state:any) => state.eventPeriod.isEventPeriod
 export const {updatePeriod} = eventPeriodSlice.actions;

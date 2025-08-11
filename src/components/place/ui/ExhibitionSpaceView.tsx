@@ -35,7 +35,7 @@ export const ExhibitionSpaceView = () => {
             </div>
             <div className={cn(
                 "flex w-full",
-                selectedExhibition.length > 1 ? "pl-5" : "px-[23.7px]"
+                selectedExhibition.length > 1 ? "pl-5" : "pl-5 pr-[26.6px]"
             )}>
                 <SwiperView
                     slideClassName="!w-[93%]"

@@ -110,31 +110,7 @@ export const EXPERIENCE = [
         subTitle: 'space_detail_049',
         caption: `space_detail_050`,
         positionInformation: "pop_space_loc_012",
-    },
-    {
-        title: "home_main_space_022",
-        subTitle: 'space_detail_052',
-        caption: `space_detail_053`,
-        positionInformation: "pop_space_loc_012",
-    },
-    {
-        title: "home_main_space_023",
-        subTitle: 'space_detail_055',
-        caption: `space_detail_056`,
-        positionInformation: "pop_space_loc_012",
-    },
-    {
-        title: "home_main_space_024",
-        subTitle: 'space_detail_058',
-        caption: `space_detail_059`,
-        positionInformation: "pop_space_loc_012",
-    },
-    {
-        title: "home_main_space_025",
-        subTitle: 'space_detail_061',
-        caption: `space_detail_062`,
-        positionInformation: "pop_space_loc_012",
-    },
+    }
 ]
 
 /**

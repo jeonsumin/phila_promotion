@@ -14,7 +14,8 @@ export const AlreadyCheckInButton = () => {
         modal.showAlert({
             message: "",
             children: <AlreadyCheckFrom />,
-            onConfirm: alreadyCheck.onSubmit
+            onConfirm: alreadyCheck.onSubmit,
+            isConfirm: true,
         })
     }
     return (

@@ -27,7 +27,7 @@ export const CheckInView = () => {
                     <p> {t("pre_main_mo_003")} {t("pre_main_mo_004")}</p>
 
                     <div className="flex justify-center w-full mx-auto text-3xl font-bold">
-                        <p>{t('open_main_mo_005')}</p>
+                        <p>{t('open_main_mo_003')}</p>
                         <p className="text-[#32833A]">2</p>
                         <p className="text-[#D93657]">0</p>
                         <p className="text-[#D3A117]">2</p>

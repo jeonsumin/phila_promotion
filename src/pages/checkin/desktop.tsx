@@ -8,6 +8,7 @@ import {SwiperView} from "shared/ui/swiper/SwiperView";
 import {PlaceCard} from "shared/ui/placeCard";
 import {TIME_TABLE} from "shared/constant/timetable";
 import {Image} from "shared/ui/image";
+import {ChangeLangButton} from "features/changeLang";
 
 export const BetaCheckInPage = () => {
 
@@ -23,17 +24,19 @@ export const BetaCheckInPage = () => {
         <>
 
             <div className="flex flex-col justify-center items-center mx-auto overflow-y-auto">
+
                 <img src={`/assets/images/home/${lang}/bg_main_pc.png`} alt=""/>
 
 
-                <section className="flex flex-col text-center gap-10 mx-30 py-30  max-w-[960px]">
+                <section
+                    className="flex flex-col text-center gap-10 mx-30 py-[100px]  max-w-[960px] text-[var(--subTxt)]">
 
                     <h1 className="text-black text-4xl font-bold ">
                         {t("home_main_001")}
                     </h1>
 
                     <div className="flex flex-col gap-3.5">
-                        <p> {t("home_main_002")} </p>
+                        <p className=" "> {t("home_main_002")} </p>
                         <p> {t("home_main_003")} </p>
                     </div>
 
@@ -42,19 +45,19 @@ export const BetaCheckInPage = () => {
                 <section className="flex flex-col text-center gap-10 bg-[#FFEDF1] w-full py-[60px] ">
 
                     <h1 className="text-3xl font-bold text-[var(--primary)]">
-                        {t("home_main_011")}
+                        {t("home_main_004")}
                     </h1>
 
                     <img src={`/assets/images/home/${lang}/bg_operation_pc.png`} alt="opreration_pc"
                          className=" max-w-[960px] mx-auto"/>
 
                     <h1 className="text-3xl font-bold text-[var(--primary)]">
-                        {t("home_main_004")}
+                        {t("home_main_011")}
                     </h1>
 
-                    <div className=" max-w-[960px] mx-auto">
+                    <div className=" max-w-[960px] mx-auto bg-white">
                         <SwiperView
-                            data={TIME_TABLE(lang)}
+                            data={TIME_TABLE(lang, "desktop")}
                             renderItem={Image}
                         />
                     </div>
@@ -82,7 +85,7 @@ export const BetaCheckInPage = () => {
                     </div>
 
                 </section>
-                <div className="flex flex-col py-10 w-full">
+                <div className="flex flex-col h-[24vw] w-full">
                     <SwiperView
                         pagination={true}
                         className={"h-full"}

@@ -38,8 +38,12 @@ export const useCheckIn = () => {
 
         if (isPreRegistration == 0) {
             modal.showAlert({
-                title: t("pre_main_mo_001"),
-                message: t(`pop_preo_chk_mo_012`)
+                title: t("pre_main_mo_001_1"),
+                message: t(`pop_preo_chk_mo_012`),
+                onConfirm: () => {
+                    joinUser(user);
+                    modal.allClear();
+                }
             })
             return
         }
