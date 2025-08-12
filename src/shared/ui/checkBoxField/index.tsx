@@ -30,7 +30,7 @@ export const CheckBoxField = (props: Props) => {
                     onChange={onChange}
                 />
                 <span className='chk_mark'></span>
-                <span className={`text-sm text-[var(--subTxt)] font-normal ${className}`} onClick={onLabelClick}>
+                <span className={`text-sm text-[var(--subTxt)] ${require && 'underline'} font-normal ${className}`} onClick={onLabelClick}>
                     {label}
 
                 </span>

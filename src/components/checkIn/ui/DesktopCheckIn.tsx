@@ -14,7 +14,7 @@ export const DesktopCheckIn = () => {
     })
     const openModal = () => {
         showModal({
-            title: t('open_main_mo_004'),
+            title: t('pre_main_mo_001'),
             body: <CheckInForm/>,
         })
     }

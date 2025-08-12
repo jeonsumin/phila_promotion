@@ -35,6 +35,7 @@ export const CheckInForm = () => {
                                 type={"text"}
                                 id={"phone1"}
                                 inputMode={"decimal"}
+                                placeholder="010"
                                 maxLength={3}
                                 value={checkInForm.phone1}
                                 onChange={(e: any) => {
@@ -47,6 +48,7 @@ export const CheckInForm = () => {
                                 type={"text"}
                                 id={"phone2"}
                                 inputMode={"decimal"}
+                                placeholder="1234"
                                 inputRef={input2}
                                 maxLength={4}
                                 value={checkInForm.phone2}
@@ -60,6 +62,7 @@ export const CheckInForm = () => {
                                 type={"text"}
                                 id={"phone3"}
                                 inputMode={"decimal"}
+                                placeholder="5678"
                                 inputRef={input3}
                                 maxLength={4}
                                 value={checkInForm.phone3}
