@@ -8,11 +8,13 @@ export const PreRegistration = () => {
     return (
         <main
             className={cn(
-                "flex flex-col gap-10 items-center overflow-auto h-full relative scrollbar-hide py-10 bg-no-repeat bg-cover space-y-10",
+                "flex flex-col gap-10 items-center overflow-auto h-full relative scrollbar-hide py-10 bg-no-repeat bg-cover space-y-3",
                 `bg-[url('/assets/images/betacheckin_bg.png')]`
             )}
         >
-            <ChangeLangButton/>
+            <div>
+                <ChangeLangButton/>
+            </div>
 
             <div className="mx-auto text-center">
                 <img
@@ -31,10 +33,9 @@ export const PreRegistration = () => {
             </div>
 
             <div className="w-full relative px-5">
-                        <span
-                            className="absolute top-[-30px] left-1/2 translate-x-[-50%] w-[200px] h-[60px] bg-[var(--blue)] text-[var(--white)] font-bold flex items-center justify-center rounded-[60px] text-[28px]">
-                            EVENT
-                        </span>
+                <span className="absolute top-[-30px] left-1/2 translate-x-[-50%] py-[10px] px-[30px] bg-[var(--blue)] text-[var(--white)] font-bold flex items-center justify-center rounded-[60px] text-[24px]">
+                    EVENT
+                </span>
 
                 <div className="pt-16.5 px-5 pb-[40px] bg-[var(--dimm)] text-center">
                     <img src="/assets/images/icon/img_pre_gift.svg" alt="" className="w-[100px] mx-auto"/>

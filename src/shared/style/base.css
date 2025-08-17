@@ -61,6 +61,7 @@
         width: 18px;
         height: 18px;
         border-radius: 4px;
+        flex-shrink: 0;
         background-color: #F0F0F0;
         transition: background-color 0.2s, border-color 0.2s;
         position: relative;

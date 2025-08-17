@@ -51,7 +51,7 @@ export const DesktopCheckIn = () => {
                         <p className="font-bold mt-[40px] text-[28px] text-[var(--yellow)]">{t("pre_main_mo_006")}</p>
                         <p className="text-[20px] text-[var(--subWhite)] mt-[12px]">{t("pre_main_mo_007")}</p>
                     </div>
-                    <Button variant="fixed" onClick={openModal}>
+                    <Button variant="fixed" onClick={openModal} className="text-[28px] ">
                         {t("pre_main_mo_008")}
                     </Button>
                 </div>

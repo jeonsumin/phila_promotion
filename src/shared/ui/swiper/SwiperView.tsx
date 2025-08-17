@@ -49,14 +49,6 @@ export const SwiperView = <T, >({
 
     }, [target]);
 
-
-    useEffect(() => {
-        console.log(data);
-
-
-    }, [data]);
-
-
     return (
         <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}

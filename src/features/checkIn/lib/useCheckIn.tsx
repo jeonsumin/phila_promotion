@@ -36,25 +36,34 @@ export const useCheckIn = () => {
         const ph = [checkInForm.phone1, checkInForm.phone2, checkInForm.phone3].join('-')
         const user = {...checkInForm, phone_num: ph, step: 1};
 
+        const checkIn = await joinUser(user);
         if (isPreRegistration == 0) {
+            modal.allClear();
+
+
+            if (checkIn == 2) {
+                modal.showAlert({
+                    title: t("pre_main_mo_001_1"),
+                    message: t('pop_open_chk_mo_010'),
+                })
+            return ;
+            }
+
             modal.showAlert({
                 title: t("pre_main_mo_001_1"),
                 message: t(`pop_preo_chk_mo_012`),
                 onConfirm: () => {
-                    joinUser(user);
                     modal.allClear();
                 }
             })
             return
         }
 
-        const checkIn = await joinUser(user);
-
-        if(checkIn == 2){
+        if (checkIn == 2) {
             modal.showAlert({
                 message: t('pop_preo_chk_mo_013'),
                 isCancel: true,
-                onConfirm : () => {
+                onConfirm: () => {
                     const alreadyCheckIn = {...user, step: 2}
                     joinUser(alreadyCheckIn)
                     modal.allClear();
@@ -66,8 +75,6 @@ export const useCheckIn = () => {
         modal.allClear();
         navigate(ROUTES.HOME);
     }
-
-    // const PreRegistrationPeriod
 
     /**
      * 체크인 정보 설정

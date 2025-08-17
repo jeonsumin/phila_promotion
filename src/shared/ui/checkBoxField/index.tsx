@@ -1,3 +1,6 @@
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
+
 type Props = {
     label?: string;
     id?: string;
@@ -20,6 +23,7 @@ export const CheckBoxField = (props: Props) => {
         onLabelClick,
         require,
     } = props
+    const t = useSelector(currentTranslation);
     return (
         <div className="flex flex-col justify-center">
             <label htmlFor={htmlFor || id} className=" form_chk">
@@ -29,10 +33,10 @@ export const CheckBoxField = (props: Props) => {
                     checked={checked}
                     onChange={onChange}
                 />
-                <span className='chk_mark'></span>
-                <span className={`text-sm text-[var(--subTxt)] ${require && 'underline'} font-normal ${className}`} onClick={onLabelClick}>
+                <span className='chk_mark  '></span>
+                <span className={`flex gap-1 text-sm text-[var(--subTxt)] ${require && 'underline'} font-normal ${className}`}
+                      onClick={onLabelClick}>
                     {label}
-
                 </span>
             </label>
 

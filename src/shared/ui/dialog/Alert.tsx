@@ -16,7 +16,7 @@ export const Alert = (props: Props) => {
     const {title, message, children, isCancel,isConfirm, onConfirm, alertClose} = props;
     return (
         <>
-            <div className="absolute top-0 left-0 w-full h-screen bg-[#454545] opacity-50 z-[99999] gap-5"
+            <div className="absolute top-0 left-0 w-full h-full bg-[#454545] opacity-50 z-[99999] gap-5"
                  onClick={alertClose}/>
             <div
                 className="flex flex-col fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center rounded-[10px] max-w-screen-sm w-[90%] gap-5 py-10 z-[99999] bg-white">

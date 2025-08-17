@@ -7,9 +7,9 @@ const srcPath = (...paths: string[]) => path.resolve(__dirname, 'src', ...paths)
 
 // https://vite.dev/config/
 export default defineConfig({
+    base: '/',
     server: {
-        host: '0.0.0.0',
-        port: 7424,
+        port: 3000,
     },
 
     plugins: [react(), tailwindcss()],

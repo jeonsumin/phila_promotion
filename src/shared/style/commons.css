@@ -66,3 +66,25 @@ html, body {
 h1, span, em, p, button {
   white-space: pre-line;
 }
+
+.terms_height {
+  height: 358px;
+}
+.terms_box {
+  border-radius: 16px;
+  height: 358px;
+}
+
+.terms_height::-webkit-scrollbar {
+  display: block;
+}
+
+@media screen and (max-width:1024px) {
+  .terms_height {
+    height:calc(100dvh - 58px);
+  }
+  .terms_box {
+    height: calc(100dvh - 130px);
+  }
+
+}

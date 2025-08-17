@@ -10,7 +10,17 @@ import {currentTranslation} from "features/changeLang";
 
 export const CheckInForm = () => {
 
-    const {input2,input3, checkInForm, currentTerms,  setCheckInFrom, validation, handleAllCheck, onDetailTerms, onSubmit} = useCheckIn()
+    const {
+        input2,
+        input3,
+        checkInForm,
+        currentTerms,
+        setCheckInFrom,
+        validation,
+        handleAllCheck,
+        onDetailTerms,
+        onSubmit
+    } = useCheckIn()
     const t = useSelector(currentTranslation);
 
 
@@ -22,9 +32,10 @@ export const CheckInForm = () => {
                     isMobile ? 'space-y-4 mt-[20px]' : 'flex gap-5 justify-center items-center mt-[30px]'
                 )}>
                     <Input
+                        maxLength={8}
                         label={t("pop_open_chk_mo_002")}
                         value={checkInForm.nick_name}
-                        placeholder={"Up to 8 characters (Kor/Eng/Num)"}
+                        placeholder={t("pop_pre_mo_003")}
                         onChange={(e: any) => setCheckInFrom('nick_name', e.target.value)}
                     />
 
@@ -32,7 +43,7 @@ export const CheckInForm = () => {
                         <label className="text-sm font-bold text-[var(--subTxt)]">{t("pop_open_chk_mo_004")}</label>
                         <div className="flex justify-start items-center gap-2">
                             <Input
-                                type={"text"}
+                                type={"number"}
                                 id={"phone1"}
                                 inputMode={"decimal"}
                                 placeholder="010"
@@ -45,7 +56,7 @@ export const CheckInForm = () => {
                             />
                             -
                             <Input
-                                type={"text"}
+                                type={"number"}
                                 id={"phone2"}
                                 inputMode={"decimal"}
                                 placeholder="1234"
@@ -59,14 +70,17 @@ export const CheckInForm = () => {
                             />
                             -
                             <Input
-                                type={"text"}
+                                type={"number"}
                                 id={"phone3"}
                                 inputMode={"decimal"}
                                 placeholder="5678"
                                 inputRef={input3}
                                 maxLength={4}
                                 value={checkInForm.phone3}
-                                onChange={(e: any) => setCheckInFrom('phone3', e.target.value)}
+                                onChange={(e: any) => {
+                                    e.target.value.length == 4 && input3.current?.blur()
+                                    setCheckInFrom('phone3', e.target.value)
+                                }}
                             />
                         </div>
                     </div>
@@ -87,7 +101,7 @@ export const CheckInForm = () => {
                         {TERMS.map((item: any, index: number) =>
                             <CheckBoxField
                                 key={index}
-                                label={t(item.title)}
+                                label={t(item.label)}
                                 require={true}
                                 checked={checkInForm[`terms${item.id}`]}
                                 onChange={(e: any) => setCheckInFrom(`terms${item.id}`, e.target.checked)}
@@ -107,11 +121,11 @@ export const CheckInForm = () => {
                     disabled={!validation()}
                     className={cn(
                         "h-[60px] font-bold text-[var(--white)] bg-[var(--point)] justify-center items-center disabled:bg-[var(--subTxt)]"
-                        , isMobile ? 'w-full fixed bottom-0' : 'rounded-full w-full'
+                        , isMobile ? 'w-full fixed bottom-0' : 'rounded-full w-[320px]'
                     )}>{t('pop_open_chk_mo_011')}
                 </button>
             </div>
-            <TermsDetail terms={currentTerms}  onClose={() => onDetailTerms(null)}/>
+            <TermsDetail terms={currentTerms} onClose={() => onDetailTerms(null)}/>
         </>
     )
 }

@@ -22,7 +22,7 @@ export const CheckInButton = (props: Props) => {
 
 
     return (
-        <Button variant="fixed" onClick={openModal}>
+        <Button variant="fixed" onClick={openModal} className="text-[18px]">
             {isPreRegistration == 0 ? t('pre_main_pc_007') : t('open_main_mo_004')}
         </Button>
     )
