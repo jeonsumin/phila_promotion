@@ -16,7 +16,8 @@ export const TreasurePage = () => {
                 <h1 className="text-4xl font-bold leading-10">{t('tre_main_002')}</h1>
             </div>
 
-            <div className="w-full h-60 bg-gray-500">
+            <div className="w-full h-60">
+                <img src="/assets/images/treasure_kv.png" alt="treasure_kv" className="h-full w-full"/>
             </div>
 
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#FCEBEF] gap-5">
@@ -54,7 +55,7 @@ export const TreasurePage = () => {
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#DBECF5] gap-5">
                 <h1 className="text-xl font-bold text-[var(--phliaBlue)] leading-10">{t('tre_main_006')}</h1>
 
-                <ExhibitionLocationButton title={t("pop_space_loc_019")} subTitle={t("pop_tre_main_loc_002")}/>
+                <ExhibitionLocationButton title={t("pop_space_loc_019")} subTitle={t("pop_tre_main_loc_002")} map={"/assets/images/treasure_map.png"}/>
 
 
                 <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col px-[20px]">

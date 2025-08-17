@@ -23,8 +23,8 @@ export const RecommendResultPage = () => {
                 <h1 className={`text-4xl font-bold text-[${result?.color}]`}>{t(result?.title)}</h1>
             </div>
             <div className='w-full h-[200px] '>
-                <img src="https://picsum.photos/300/200" className="w-full"
-                     alt="randomImg"/>
+                <img src={result?.img} className="w-full"
+                     alt={result?.img}/>
                 <div
                     className="flex flex-col justify-center items-center text-center w-full gap-5 py-5 px-5 bg-[var(--grayBg)]">
                     <p className="text-base font-normal">{t("reco_detail_type1_result1_003")}</p>

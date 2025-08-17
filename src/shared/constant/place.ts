@@ -3,42 +3,49 @@
  */
 export const THEME = [
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_004',
         subTitle: 'space_detail_003',
         caption: 'space_detail_004',
         positionInformation: "pop_space_loc_002",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_005',
         subTitle: 'space_detail_006',
         caption: 'space_detail_007',
         positionInformation: "pop_space_loc_002",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_006',
         subTitle: 'space_detail_009',
         caption: 'space_detail_010',
         positionInformation: "pop_space_loc_002",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_007',
         subTitle: 'space_detail_012',
         caption: 'space_detail_013',
         positionInformation: "pop_space_loc_002",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_008',
         subTitle: 'space_detail_015',
         caption: 'space_detail_016',
         positionInformation: "pop_space_loc_002",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_009',
         subTitle: 'space_detail_018',
         caption: 'space_detail_019',
         positionInformation: "pop_space_loc_002",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: 'home_main_space_010',
         subTitle: 'space_detail_020',
         caption: 'space_detail_021',
@@ -51,42 +58,49 @@ export const THEME = [
  */
 export const DIGITAL = [
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_012",
         subTitle: 'space_detail_024',
         caption: `space_detail_025`,
         positionInformation: "pop_space_loc_004",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_013",
         subTitle: 'space_detail_027',
         caption: `space_detail_028`,
         positionInformation: "pop_space_loc_005",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_014",
         subTitle: 'space_detail_030',
         caption: `space_detail_031`,
         positionInformation: "pop_space_loc_007",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_015",
         subTitle: 'space_detail_033',
         caption: `space_detail_034`,
         positionInformation: "pop_space_loc_008",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_016",
         subTitle: 'space_detail_036',
         caption: `space_detail_037`,
         positionInformation: "pop_space_loc_009",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_017",
         subTitle: 'space_detail_039',
         caption: `space_detail_040`,
         positionInformation: "pop_space_loc_010",
     },
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_018",
         subTitle: 'space_detail_042',
         caption: `space_detail_043`,
@@ -99,16 +113,10 @@ export const DIGITAL = [
  */
 export const EXPERIENCE = [
     {
+        img: 'https://picsum.photos/600/400',
         title: "home_main_space_020",
         subTitle: 'space_detail_046',
         caption: `space_detail_047`,
-        positionInformation: "pop_space_loc_012",
-    },
-
-    {
-        title: "home_main_space_021",
-        subTitle: 'space_detail_049',
-        caption: `space_detail_050`,
         positionInformation: "pop_space_loc_012",
     }
 ]
@@ -118,6 +126,8 @@ export const EXPERIENCE = [
  */
 export const ARTWORK = [
     {
+        img: 'https://picsum.photos/600/400',
+
         title: "home_main_space_027",
         subTitle: 'space_detail_065',
         caption: `space_detail_066`,
@@ -129,6 +139,8 @@ export const ARTWORK = [
  */
 export const STAMPS = [
     {
+        img: 'https://picsum.photos/600/400',
+
         title: "home_main_space_031",
         subTitle: 'space_detail_073',
         caption: `space_detail_074`,
@@ -141,6 +153,8 @@ export const STAMPS = [
  */
 export const POST = [
     {
+        img: 'https://picsum.photos/600/400',
+
         title: "home_main_space_029",
         subTitle: 'space_detail_069',
         caption: `space_detail_070`,

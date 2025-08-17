@@ -60,7 +60,7 @@ export const StampPage = () => {
 
                 <h1 className="text-xl font-bold text-[var(--phliaBlue)] leading-10">{t("stamp_main_007")}</h1>
 
-                <ExhibitionLocationButton title={t("pop_space_loc_019")} subTitle={t("pop_space_loc_020")}/>
+                <ExhibitionLocationButton title={t("pop_space_loc_019")} subTitle={t("pop_space_loc_020")} map={"/assets/images/stamp_map.png"}/>
 
                 <div
                     className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center">

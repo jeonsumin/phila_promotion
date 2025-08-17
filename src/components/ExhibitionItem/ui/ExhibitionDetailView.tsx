@@ -11,14 +11,17 @@ type Props = {
 export const ExhibitionDetailView = (props: Props) => {
     const {item, index} = props;
     const {target} = useParams();
-    const routeName = useSelector((state:RootState) => state.layout.routeName);
+    const routeName = useSelector((state: RootState) => state.layout.routeName);
     const t = useSelector(currentTranslation);
 
+    console.log('ExhibitionDetailView item :: ', item);
     return (
         <div className="flex flex-col w-full justify-center items-center gap-3.5 mb-10">
-            <div className="w-full h-60 bg-[var(--grayBg)]">
-                <div className="flex justify-end items-end translate-y-45 translate-x-[-15px]">
-                    <ExhibitionLocationButton title={routeName} subTitle={t(item.positionInformation)} className="px-2">
+            <div className={`w-full h-60 bg-[var(--grayBg)] relative`}>
+                <img src={item.img} alt={item.img} className="w-full h-full object-cover"/>
+                <div className="flex justify-end items-end absolute right-4 bottom-3">
+                    <ExhibitionLocationButton title={routeName} subTitle={t(item.positionInformation)} className="py-1/2 px-1/2"
+                                              index={index} map={item.map}>
                         <img src="/assets/images/icon/icn_pin.svg" alt=""/>
                     </ExhibitionLocationButton>
                 </div>

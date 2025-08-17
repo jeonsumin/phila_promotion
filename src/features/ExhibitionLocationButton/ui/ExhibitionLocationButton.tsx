@@ -1,7 +1,7 @@
 import {Button} from "shared/ui";
 import {useModal} from "shared/config/ModalProvider";
 import {PlaceLocationView} from "shared/ui/spaceView/PlaceLocationView";
-import {ReactNode} from "react";
+import {ReactNode, useEffect} from "react";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
 
@@ -12,16 +12,19 @@ type Props = {
     position?: string;
     children?: ReactNode;
     className?: string;
+    index?: number;
+    map?: string;
 }
 export const ExhibitionLocationButton = (props: Props) => {
     const t = useSelector(currentTranslation);
-    const {label = t("stamp_main_010"), title = "", subTitle = "", children, className} = props;
+    const {label = t("stamp_main_010"), title = "", subTitle = "", children, className, index, map} = props;
     const {showAlert} = useModal();
+
     const openModal = () => {
         showAlert({
             title: title,
             message: subTitle,
-            children: <PlaceLocationView/>,
+            children: <PlaceLocationView index={index} map={map}/>,
         })
     }
     return (

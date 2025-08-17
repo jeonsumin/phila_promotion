@@ -17,15 +17,15 @@ export const MissionPage = () => {
 
     return (
         <>
-            <div className="w-full h-60 bg-gray-500">
+            <div className="w-full h-60 ">
+                <img src={`/assets/images/mission/${target}.png`} alt="" className="w-full h-full object-cover"/>
             </div>
 
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#DBECF5] gap-5">
 
                 <h1 className="text-xl font-bold text-[var(--phliaBlue)] leading-10">Mission</h1>
 
-                <div
-                    className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center px-10">
+                <div className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center px-10">
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">
