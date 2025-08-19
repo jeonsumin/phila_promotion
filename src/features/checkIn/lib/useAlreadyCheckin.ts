@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {checkInUserCheck} from "entities/user/api/userApi";
 import {ROUTES} from "shared/config/routes";
 import {useNavigate} from "react-router-dom";
@@ -11,6 +11,10 @@ export const useAlreadyCheckin = () => {
     const [failedCheckIn, setFailedCheckIn] = useState(false);
     const navigate = useNavigate();
     const modal = useModal();
+
+    const input2 = useRef<HTMLInputElement>(null)
+    const input3 = useRef<HTMLInputElement>(null)
+
     const [phoneNum, setPhoneNum] = useState<any>({
         phone1: '',
         phone2: '',
@@ -38,5 +42,5 @@ export const useAlreadyCheckin = () => {
         setFailedCheckIn(false);
     }, [phoneNum]);
 
-    return {t, phoneNum, failedCheckIn, setForm, onSubmit}
+    return {t, phoneNum, input2, input3, failedCheckIn, setForm, onSubmit}
 }

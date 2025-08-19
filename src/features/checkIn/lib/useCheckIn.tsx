@@ -7,6 +7,7 @@ import {useModal} from "shared/config/ModalProvider";
 import {getCookie} from "shared/utils";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {preCheckIn} from "entities/user/api/userApi";
 
 export const useCheckIn = () => {
     const isPreRegistration = useSelector((state: RootState) => state.period.isEventPeriod);
@@ -36,17 +37,17 @@ export const useCheckIn = () => {
         const ph = [checkInForm.phone1, checkInForm.phone2, checkInForm.phone3].join('-')
         const user = {...checkInForm, phone_num: ph, step: 1};
 
-        const checkIn = await joinUser(user);
         if (isPreRegistration == 0) {
+            const preRegistration = await preCheckIn(user);
             modal.allClear();
 
 
-            if (checkIn == 2) {
+            if (preRegistration == 2) {
                 modal.showAlert({
                     title: t("pre_main_mo_001_1"),
                     message: t('pop_open_chk_mo_010'),
                 })
-            return ;
+                return;
             }
 
             modal.showAlert({
@@ -59,6 +60,8 @@ export const useCheckIn = () => {
             return
         }
 
+        const checkIn = await joinUser(user);
+
         if (checkIn == 2) {
             modal.showAlert({
                 message: t('pop_preo_chk_mo_013'),
@@ -70,10 +73,10 @@ export const useCheckIn = () => {
                     navigate(ROUTES.HOME);
                 }
             })
+        } else {
+            modal.allClear();
+            navigate(ROUTES.HOME);
         }
-
-        modal.allClear();
-        navigate(ROUTES.HOME);
     }
 
     /**

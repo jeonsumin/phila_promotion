@@ -5,34 +5,51 @@ import {CircleAlert} from "lucide-react";
 
 export const AlreadyCheckFrom = () => {
 
-    const {t, phoneNum, failedCheckIn,setForm, onSubmit} = useAlreadyCheckin();
+    const {t, phoneNum, failedCheckIn,setForm, onSubmit, input2, input3} = useAlreadyCheckin();
     return (
         <div className="flex flex-col px-5 gap-3.5">
             <h1 className="text-xl font-bold ">{t("pop_preo_chk_mo_001")}</h1>
             <p>{t("pop_preo_chk_mo_002")}</p>
             <div className="flex justify-start items-center gap-2">
                 <Input
-                    type={"text"}
-                    maxLength={3}
+                    type={"number"}
+                    id={"phone1"}
                     placeholder="010"
+                    maxLength={3}
+                    inputMode={"decimal"}
                     value={phoneNum.phone1}
-                    onChange={(e: any) => setForm("phone1", e.target.value)}
+                    onChange={(e: any) => {
+                        e.target.value.length == 3 && input2.current?.focus()
+                        setForm("phone1", e.target.value)
+                    }}
                 />
                 -
                 <Input
-                    type={"text"}
+                    type={"number"}
                     maxLength={4}
+                    id={"phone2"}
+                    inputMode={"decimal"}
+                    inputRef={input2}
                     placeholder="1234"
                     value={phoneNum.phone2}
-                    onChange={(e: any) => setForm("phone2", e.target.value)}
+                    onChange={(e: any) => {
+                        e.target.value.length == 4 && input3.current?.focus()
+                        setForm("phone2", e.target.value)
+                    }}
                 />
                 -
                 <Input
-                    type={"text"}
+                    type={"number"}
+                    id={"phone3"}
+                    inputMode={"decimal"}
+                    inputRef={input3}
                     maxLength={4}
                     placeholder="5678"
                     value={phoneNum.phone3}
-                    onChange={(e: any) => setForm("phone3", e.target.value)}
+                    onChange={(e: any) => {
+                        e.target.value.length == 4 && input3.current?.blur()
+                        setForm("phone3", e.target.value)
+                    }}
                 />
             </div>
             {failedCheckIn && <div className="flex gap-1 items-center text-xs text-[var(--primary)]">

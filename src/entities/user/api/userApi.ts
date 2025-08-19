@@ -10,6 +10,14 @@ export const joinUser = async (params: user) => {
     return res.data.data.step;
 }
 
+export const preCheckIn = async (params: user) => {
+    const res = await $axios.post<any>('/pre_checkIn', params);
+
+    if (res.data.basic.code == 1) throw new Error('@@ failed check-in!')
+
+    return res.data.data.step;
+}
+
 export const checkInUserCheck = async (params: any) => {
     const res = await $axios.post<any>('/user_check', params)
 
