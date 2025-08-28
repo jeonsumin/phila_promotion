@@ -26,6 +26,7 @@ export const OtherRecommendPage = () => {
                     key={index}
                     item={item}
                     index={0}
+                    isBg={true}
                 />
             )}
         </div>

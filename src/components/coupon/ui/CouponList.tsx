@@ -10,6 +10,7 @@ export const CouponList = () => {
     const {coupon} = useCoupon();
     const t = useSelector(currentTranslation);
     const modal = useModal();
+
     const onClick = (code: string) => {
         modal.showModal({
             title: t("pop_reward_001"),

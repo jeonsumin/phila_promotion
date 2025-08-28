@@ -12,7 +12,7 @@ html {
 }
 @font-face {
   font-family: "Paperlogy";
-  font-weight: 700;
+  font-weight: 600;
   src:
     local("Paperlogy-Bold"),
     local("Paperlogy-Bold"),
@@ -79,6 +79,10 @@ h1, span, em, p, button {
   display: block;
 }
 
+.swiper-pagination {
+  padding:10px;
+}
+
 @media screen and (max-width:1024px) {
   .terms_height {
     height:calc(100dvh - 58px);
@@ -87,4 +91,10 @@ h1, span, em, p, button {
     height: calc(100dvh - 130px);
   }
 
+}
+.paging .swiper-pagination {
+  position: relative;
+}
+.paging_mt15 .swiper-pagination {
+  margin-top: 60px; padding:0;
 }

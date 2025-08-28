@@ -1,5 +1,6 @@
 export const TREASURE = [
     {
+        id:1,
         title: "tre_detail_type_003",
         src: "/assets/images/treasure1.png",
         option: [
@@ -26,6 +27,7 @@ export const TREASURE = [
         ]
     },
     {
+        id:2,
         title: "tre_detail_type_004",
         src: "/assets/images/treasure2.png",
         option: [
@@ -52,6 +54,7 @@ export const TREASURE = [
         ]
     },
     {
+        id:3,
         title: "tre_detail_type_005",
         src: "/assets/images/treasure1.png",
         option: [
@@ -78,6 +81,7 @@ export const TREASURE = [
         ]
     },
     {
+        id:4,
         title: "tre_detail_type_006",
         src: "/assets/images/treasure2.png",
         option: [
@@ -104,6 +108,7 @@ export const TREASURE = [
         ]
     },
     {
+        id:5,
         title: "tre_detail_type_007",
         src: "/assets/images/treasure1.png",
         option: [
@@ -130,6 +135,7 @@ export const TREASURE = [
         ]
     },
     {
+        id:6,
         title: "tre_detail_type_008",
         src: "/assets/images/treasure2.png",
         option: [

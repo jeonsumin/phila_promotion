@@ -2,6 +2,10 @@ export const ROUTES = {
     CHECK_IN: '/check-in',
 
     HOME: "/main",
+
+    PLACE: "/place",
+    PLACE_DETAIL: "/place/:target/:id",
+
     RECOMMEND: '/main/recommend',
     RECOMMEND_RESULT: '/main/recommend/result/:target/:id',
     RECOMMEND_OTHER: '/main/recommend/other/:target/:id',
@@ -19,8 +23,6 @@ export const ROUTES = {
 
     COUPON: "/coupon",
 
-    PLACE: "/place",
-    PLACE_DETAIL: "/place/:target/:id",
 
 
 }

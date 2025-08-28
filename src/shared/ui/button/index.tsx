@@ -14,7 +14,7 @@ type Props = {
 }
 
 const buttonVariants = cva(
-    "flex items-center justify-center font-bold text-[var(--white)] text-[16px]",
+    "flex items-center justify-center font-bold text-[var(--white)] text-[18px]",
     {
         variants: {
             variant: {

@@ -7,7 +7,7 @@ export const PlaceLocationView = (props:any) => {
     const [, , targetCode, idStr] = location.pathname.split('/');
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col my-5">
             <ZoomableImage src={ props.map || `/assets/images/place-map/${targetCode}/map${props.index}.png`} alt="place"/>
         </div>
     )

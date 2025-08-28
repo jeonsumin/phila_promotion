@@ -48,14 +48,15 @@ export const useSelectOption = (survey: any[], type: string) => {
 
     const onSubmitSurvey = async () => {
         const result = transformToQKeys(selectedOption);
-        await updateSurvey(result);
-        modal.showAlert({
-            title: t("pop_survey_cplt_003"),
-            message: t('pop_survey_cplt_004'),
-            onConfirm: () => {
-                modal.alertClose()
-                navigate(ROUTES.HOME)
-            }
+        updateSurvey(result).then(() => {
+            modal.showAlert({
+                title: t("pop_survey_cplt_003"),
+                message: t('pop_survey_cplt_004'),
+                onConfirm: () => {
+                    modal.alertClose()
+                    navigate(ROUTES.HOME)
+                }
+            })
         })
 
     }

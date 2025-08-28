@@ -22,7 +22,7 @@ export const HomePage = () => {
 
             <div className="flex flex-col gap-[24px] text-center text-[var(--subTxt)]">
                 <h2 className="text-[22px] font-bold text-[var(--bk)] "> {t("home_main_001")}</h2>
-                <div className="flex flex-col gap-[14px] text-[16px] text-center font-light">
+                <div className="flex flex-col gap-[14px] text-[16px] text-center font-light px-5">
                     <p> {t("home_main_002_1")} </p>
                     <p> {t("home_main_003_1")} </p>
                 </div>
@@ -54,9 +54,10 @@ export const HomePage = () => {
                 </div>
                 <div className="flex flex-col gap-[20px]">
                     <h2 className="self-center text-[22px] border-[var(--point)] text-[var(--point)] font-bold">{t("home_main_011")}</h2>
-                    <div className="bg-white">
+                    <div className="bg-white paging">
                         <SwiperView
                             data={TIME_TABLE(lang, "mobile")}
+                            pagination={true}
                             renderItem={Image}
                         />
                     </div>

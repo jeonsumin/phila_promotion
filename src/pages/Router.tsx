@@ -45,6 +45,7 @@ export const Router = () => (
                         <Route element={<MobileLayout/>} path={"/"}>
                             <Route path={"/"} element={<Navigate to={ROUTES.HOME} replace/>}/>
                             <Route element={<HomePage/>} path={ROUTES.HOME}/>
+                            <Route element={<ExhibitionDetailPages/>} path={ROUTES.PLACE_DETAIL}/>
 
                             <Route element={<RecommendPage/>} path={ROUTES.RECOMMEND}/>
                             <Route element={<RecommendResultPage/>} path={ROUTES.RECOMMEND_RESULT}/>
@@ -62,7 +63,6 @@ export const Router = () => (
 
                             <Route element={<CouponPage/>} path={ROUTES.COUPON}/>
                             <Route element={<TreasurePage/>} path={ROUTES.TREASURE_DETAIL}/>
-                            <Route element={<ExhibitionDetailPages/>} path={ROUTES.PLACE_DETAIL}/>
                         </Route>
                     </Route>
 

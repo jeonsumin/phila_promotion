@@ -20,7 +20,7 @@ export const ExhibitionDetailPages = () => {
     return (
         <SwiperView
             pagination={true}
-            className={"h-full"}
+            className={"!h-full"}
             data={exhibition.item}
             target={target}
             idx={id}

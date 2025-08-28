@@ -61,7 +61,8 @@ export const RECOMMEND_RESULT = [
         title: 'reco_detail_type1_result1_002',
         color: '#32833A',
         description: 'reco_detail_type1_result1_001',
-        img:'',
+        img:'/assets/images/facility_info.png',
+        //TODO: PLACE 조인 걸기
         recommend: [
             {title: "reco_detail_type1_result1_004",     img:"/assets/images/facility_info.png", caption: `reco_detail_type1_result1_005`    , map:'/assets/images/facility_info.png' },
             {title: "reco_detail_type1_result1_alt_002", img:"/assets/images/facility_info.png", caption: `reco_detail_type1_result1_alt_003`, map:'/assets/images/facility_info.png' },
@@ -85,6 +86,7 @@ export const RECOMMEND_RESULT = [
         title: 'reco_detail_type3_result1_002',
         color: '#D93657',
         description: 'reco_detail_type3_result1_001',
+        img:'/assets/images/facility_info.png',
         recommend: [
             {title: "reco_detail_type3_result1_004",     img:"/assets/images/facility_info.png", caption: `reco_detail_type3_result1_005`    , map:'/assets/images/facility_info.png'},
             {title: "reco_detail_type3_result1_alt_002", img:"/assets/images/facility_info.png", caption: `reco_detail_type3_result1_alt_003`, map:'/assets/images/facility_info.png'},
@@ -96,6 +98,7 @@ export const RECOMMEND_RESULT = [
         title: 'reco_detail_type4_result1_002',
         color: '#741E46',
         description: 'reco_detail_type4_result1_001',
+        img:'/assets/images/facility_info.png',
         recommend: [
             {title: "reco_detail_type4_result1_004",     img:"/assets/images/facility_info.png", caption: `reco_detail_type4_result1_005`     , map:'/assets/images/facility_info.png'},
             {title: "reco_detail_type4_result1_alt_002", img:"/assets/images/facility_info.png", caption: `reco_detail_type4_result1_alt_003` , map:'/assets/images/facility_info.png'},

@@ -12,24 +12,26 @@ export const TopicList = () => {
     const t = useSelector(currentTranslation);
     return (
         <div className="py-10 px-5 space-y-5">
-            <p className="text-lg font-bold">{t('tre_detail_type_002')}</p>
+            <p className="text-lg font-bold text-center">{t('tre_detail_type_002')}</p>
 
             <div className="flex flex-col gap-3.5">
                 {
                     TREASURE.map((item, index: number) =>
                         <OptionItem
-                            key={index}
+                            key={`options_${index}`}
                             label={t(item.title)}
-                            active={selectedOption === index}
-                            onClick={() => handleSelect(index)}
+                            className={"justify-center"}
+                            active={selectedOption === item.id}
+                            onClick={() => handleSelect(item.id)}
                         />
                     )
                 }
             </div>
 
             <div className="flex w-full justify-center items-center mt-20">
-                <Button variant="rounded" url={routesBuilder.treasureResult(selectedOption)}>
-                    <ArrowRight/>
+                <Button disabled={!selectedOption} color={selectedOption ? "default" : "gray"} variant="rounded"
+                        url={routesBuilder.treasureResult(selectedOption)}>
+                    <img src="/assets/images/icon/arrow_left.svg" alt="arrow_left"/>
                 </Button>
             </div>
         </div>

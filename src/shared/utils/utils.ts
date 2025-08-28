@@ -16,6 +16,7 @@ export const transformToQKeys = (input: Record<number, any>) => {
     );
 }
 
+
 export const createScanner = (
     videoElement: HTMLVideoElement,
     {

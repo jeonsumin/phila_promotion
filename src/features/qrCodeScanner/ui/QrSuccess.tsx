@@ -1,9 +1,11 @@
 import {Button} from "shared/ui";
 import {useLocation, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {useModal} from "shared/config/ModalProvider";
 
 export const QrSuccess = () => {
     const param = useLocation()
+    const modal = useModal();
     const [data, setData] = useState<any | null>(null);
 
     useEffect(() => {
@@ -31,7 +33,7 @@ export const QrSuccess = () => {
                     <p>{data?.subtitle}</p>
                     <p>{data?.caption}</p>
                 </div>
-                <Button>확인</Button>
+                <Button onClick={() => {modal.allClear()}}>확인</Button>
             </div>
         </>
     )

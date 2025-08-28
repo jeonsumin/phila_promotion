@@ -9,6 +9,7 @@ import {PlaceCard} from "shared/ui/placeCard";
 import {TIME_TABLE} from "shared/constant/timetable";
 import {Image} from "shared/ui/image";
 import {ChangeLangButton} from "features/changeLang";
+import {cn} from "shared/utils";
 
 export const BetaCheckInPage = () => {
 
@@ -55,8 +56,9 @@ export const BetaCheckInPage = () => {
                         {t("home_main_011")}
                     </h1>
 
-                    <div className=" max-w-[960px] mx-auto bg-white">
+                    <div className=" max-w-[960px] mx-auto bg-white paging">
                         <SwiperView
+                            pagination
                             data={TIME_TABLE(lang, "desktop")}
                             renderItem={Image}
                         />
@@ -68,24 +70,27 @@ export const BetaCheckInPage = () => {
                     <div className="flex flex-col w-full justify-center items-center gap-5 px-[20px]">
                         <h2 className="self-center text-3xl border-[var(--point)] text-[var(--point)] font-bold"> {t("home_main_space_001")}</h2>
 
-                        <div className="grid grid-cols-3 w-full gap-[6px] text-white">
+                        <div className="grid grid-cols-3 w-full gap-[6px] text-white  gap-x-3 gap-y-5">
                             {
                                 exhibition.map((place, index) =>
-                                    <Button
-                                        key={index}
-                                        color={place.isActive ? 'default' : 'light'}
-                                        onClick={() => onClick(place.code)}
-                                        className="font-normal"
-                                    >
-                                        {t(place.title)}
-                                    </Button>
+                                        <button
+                                            key={index}
+                                            onClick={() => onClick(place.code)}
+                                            className={
+                                                cn(
+                                                    "flex items-center justify-center text-[var(--white)] text-[16px] rounded-full py-3",
+                                                    place.isActive ? "bg-[var(--point)]" : "bg-[var(--lightGrayBg)] text-[var(--subTxt)]"
+                                                )
+                                            }
+                                        >{t(place.title)}</button>
+
                                 )
                             }
                         </div>
                     </div>
 
                 </section>
-                <div className="flex flex-col h-[24vw] w-full">
+                <div className="flex flex-col w-full pb-20 paging paging_mt15">
                     <SwiperView
                         pagination={true}
                         className={"h-full"}

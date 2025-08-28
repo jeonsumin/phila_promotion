@@ -23,7 +23,7 @@ export const AlreadyCheckInButton = () => {
         <Button
             variant="label"
             color="none"
-            className="font-normal underline-offset-3 underline"
+            className="font-normal underline-offset-3 underline !text-base"
             onClick={alreadyCheckIn}
         >
             {t('pop_open_chk_mo_010')}

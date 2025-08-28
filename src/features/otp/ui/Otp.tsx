@@ -20,7 +20,7 @@ export const Otp = (props: any) => {
                 renderInput={(props) =>
                     <input
                         {...props}
-                        className="!size-20 !rounded-md !gap-3 !m-1 space-x-2 text-3xl bg-[var(--lightGrayBg)] focus:bg-[#FCECF0] !caret-transparent"
+                        className="!size-20 !rounded-md !gap-3 !m-1 space-x-2 text-3xl bg-[var(--lightGrayBg)] focus:bg-[#FCECF0] border-[#E6E1D6] !border-2 no-caret !caret-transparent"
                         inputMode={"numeric"}
                         type={"password"}
                     />
@@ -36,3 +36,5 @@ export const Otp = (props: any) => {
         </div>
     )
 }
+
+//className="!size-20 !rounded-md !gap-3 !m-1 space-x-2 text-3xl bg-white focus:border-[#B432F5] border-[#E6E1D6] !border-2 no-caret "

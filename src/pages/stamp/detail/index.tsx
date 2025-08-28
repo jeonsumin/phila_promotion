@@ -1,14 +1,25 @@
 import {useLayout} from "shared/ui/layout/useLayout";
 import {useParams} from "react-router-dom";
 import {MISSION} from "shared/constant/mession";
-import {QrScannerButton} from "features/qrCodeScanner";
+import {QrScanner, QrScannerButton} from "features/qrCodeScanner";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {Button} from "shared/ui";
+import {useModal} from "shared/config/ModalProvider";
 
 export const MissionPage = () => {
     const {target} = useParams();
     const t= useSelector(currentTranslation);
     const mission = MISSION.find(ex => ex.stamp === target);
+    const modal = useModal();
+
+    const onClick = () => {
+        modal.showModal({
+            title: t("stamp_detail_031"),
+            body: <QrScanner />
+        })
+    }
+
 
     useLayout({
         routeName: t(mission?.contents),
@@ -23,7 +34,7 @@ export const MissionPage = () => {
 
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#DBECF5] gap-5">
 
-                <h1 className="text-xl font-bold text-[var(--phliaBlue)] leading-10">Mission</h1>
+                <h1 className="text-[22px] font-bold text-[var(--phliaBlue)] leading-10">{target}</h1>
 
                 <div className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center px-10">
 
@@ -54,7 +65,9 @@ export const MissionPage = () => {
                 </div>
             </div>
 
-            <QrScannerButton/>
+            <div className="w-full p-5">
+                <Button onClick={onClick}>{t("stamp_detail_031")}</Button>
+            </div>
 
         </>
     )

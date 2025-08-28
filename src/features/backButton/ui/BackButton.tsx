@@ -1,10 +1,10 @@
-import {ArrowLeft} from "lucide-react";
+import {ChevronLeft} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 
 export const BackButton = () => {
     const navigate = useNavigate();
-    const referrer = useSelector((state:RootState) => state.layout.referrer);
+    const referrer = useSelector((state: RootState) => state.layout.referrer);
     const onClick = () => {
         referrer ? navigate(referrer) : navigate(-1)
     }
@@ -12,7 +12,7 @@ export const BackButton = () => {
         onClick={onClick}
         className={"absolute left-6"}
     >
-        <ArrowLeft size={20}/>
+        <ChevronLeft size={20}/>
     </button>
 
 }

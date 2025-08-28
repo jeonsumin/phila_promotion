@@ -4,10 +4,15 @@ import {createScanner} from "shared/utils/utils";
 import {useModal} from "shared/config/ModalProvider";
 import {checkStamp} from "entities/stamp";
 import {insertCoupon} from "entities/coupon";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
+import {useTimer} from "shared/utils/useTimer";
 
 export const useQrScan = (props: any) => {
+    const t = useSelector(currentTranslation);
     const videoRef = useRef<HTMLVideoElement>(null);
     const scannerRef = useRef<QrScanner | null>(null);
+    const {setTimer} = useTimer();
     const modal = useModal();
 
     const [isScan, setIsScan] = useState(false);
@@ -18,15 +23,16 @@ export const useQrScan = (props: any) => {
         const param = resultUrl.get('stamp');
 
         if (param) {
-            await checkStamp(param);
             scannr.stop();
+            await checkStamp(param);
+            modal.allClear();
         } else {
             const treasure = resultUrl.get('treasure')
             const idx = resultUrl.get('idx')
 
             if (Number(props.treasure) == Number(treasure) && Number(props.hint) === Number(idx)) {
                 setIsScan(true);
-                await insertCoupon("4");
+                // await insertCoupon("4");
                 scannr.stop();
             } else {
                 scannr.stop();
@@ -51,7 +57,9 @@ export const useQrScan = (props: any) => {
                 onDecode: (result, scannr) => onDecode(result, scannr)
             })
 
-        scannerRef.current?.start();
+        setTimer(() => {
+            scannerRef.current?.start();
+        }, 200)
 
 
         return () => {

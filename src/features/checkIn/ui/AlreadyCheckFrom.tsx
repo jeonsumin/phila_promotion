@@ -5,11 +5,13 @@ import {CircleAlert} from "lucide-react";
 
 export const AlreadyCheckFrom = () => {
 
-    const {t, phoneNum, failedCheckIn,setForm, onSubmit, input2, input3} = useAlreadyCheckin();
+    const {t, phoneNum, failedCheckIn, setForm, onSubmit, input2, input3} = useAlreadyCheckin();
     return (
-        <div className="flex flex-col px-5 gap-3.5">
-            <h1 className="text-xl font-bold ">{t("pop_preo_chk_mo_001")}</h1>
-            <p>{t("pop_preo_chk_mo_002")}</p>
+        <div className="flex flex-col px-5 space-y-6">
+            <div className="space-y-4">
+                <h1 className="text-xl font-bold text-[var()] ">{t("pop_preo_chk_mo_001")}</h1>
+                <p className="text-[var(--subTxt)]">{t("pop_preo_chk_mo_002")}</p>
+            </div>
             <div className="flex justify-start items-center gap-2">
                 <Input
                     type={"number"}
@@ -18,6 +20,7 @@ export const AlreadyCheckFrom = () => {
                     maxLength={3}
                     inputMode={"decimal"}
                     value={phoneNum.phone1}
+                    className="placeholder:text-center text-center"
                     onChange={(e: any) => {
                         e.target.value.length == 3 && input2.current?.focus()
                         setForm("phone1", e.target.value)
@@ -32,6 +35,7 @@ export const AlreadyCheckFrom = () => {
                     inputRef={input2}
                     placeholder="1234"
                     value={phoneNum.phone2}
+                    className="placeholder:text-center text-center"
                     onChange={(e: any) => {
                         e.target.value.length == 4 && input3.current?.focus()
                         setForm("phone2", e.target.value)
@@ -46,6 +50,7 @@ export const AlreadyCheckFrom = () => {
                     maxLength={4}
                     placeholder="5678"
                     value={phoneNum.phone3}
+                    className="placeholder:text-center text-center"
                     onChange={(e: any) => {
                         e.target.value.length == 4 && input3.current?.blur()
                         setForm("phone3", e.target.value)

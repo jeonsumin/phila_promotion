@@ -25,7 +25,7 @@ export const TreasurePage = () => {
                 <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col p-5">
 
                     <div
-                        className="flex flex-col justify-center items-center gap-3.5 py-3.5  border-b border-[var(--lightGrayBg)] w-full">
+                        className="flex flex-col justify-center items-center gap-3.5 pb-3.5  border-b border-[var(--lightGrayBg)] w-full">
                         <div>
                             <p
                                 className="text-sm font-bold bg-[var(--primary)] px-[20px] py-[10px] rounded-full text-white">STEP.1
@@ -37,7 +37,7 @@ export const TreasurePage = () => {
                     </div>
 
                     <div
-                        className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-[var(--lightGrayBg)] w-full">
+                        className="flex flex-col justify-center items-center gap-3.5 pt-3.5 border-[var(--lightGrayBg)] w-full">
                         <div>
                             <p
                                 className="text-sm font-bold bg-[var(--primary)] px-[20px] py-[10px] rounded-full text-white">STEP.2
@@ -53,12 +53,14 @@ export const TreasurePage = () => {
 
 
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#DBECF5] gap-5">
-                <h1 className="text-xl font-bold text-[var(--phliaBlue)] leading-10">{t('tre_main_006')}</h1>
+                <h1 className="text-[22px] font-bold text-[var(--phliaBlue)] leading-10">{t('tre_main_006')}</h1>
 
-                <ExhibitionLocationButton title={t("pop_space_loc_019")} subTitle={t("pop_tre_main_loc_002")} map={"/assets/images/treasure_map.png"}/>
+                <ExhibitionLocationButton className="text-[14px] font-light" title={t("pop_space_loc_019")}
+                                          subTitle={t("pop_tre_main_loc_002")} map={"/assets/images/treasure_map.png"}/>
 
 
-                <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col px-[20px]">
+                <div
+                    className="bg-white rounded-lg w-full justify-center items-center flex flex-col px-[20px] text-center">
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">

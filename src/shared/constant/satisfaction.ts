@@ -55,7 +55,6 @@ export const SATISFACTION = [
     {
         question: "survey_detail_q7",
         options: [
-            "survey_detail_q7_a_001",
             "survey_detail_q7_a_002",
             "survey_detail_q7_a_003",
             "survey_detail_q7_a_004",
@@ -65,6 +64,7 @@ export const SATISFACTION = [
             "survey_detail_q7_a_008",
             "survey_detail_q7_a_009",
             "survey_detail_q7_a_010",
+            "survey_detail_q7_a_011",
         ],
         multi: 10,
     },
