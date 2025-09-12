@@ -15,7 +15,7 @@ export const ChangeLangButton = () => {
                     <option value="EN">English</option>
                 </select>
                 <img
-                    src="/assets/images/icon/icn_dropdown.svg"
+                    src="/assets/images/icn_dropdown.svg"
                     alt=""
                     className="w-[16px] h-[16px] absolute right-[10px] top-1/2 -translate-y-1/2 pointer-events-none"
                 />

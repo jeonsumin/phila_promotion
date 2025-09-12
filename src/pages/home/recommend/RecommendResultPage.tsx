@@ -34,7 +34,7 @@ export const RecommendResultPage = () => {
                     <div className="flex justify-end items-end absolute right-4 bottom-3">
                         <ExhibitionLocationButton
                             className="py-1/2 px-1/2">
-                            <img src="/assets/images/icon/icn_pin.svg" alt=""/>
+                            <img src="/assets/images/icn_pin.svg" alt=""/>
                         </ExhibitionLocationButton>
                     </div>
                 </div>

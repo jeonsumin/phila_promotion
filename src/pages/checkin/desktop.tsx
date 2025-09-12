@@ -121,22 +121,22 @@ export const BetaCheckInPage = () => {
                         <button onClick={() => {
                             window.open("http://kr.philakorea2025.kr/ ", "_blank")
                         }} className="w-[48px]">
-                            <img src="/assets/images/icon/sns_share_1.svg" alt=""/>
+                            <img src="/assets/images/sns_share_1.svg" alt=""/>
                         </button>
                         <button onClick={() => {
                             window.open("https://www.youtube.com/channel/UCw3-jbBEWVitgOFHutWZmug", "_blank")
                         }} className="w-[48px]">
-                            <img src="/assets/images/icon/sns_share_2.svg" alt=""/>
+                            <img src="/assets/images/sns_share_2.svg" alt=""/>
                         </button>
                         <button onClick={() => {
                             window.open("https://blog.naver.com/posastamp", "_blank")
                         }} className="w-[48px]">
-                            <img src="/assets/images/icon/sns_share_3.svg" alt=""/>
+                            <img src="/assets/images/sns_share_3.svg" alt=""/>
                         </button>
                         <button onClick={() => {
                             window.open("https://www.instagram.com/korea.stamp/", "_blank")
                         }} className="w-[48px]">
-                            <img src="/assets/images/icon/sns_share_4.svg" alt=""/>
+                            <img src="/assets/images/sns_share_4.svg" alt=""/>
                         </button>
                     </div>
                 </div>

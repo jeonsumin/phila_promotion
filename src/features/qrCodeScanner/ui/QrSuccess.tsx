@@ -1,15 +1,23 @@
 import {Button} from "shared/ui";
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useModal} from "shared/config/ModalProvider";
+import {ROUTES} from "shared/config/routes";
 
+//TODO: 카피덱 적용하기
 export const QrSuccess = () => {
     const param = useLocation()
     const modal = useModal();
+    const navigate = useNavigate();
     const [data, setData] = useState<any | null>(null);
 
-    useEffect(() => {
+    const qrSuccessHandler = () => {
         console.log(param.pathname.includes("stamp"))
+        navigate(param.pathname.includes("stamp") ? ROUTES.STAMP : ROUTES.COUPON)
+        // modal.allClear();
+    }
+
+    useEffect(() => {
         setData(() => {
 
             return param.pathname.includes("stamp") ? {
@@ -33,7 +41,7 @@ export const QrSuccess = () => {
                     <p>{data?.subtitle}</p>
                     <p>{data?.caption}</p>
                 </div>
-                <Button onClick={() => {modal.allClear()}}>확인</Button>
+                <Button onClick={qrSuccessHandler}>확인</Button>
             </div>
         </>
     )

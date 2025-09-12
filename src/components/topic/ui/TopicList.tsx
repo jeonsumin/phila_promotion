@@ -31,7 +31,7 @@ export const TopicList = () => {
             <div className="flex w-full justify-center items-center mt-20">
                 <Button disabled={!selectedOption} color={selectedOption ? "default" : "gray"} variant="rounded"
                         url={routesBuilder.treasureResult(selectedOption)}>
-                    <img src="/assets/images/icon/arrow_left.svg" alt="arrow_left"/>
+                    <img src="/assets/images/arrow_left.svg" alt="arrow_left"/>
                 </Button>
             </div>
         </div>

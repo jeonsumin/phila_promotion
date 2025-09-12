@@ -7,6 +7,8 @@ import {insertCoupon} from "entities/coupon";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
 import {useTimer} from "shared/utils/useTimer";
+import {useNavigate} from "react-router-dom";
+import {ROUTES} from "shared/config/routes";
 
 export const useQrScan = (props: any) => {
     const t = useSelector(currentTranslation);
@@ -14,6 +16,7 @@ export const useQrScan = (props: any) => {
     const scannerRef = useRef<QrScanner | null>(null);
     const {setTimer} = useTimer();
     const modal = useModal();
+    const navigate = useNavigate();
 
     const [isScan, setIsScan] = useState(false);
 
@@ -22,14 +25,25 @@ export const useQrScan = (props: any) => {
         const resultUrl = new URL(result.data).searchParams;
         const param = resultUrl.get('stamp');
 
+        console.log('resultUrl ', result.data)
+
         if (param) {
             scannr.stop();
             await checkStamp(param);
-            modal.allClear();
+            modal.showAlert({
+                title: '미션 성공!',
+                message: '스탬프 미션을 성공하셨습니다!',
+                onConfirm: () => {
+                    modal.allClear();
+                    navigate(ROUTES.STAMP)
+                }
+            })
         } else {
             const treasure = resultUrl.get('treasure')
             const idx = resultUrl.get('idx')
 
+            console.log('treasure : ', treasure, ", idx : ", idx);
+            console.log('props.treasure', props.treasure,'props.hit', props.hint);
             if (Number(props.treasure) == Number(treasure) && Number(props.hint) === Number(idx)) {
                 setIsScan(true);
                 // await insertCoupon("4");

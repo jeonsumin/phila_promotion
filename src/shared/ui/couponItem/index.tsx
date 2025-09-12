@@ -19,7 +19,7 @@ export const CouponItem = (props: any) => {
                         {props.type === "reward" ? t("coupon_main_002") : t("coupon_main_005")}
                     </div>
                     <div className="flex bg-white rounded-b-2xl w-full p-5 gap-5 text-start">
-                        <img alt="icn_coupon" src="/assets/images/icon/icn_coupon.svg"/>
+                        <img alt="icn_coupon" src="/assets/images/icn_coupon.svg"/>
                         <div className="flex flex-col gap-5">
                             <h1 className="text-lg font-bold text-[var(--primary)]">
                                 {t(props.title)}

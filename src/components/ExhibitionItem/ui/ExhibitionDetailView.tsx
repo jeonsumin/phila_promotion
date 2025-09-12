@@ -27,7 +27,7 @@ export const ExhibitionDetailView = (props: Props) => {
                         index={index}
                         map={item.map}
                     >
-                        <img src="/assets/images/icon/icn_pin.svg" alt=""/>
+                        <img src="/assets/images/icn_pin.svg" alt=""/>
                     </ExhibitionLocationButton>
                 </div>
 

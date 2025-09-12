@@ -22,7 +22,7 @@ export const NavItem = (props: Props) => {
                 <div className="justify-center items-center">
                     {icon && <img
                         className="w-full  h-[24px] mb-[4px]"
-                        src={`/assets/images/icon/${isActive ? `${icon}_on` : icon}.svg`}
+                        src={`/assets/images/${isActive ? `${icon}_on` : icon}.svg`}
                         alt={`${label} icon`}
                     />}
                     <p className="flex w-full justify-center items-center text-[12px]">{t(label)}</p>

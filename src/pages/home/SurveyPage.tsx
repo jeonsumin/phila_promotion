@@ -20,7 +20,7 @@ export const SurveyPage = () => {
             <h1 className="font-bold text-[22px]">
                 {t("survey_detail_002")}
             </h1>
-            <div className="flex flex-col gap-3.5 text-base font-normal text-[var(--subTxt)]">
+            <div className="flex flex-col gap-3.5 text-base font-normal text-[var(--subTxt)] px-5">
                 <p>
                     {t("survey_detail_003")}
                 </p>

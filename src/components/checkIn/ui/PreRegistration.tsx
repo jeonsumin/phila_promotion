@@ -38,7 +38,7 @@ export const PreRegistration = () => {
                 </span>
 
                 <div className="pt-16.5 px-5 pb-[40px] bg-[var(--dimm)] text-center">
-                    <img src="/assets/images/icon/img_pre_gift.svg" alt="" className="w-[100px] mx-auto"/>
+                    <img src="/assets/images/img_pre_gift.svg" alt="" className="w-[100px] mx-auto"/>
                     <p className="font-bold mt-[40px] text-[28px] text-[var(--yellow)]">{t('pre_main_mo_006')}</p>
                     <p className="text-[20px] text-[var(--subWhite)] mt-[12px]">{t('pre_main_mo_007')}</p>
                 </div>

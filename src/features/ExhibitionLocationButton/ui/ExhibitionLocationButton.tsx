@@ -30,7 +30,7 @@ export const ExhibitionLocationButton = (props: Props) => {
     return (
         <Button variant="label" color='white' onClick={openModal} className={className}>
             {children ? children : <>
-                <img src={'/assets/images/icon/icn_location.svg'} alt="location"/>
+                <img src={'/assets/images/icn_location.svg'} alt="location"/>
                 <span className="border-b">{label}</span>
             </>}
         </Button>

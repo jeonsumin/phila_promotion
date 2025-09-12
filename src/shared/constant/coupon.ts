@@ -1,7 +1,7 @@
 export const COUPON = [
     {
         title: 'coupon_main_003',
-        code: '0',
+        code: '1',
         subTitle: "coupon_main_004",
     },
     {

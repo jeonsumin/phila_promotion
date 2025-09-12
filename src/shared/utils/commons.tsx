@@ -24,7 +24,7 @@ export const Commons = () => {
         }
     }
     useEffect(() => {
-        // topScroll();
+        topScroll();
         const user = getCookie("user")
         if (!user) navigate(ROUTES.CHECK_IN);
     }, [pathname]);
