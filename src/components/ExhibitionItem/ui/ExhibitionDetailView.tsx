@@ -7,25 +7,26 @@ import {cn} from "shared/utils";
 type Props = {
     item: any
     index: number;
+    target?: string;
     isBg?: boolean;
 }
 
 export const ExhibitionDetailView = (props: Props) => {
-    const {item, index} = props;
+    const {item, index, target} = props;
     const routeName = useSelector((state: RootState) => state.layout.routeName);
     const t = useSelector(currentTranslation);
 
     return (
         <div className="flex flex-col w-full justify-center items-center mb-10">
             <div className={`w-full h-60 bg-[var(--grayBg)] relative`}>
-                <img src={item.img} alt={item.img} className="w-full h-full object-cover"/>
+                <img src={`/assets/images/${item.img}.png`} alt={item.img} className="w-full h-full object-cover"/>
                 <div className="flex justify-end items-end absolute right-4 bottom-3">
                     <ExhibitionLocationButton
                         title={t(item.title)}
                         subTitle={t(item.positionInformation)}
                         className="py-1/2 px-1/2"
                         index={index}
-                        map={item.map}
+                        map={item.placeImg}
                     >
                         <img src="/assets/images/icn_pin.svg" alt=""/>
                     </ExhibitionLocationButton>

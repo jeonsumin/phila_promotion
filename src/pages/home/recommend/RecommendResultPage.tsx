@@ -25,15 +25,19 @@ export const RecommendResultPage = () => {
 
             </div>
             <div className='w-full h-[200px] '>
-                <div className={`w-full h-60 bg-[var(--grayBg)] relative`}>
+                <div className={`w-full bg-[var(--grayBg)] relative`}>
 
-                    <div className="overflow-hidden relative h-full">
-                        <img src={result?.img} className="w-full" alt={result?.img}/>
+                    <div className="overflow-hidden relative w-full h-auto">
+                        <img src={`/assets/images/${result?.recommend[Number(id)].img}.png`} className="w-full" alt={result?.img}/>
                     </div>
 
                     <div className="flex justify-end items-end absolute right-4 bottom-3">
                         <ExhibitionLocationButton
-                            className="py-1/2 px-1/2">
+                            title={t(result?.recommend[Number(id)].title)}
+                            subTitle={t(result?.recommend[Number(id)].positionInformation)}
+                            className="py-1/2 px-1/2"
+                            map={result?.recommend[Number(id)].placeImg}
+                        >
                             <img src="/assets/images/icn_pin.svg" alt=""/>
                         </ExhibitionLocationButton>
                     </div>

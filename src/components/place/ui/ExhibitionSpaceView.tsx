@@ -20,7 +20,7 @@ export const ExhibitionSpaceView = () => {
                     label={t('home_main_space_002')}
                     title={t("home_main_space_000")}
                     subTitle={t("pop_space_loc_016")}
-                    map={"/assets/images/basic_map.png"}
+                    map={"map_main.png"}
                     className="font-light text-sm"
                 />
 

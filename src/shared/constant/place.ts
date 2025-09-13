@@ -1,324 +1,185 @@
 export const PLACE = [
-    {
-        "img": "theme_culture",
+    { // 문화유산을 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_004",
         "subTitle": "space_detail_003",
         "caption": "space_detail_004",
-        "placeImg": "theme_culture_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "theme_art",
+    { // 예술과 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_005",
         "subTitle": "space_detail_006",
         "caption": "space_detail_007",
-        "placeImg": "theme_art_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "theme_kculture",
+    { // K-컬처를 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_006",
         "subTitle": "space_detail_009",
         "caption": "space_detail_010",
-        "placeImg": "theme_kculture_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "theme_hearts",
+    { //마음을 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_007",
         "subTitle": "space_detail_012",
         "caption": "space_detail_013",
-        "placeImg": "theme_hearts_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "theme_enviornment",
+    { //환경을 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_008",
         "subTitle": "space_detail_015",
         "caption": "space_detail_016",
-        "placeImg": "theme_enviornment_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "theme_design",
+    { //디자인으로 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_009",
         "subTitle": "space_detail_018",
         "caption": "space_detail_019",
-        "placeImg": "theme_design_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "theme_history",
+    { // 우표 역사를 연결하다
+        "img": "mo_space_theme",
         "title": "home_main_space_010",
         "subTitle": "space_detail_020",
         "caption": "space_detail_021",
-        "placeImg": "theme_history_loc",
+        "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
     },
-    {
-        "img": "digital_world",
+    { //우표로 떠나는 세계여행
+        "img": "mo_space_connect",
         "title": "home_main_space_012",
         "subTitle": "space_detail_024",
         "caption": "space_detail_025",
-        "placeImg": "digital_world_loc",
+        "placeImg": "map_connect.png",
         "positionInformation": "pop_space_loc_004"
     },
-    {
-        "img": "digital_emotion",
+    { //오늘의 감정, 한 장의 우표
+        "img": "mo_space_emotion",
         "title": "home_main_space_013",
         "subTitle": "space_detail_027",
         "caption": "space_detail_028",
-        "placeImg": "digital_emotion_loc",
+        "placeImg": "map_emotion.png",
         "positionInformation": "pop_space_loc_005"
     },
-    {
-        "img": "digital_letter",
+    { // 편지 날리기 게임
+        "img": "mo_space_mind",
         "title": "home_main_space_014",
         "subTitle": "space_detail_030",
         "caption": "space_detail_031",
-        "placeImg": "digital_letter_loc",
-        "positionInformation": "pop_space_loc_007"
+        "placeImg": "map_mind.png",
+        "positionInformation": "pop_space_loc_006"
     },
-    {
-        "img": "digital_sketcher",
+    { // 초상화 로봇
+        "img": "mo_space_robo",
         "title": "home_main_space_015",
         "subTitle": "space_detail_033",
         "caption": "space_detail_034",
-        "placeImg": "digital_sketcher_loc",
-        "positionInformation": "pop_space_loc_008"
+        "placeImg": "map_robo.png",
+        "positionInformation": "pop_space_loc_007"
     },
-    {
-        "img": "digital_graffiti",
+    { //그래피티X
+        "img": "mo_space_graffiti",
         "title": "home_main_space_016",
         "subTitle": "space_detail_036",
         "caption": "space_detail_037",
-        "placeImg": "digital_graffiti_loc",
-        "positionInformation": "pop_space_loc_009"
+        "placeImg": "map_graffiti.png",
+        "positionInformation": "pop_space_loc_008"
     },
-    {
-        "img": "digital_aistamp",
+    { //AI 스탬프 스튜디오
+        "img": "mo_space_aistampstudio",
         "title": "home_main_space_017",
         "subTitle": "space_detail_039",
         "caption": "space_detail_040",
-        "placeImg": "digital_aistamp_loc",
-        "positionInformation": "pop_space_loc_010"
+        "placeImg": "map_aistampstudio.png",
+        "positionInformation": "pop_space_loc_009"
     },
-    {
-        "img": "digital_talk",
+    { // 말하는 우표
+        "img": "mo_space_talkingstamp",
         "title": "home_main_space_018",
         "subTitle": "space_detail_042",
         "caption": "space_detail_043",
-        "placeImg": "digital_talk_loc",
-        "positionInformation": "pop_space_loc_006"
+        "placeImg": "map_talkingstamp.png",
+        "positionInformation": "pop_space_loc_010"
     },
-    {
-        "img": "exp_doodle",
+    { // 우표낙서 Zone
+        "img": "mo_space_exp",
         "title": "home_main_space_020",
         "subTitle": "space_detail_046",
         "caption": "space_detail_047",
-        "placeImg": "exp_doodle_loc",
-        "positionInformation": "pop_space_loc_012"
+        "placeImg": "map_exp.png",
+        "positionInformation": "pop_space_loc_020"
     },
-    {
-        "img": "exp_drawing",
-        "title": "home_main_space_021",
-        "subTitle": "",
-        "caption": "",
-        "placeImg": "exp_drawing_loc",
-        "positionInformation": ""
-    },
-    {
-        "img": "stamphall",
+    { //  세계가 모은 우표 예술의 정수
+        "img": "mo_space_exhibt",
         "title": "home_main_space_027",
         "subTitle": "space_detail_065",
         "caption": "space_detail_066",
-        "placeImg": "stamphall_loc",
-        "positionInformation": ""
+        "placeImg": "map_exhibit.png",
+        "positionInformation": "pop_space_loc_018"
     },
-    {
-        "img": "postshop",
+    { // 우체국 쇼핑관 / 믿고 사는 우리 상품
+        "img": "mo_space_shopping",
         "title": "home_main_space_029",
         "subTitle": "space_detail_069",
         "caption": "space_detail_070",
-        "placeImg": "postshop_loc",
-        "positionInformation": ""
+        "placeImg": "map_shopping.png",
+        "positionInformation": "pop_space_loc_016"
     },
-    {
-        "img": "rarestamp",
+    { // 희귀우표관  / 시간을 담은 진귀한 보물들
+        "img": "mo_space_rare",
         "title": "home_main_space_031",
         "subTitle": 'space_detail_073',
         "caption": `space_detail_074`,
-        "placeImg": "rarestamp_loc",
-        "positionInformation": ""
+        "placeImg": "map_rare.png",
+        "positionInformation": "pop_space_loc_014"
+    },
+    { // 체험관
+        "img": "mo_space_exp",
+        "title": "reco_detail_type3_result1_alt_002",
+        "subTitle": "",
+        "caption": "reco_detail_type3_result1_alt_003",
+        "placeImg": "map_exp.png",
+        "positionInformation": "pop_space_loc_012"
+    },
+    { // 작품관
+        "img": "mo_space_exhibt",
+        "title": "reco_detail_type1_result1_alt_004",
+        "subTitle": "",
+        "caption": "reco_detail_type1_result1_alt_005",
+        "placeImg": "map_exhibit.png",
+        "positionInformation": "pop_space_loc_018"
+    },
+    { // 보물찾기
+        "img": "mo_treasure",
+        "title": "reco_detail_type4_result1_alt_002",
+        "subTitle": "",
+        "caption": "reco_detail_type4_result1_alt_003",
+        "placeImg": "map_exp.png",
+        "positionInformation": "pop_space_loc_012"
+    },
+    { // 스탬프 투어
+        "img": "mo_stamptour",
+        "title": "reco_detail_type4_result1_004",
+        "subTitle": "",
+        "caption": "reco_detail_type4_result1_005",
+        "placeImg": "map_exp.png",
+        "positionInformation": "pop_space_loc_012"
     }
 ]
-/**
- * 테마관
- */
-export const THEME = [
-    {
-        img: '',
-        title: 'home_main_space_004',
-        subTitle: 'space_detail_003',
-        caption: 'space_detail_004',
-        positionInformation: "pop_space_loc_002",
-    },
-    {
-        img: '',
-        title: 'home_main_space_005',
-        subTitle: 'space_detail_006',
-        caption: 'space_detail_007',
-        positionInformation: "pop_space_loc_002",
-    },
-    {
-        img: '',
-        title: 'home_main_space_006',
-        subTitle: 'space_detail_009',
-        caption: 'space_detail_010',
-        positionInformation: "pop_space_loc_002",
-    },
-    {
-        img: '',
-        title: 'home_main_space_007',
-        subTitle: 'space_detail_012',
-        caption: 'space_detail_013',
-        positionInformation: "pop_space_loc_002",
-    },
-    {
-        img: '',
-        title: 'home_main_space_008',
-        subTitle: 'space_detail_015',
-        caption: 'space_detail_016',
-        positionInformation: "pop_space_loc_002",
-    },
-    {
-        img: '',
-        title: 'home_main_space_009',
-        subTitle: 'space_detail_018',
-        caption: 'space_detail_019',
-        positionInformation: "pop_space_loc_002",
-    },
-    {
-        img: '',
-        title: 'home_main_space_010',
-        subTitle: 'space_detail_020',
-        caption: 'space_detail_021',
-        positionInformation: "pop_space_loc_002",
-    },
-]
-
-/**
- * 디지털관
- */
-export const DIGITAL = [
-    {
-        img: '',
-        title: "home_main_space_012",
-        subTitle: 'space_detail_024',
-        caption: `space_detail_025`,
-        positionInformation: "pop_space_loc_004",
-    },
-    {
-        img: '',
-        title: "home_main_space_013",
-        subTitle: 'space_detail_027',
-        caption: `space_detail_028`,
-        positionInformation: "pop_space_loc_005",
-    },
-    {
-        img: '',
-        title: "home_main_space_014",
-        subTitle: 'space_detail_030',
-        caption: `space_detail_031`,
-        positionInformation: "pop_space_loc_007",
-    },
-    {
-        img: '',
-        title: "home_main_space_015",
-        subTitle: 'space_detail_033',
-        caption: `space_detail_034`,
-        positionInformation: "pop_space_loc_008",
-    },
-    {
-        img: '',
-        title: "home_main_space_016",
-        subTitle: 'space_detail_036',
-        caption: `space_detail_037`,
-        positionInformation: "pop_space_loc_009",
-    },
-    {
-        img: '',
-        title: "home_main_space_017",
-        subTitle: 'space_detail_039',
-        caption: `space_detail_040`,
-        positionInformation: "pop_space_loc_010",
-    },
-    {
-        img: '',
-        title: "home_main_space_018",
-        subTitle: 'space_detail_042',
-        caption: `space_detail_043`,
-        positionInformation: "pop_space_loc_006",
-    },
-]
-
-/**
- * 체험관
- */
-export const EXPERIENCE = [
-    {
-        img: '',
-        title: "home_main_space_020",
-        subTitle: 'space_detail_046',
-        caption: `space_detail_047`,
-        positionInformation: "pop_space_loc_012",
-    }
-]
-
-/**
- * 작품관
- */
-export const ARTWORK = [
-    {
-        img: '',
-        title: "home_main_space_027",
-        subTitle: 'space_detail_065',
-        caption: `space_detail_066`,
-        positionInformation: "pop_space_loc_016",
-    }
-]
-/**
- * 우체국쇼핑관
- */
-export const STAMPS = [
-    {
-        img: '',
-
-        title: "home_main_space_031",
-        subTitle: 'space_detail_073',
-        caption: `space_detail_074`,
-        positionInformation: "pop_space_loc_012",
-    }
-]
-
-/**
- * 희귀우표관
- */
-export const POST = [
-    {
-        img: '',
-
-        title: "home_main_space_029",
-        subTitle: 'space_detail_069',
-        caption: `space_detail_070`,
-        positionInformation: "pop_space_loc_014",
-    }
-]
-
 export const EXHIBITION = [
-    {
-        title: "home_main_space_003",
+    {//테마관
         code: "theme",
+        title: "home_main_space_003",
         isActive: true,
         item: PLACE.filter(place => [
             'home_main_space_004',
@@ -331,8 +192,8 @@ export const EXHIBITION = [
         ].includes(place.title))
     },
     {
-        title: "home_main_space_011",
         code: "digital",
+        title: "home_main_space_011",
         isActive: false,
         item: PLACE.filter(place => [
             "home_main_space_012",
@@ -345,16 +206,16 @@ export const EXHIBITION = [
         ].includes(place.title)),
     },
     {
-        title: "home_main_space_019",
         code: "experience",
+        title: "home_main_space_019",
         isActive: false,
         item: PLACE.filter(place => [
             "home_main_space_020"
         ].includes(place.title)),
     },
     {
-        title: "home_main_space_026",
         code: "artwork",
+        title: "home_main_space_026",
         isActive: false,
         item: PLACE.filter(place => [
             "home_main_space_027"
@@ -362,16 +223,16 @@ export const EXHIBITION = [
 
     },
     {
-        title: "home_main_space_028",
         code: "stamps",
+        title: "home_main_space_028",
         isActive: false,
         item: PLACE.filter(place => [
             "home_main_space_031"
         ].includes(place.title)),
     },
     {
-        title: "home_main_space_030",
         code: "post",
+        title: "home_main_space_030",
         isActive: false,
         item: PLACE.filter(place => [
             "home_main_space_029"

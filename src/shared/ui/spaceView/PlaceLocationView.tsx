@@ -8,7 +8,7 @@ export const PlaceLocationView = (props:any) => {
 
     return (
         <div className="flex flex-col my-5">
-            <ZoomableImage src={ props.map || `/assets/images/place-map/${targetCode}/map${props.index}.png`} alt="place"/>
+            <ZoomableImage src={ `/assets/images/${props.map}` || `/assets/images/place-map/${targetCode}/${props.index}.png`} alt="place"/>
         </div>
     )
 }
