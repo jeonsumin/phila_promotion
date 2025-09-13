@@ -28,7 +28,7 @@ export const RecommendResultPage = () => {
                 <div className={`w-full bg-[var(--grayBg)] relative`}>
 
                     <div className="overflow-hidden relative w-full h-auto">
-                        <img src={`/assets/images/${result?.recommend[Number(id)].img}.png`} className="w-full" alt={result?.img}/>
+                        <img src={`/assets/images/${result?.recommend[Number(id)].img}.png`} className="w-full" alt={result?.recommend[Number(id)].img}/>
                     </div>
 
                     <div className="flex justify-end items-end absolute right-4 bottom-3">

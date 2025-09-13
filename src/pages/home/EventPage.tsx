@@ -12,7 +12,7 @@ export const EventPage = () => {
     return (
         <div>
             <div className="w-full h-full bg-gray-500">
-                <img src="/assets/images/sns_event.png" className="w-full"
+                <img src="/assets/images/sns.png" className="w-full"
                      alt="randomImg"/>
             </div>
 
