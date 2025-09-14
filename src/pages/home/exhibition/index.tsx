@@ -6,16 +6,10 @@ import {EXHIBITION} from "shared/constant/place";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
 
-export const ExhibitionDetailPages = () => {
+export const ExhibitionDetailPages = (props: any) => {
     const {target, id} = useParams();
     const t = useSelector(currentTranslation);
-    const exhibition = EXHIBITION.find(ex => ex.code === target)!;
-
-    useLayout({
-        routeName: t(exhibition.title),
-        hasFooter: false
-    })
-
+    const exhibition = EXHIBITION.find(ex => ex.code === props.code)!;
 
     return (
         <SwiperView
