@@ -7,7 +7,6 @@ import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
 
 export const ExhibitionDetailPages = (props: any) => {
-    const {target, id} = useParams();
     const t = useSelector(currentTranslation);
     const exhibition = EXHIBITION.find(ex => ex.code === props.code)!;
 
@@ -17,7 +16,7 @@ export const ExhibitionDetailPages = (props: any) => {
             className={"!h-full"}
             data={exhibition.item}
             target={exhibition.title}
-            idx={id}
+            idx={props.id}
             renderItem={ExhibitionDetailView}
         />
 

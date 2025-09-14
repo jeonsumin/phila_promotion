@@ -36,7 +36,7 @@ export const TreasureResultPage = () => {
     return (
         <div className="flex flex-col justify-center items-center">
             <div className="py-10 px-5">
-                <h1 className="text-base font-normal text-[var(--subTxt)]">{t(treasure.title)} {t("tre_detail_result_trd1_002")}</h1>
+                <h1 className="text-base font-normal text-[var(--subTxt)]">{t("tre_detail_result_trd1_002").replace("전통", t(treasure.title))}</h1>
             </div>
 
             <div className="w-full bg-[var(--listBd)] px-12 py-5">

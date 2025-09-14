@@ -1,19 +1,34 @@
 import {useMission} from "components/mission";
 import {Button} from "shared/ui";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
+import {ROUTES} from "shared/config/routes";
+import {useEffect} from "react";
 
 export const StampList = () => {
     const {stamp} = useMission();
+    const t = useSelector(currentTranslation);
 
     return (
-        <div className="w-full sticky h-[248px]">
-            {/*
-            <div
+        <div className="w-full sticky h-[245px]">
+
+            {stamp?.length == 5 && <div
                 className={`absolute w-full h-full left-0 right-0 bg-black/80  backdrop-blur-xs flex justify-center items-center `}>
                 <div className={"w-full px-5"}>
-                    <Button>미션 성공</Button>
+                    <Button
+                        variant="label"
+                        color='none'
+                        className={" mx-auto"}
+                        url={ROUTES.COUPON}>
+                        <span
+                            className="border-b"
+                        >{t('stamp_success')}
+                        </span>
+                    </Button>
                 </div>
             </div>
-            */}
+            }
+
             <div
                 className="flex flex-col justify-center items-center bg-gray-500 bg-[url(/assets/images/stamp_bg.png)] bg-no-repeat bg-cover gap-4 py-5">
                 <div className="flex gap-5">

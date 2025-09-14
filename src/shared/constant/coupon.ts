@@ -5,9 +5,9 @@ export const COUPON = [
         subTitle: "coupon_main_004",
     },
     {
-        title: 'coupon_main_006',
-        code: '3',
-        subTitle: "coupon_main_007",
+        title: 'coupon_main_016',
+        code: '2',
+        subTitle: "coupon_main_017",
     },
     {
         title: 'coupon_main_006',
@@ -16,7 +16,7 @@ export const COUPON = [
     },
     {
         title: 'tre_main_002',
-        code: '5',
-        subTitle: "coupon_main_013",
+        code: '4',
+        subTitle: "coupon_main_010",
     },
 ]

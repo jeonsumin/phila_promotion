@@ -20,7 +20,7 @@ export const RecommendResultPage = () => {
     return (
         <div className="flex flex-col">
             <div className="flex flex-col w-full gap-5 py-10 px-5 justify-start items-center text-center">
-                <p className="text-base font-normal leading-relaxed text-[var(--subTxt)]">{t(result?.description)} {t('reco_detail_type1_result1_003')} </p>
+                <p className="text-base font-normal leading-relaxed text-[var(--subTxt)]">{t(result?.description)}</p>
                 <h1 className={`text-4xl font-bold text-[${result?.color}]`}>{t(result?.title)}</h1>
 
             </div>

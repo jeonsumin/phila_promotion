@@ -56,7 +56,6 @@ export const RECOMMEND = [
         ]
     }
 ]
-//TODO: 추천 리스트 리체크하기, 체험관, 보물찾기 추천 리스트
 export const RECOMMEND_RESULT = [
     {
         type: 'A',

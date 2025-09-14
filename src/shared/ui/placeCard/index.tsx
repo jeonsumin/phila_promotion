@@ -20,7 +20,7 @@ export const PlaceCard = (props: any) => {
             // navigate(routesBuilder.placeDetail(props.target, props.index))
             modal.showModal({
                 title: headerName,
-                body: <ExhibitionDetailPages code={props.target}/>
+                body: <ExhibitionDetailPages code={props.target} id={props.index}/>
             })
         }
     }

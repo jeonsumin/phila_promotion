@@ -19,7 +19,6 @@ export const ExhibitionSpaceView = () => {
                 <ExhibitionLocationButton
                     label={t('home_main_space_002')}
                     title={t("home_main_space_000")}
-                    subTitle={t("pop_space_loc_016")}
                     map={"map_main.png"}
                     className="font-light text-sm"
                 />
@@ -42,7 +41,7 @@ export const ExhibitionSpaceView = () => {
                 </div>
             </div>
             <div className={cn(
-                "flex w-full",
+                "flex w-full ",
                 selectedExhibition.length > 1 ? "pl-5" : "pl-5 pr-[26.6px]"
             )}>
                 <SwiperView

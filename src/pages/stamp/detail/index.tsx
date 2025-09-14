@@ -36,7 +36,7 @@ export const MissionPage = () => {
 
                 <h1 className="text-[22px] font-bold text-[var(--phliaBlue)] leading-10">{target}</h1>
 
-                <div className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center px-10">
+                <div className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center px-5">
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">

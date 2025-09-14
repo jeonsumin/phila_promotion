@@ -27,6 +27,10 @@ export const StampPage = () => {
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">
+                        <p>{t("stamp_main_004")}</p>
+                    </div>
+                    <div
+                        className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">
                         <div className="w-20">
                             <p
                                 className="text-sm font-bold bg-[var(--primary)] px-[30px] py-[10px] rounded-full text-white">01
@@ -34,6 +38,7 @@ export const StampPage = () => {
                         </div>
                         <p>{t("stamp_main_005")}</p>
                     </div>
+
                     <div className="flex flex-col justify-center items-center gap-3.5 pt-3.5 w-full">
                         <div className="w-20">
                             <p
@@ -59,7 +64,7 @@ export const StampPage = () => {
                 />
 
                 <div
-                    className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center">
+                    className=" flex flex-col bg-white rounded-lg w-full justify-center items-centerpx-[20px] text-center px-5">
 
                     <div
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5 border-b border-[var(--lightGrayBg)] w-full">

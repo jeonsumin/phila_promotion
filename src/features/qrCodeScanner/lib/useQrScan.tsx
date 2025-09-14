@@ -22,17 +22,17 @@ export const useQrScan = (props: any) => {
 
     const onDecode = async (result: any, scannr: any) => {
 
-        const resultUrl = new URL(result.data).searchParams;
+        const resultUrl = new URL("https://" + result.data).searchParams;
         const param = resultUrl.get('stamp');
 
-        console.log('resultUrl ', result.data)
+        console.log('resultUrl ', resultUrl)
 
         if (param) {
             scannr.stop();
             await checkStamp(param);
             modal.showAlert({
-                title: '미션 성공!',
-                message: '스탬프 미션을 성공하셨습니다!',
+                title: t('pop_stamp_qr_001'),
+                message: t('pop_stamp_qr_002'),
                 onConfirm: () => {
                     modal.allClear();
                     navigate(ROUTES.STAMP)
@@ -46,13 +46,13 @@ export const useQrScan = (props: any) => {
             console.log('props.treasure', props.treasure,'props.hit', props.hint);
             if (Number(props.treasure) == Number(treasure) && Number(props.hint) === Number(idx)) {
                 setIsScan(true);
-                // await insertCoupon("4");
+                await insertCoupon("4");
                 scannr.stop();
             } else {
                 scannr.stop();
                 modal.showAlert({
-                    title: '잘못된 QR입니다.',
-                    message: '다시 스캔해 주세요',
+                    title: t('pop_stamp_qr_error_001'),
+                    message: t('pop_stamp_qr_error_002'),
                     onConfirm: () => {
                         modal.alertClose();
                         scannr.start()

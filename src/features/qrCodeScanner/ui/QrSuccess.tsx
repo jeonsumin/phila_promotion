@@ -3,30 +3,30 @@ import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useModal} from "shared/config/ModalProvider";
 import {ROUTES} from "shared/config/routes";
+import {useSelector} from "react-redux";
+import {currentTranslation} from "features/changeLang";
 
-//TODO: 카피덱 적용하기
 export const QrSuccess = () => {
+    const t = useSelector(currentTranslation);
     const param = useLocation()
     const modal = useModal();
     const navigate = useNavigate();
     const [data, setData] = useState<any | null>(null);
 
     const qrSuccessHandler = () => {
-        console.log(param.pathname.includes("stamp"))
-        navigate(param.pathname.includes("stamp") ? ROUTES.STAMP : ROUTES.COUPON)
-        // modal.allClear();
+        modal.allClear();
     }
 
     useEffect(() => {
         setData(() => {
 
             return param.pathname.includes("stamp") ? {
-                title: '미션 성공!',
-                subtitle: '스탬프 미션을 성공하셨습니다.',
+                title: t('pop_stamp_qr_004'),
+                subtitle: t('pop_stamp_qr_005'),
             } : {
-                title: "보물찾기 성공!",
-                subtitle: "보물찾기를 성공했습니다.",
-                caption: "이벤트존에 방문하여 리워드를 수령해 주세요."
+                title: t("pop_tre_qr_001"),
+                subtitle: t("pop_tre_qr_002"),
+                caption: t("pop_tre_qr_003")
             }
         })
     }, []);
@@ -41,7 +41,9 @@ export const QrSuccess = () => {
                     <p>{data?.subtitle}</p>
                     <p>{data?.caption}</p>
                 </div>
-                <Button onClick={qrSuccessHandler}>확인</Button>
+
+                <Button url={param.pathname.includes("stamp") ? ROUTES.STAMP : ROUTES.COUPON}
+                        onClick={qrSuccessHandler}>{t("common_01")}</Button>
             </div>
         </>
     )

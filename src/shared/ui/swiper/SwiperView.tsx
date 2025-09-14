@@ -61,7 +61,6 @@ export const SwiperView = <T, >({
             centeredSlides={centeredSlides}
             className={`w-full h-auto ${className}`}
             modules={modules}
-            autoHeight={true}
         >
             {data.map((item, index) => (
                 <SwiperSlide

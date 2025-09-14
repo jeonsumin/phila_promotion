@@ -17,7 +17,7 @@ export const EventPage = () => {
             </div>
 
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#FCEBEF] gap-5">
-                <h1 className="text-xl font-bold text-[var(--primary)] leading-10">{t("stamp_main_003")}</h1>
+                <h1 className="text-xl font-bold text-[var(--primary)] leading-10">{t("event_detail_002")}</h1>
 
 
                 <div className="bg-white rounded-lg w-full justify-center items-center flex flex-col px-[20px]">
@@ -39,7 +39,7 @@ export const EventPage = () => {
                         className="flex flex-col justify-center items-center gap-3.5 py-3.5  border-b border-[var(--lightGrayBg)] w-full">
                         <div>
                             <p
-                                className="text-sm font-bold bg-[var(--primary)] px-[20px] py-[10px] rounded-full text-white">STEP.1
+                                className="text-sm font-bold bg-[var(--primary)] px-[20px] py-[10px] rounded-full text-white">STEP.2
                             </p>
                         </div>
                         <p

@@ -50,7 +50,7 @@ export const MISSION = [
         stamp:'bonus',
         title: 'stamp_main_024',
         caption:"stamp_detail_027",
-        img:"",
+        img:"mo_stamptour_sale",
         step: ['stamp_detail_029','stamp_detail_027'],
     }
 ]

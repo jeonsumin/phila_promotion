@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "cross-env NODE_ENV=dev vite --mode dev",
     "start:prod": "cross-env NODE_ENV=prod vite --mode prod",
+    "build:dev": "tsc -b && cross-env NODE_ENV=dev vite build --mode dev",
     "build:prod": "tsc -b && cross-env NODE_ENV=prod vite build --mode prod",
     "lint": "eslint .",
     "preview": "vite preview"

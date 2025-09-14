@@ -50,7 +50,7 @@ export const PLACE = [
     { // 우표 역사를 연결하다
         "img": "mo_space_theme",
         "title": "home_main_space_010",
-        "subTitle": "space_detail_020",
+        "subTitle": "space_detail_75",
         "caption": "space_detail_021",
         "placeImg": "map_theme.png",
         "positionInformation": "pop_space_loc_002"
@@ -111,17 +111,33 @@ export const PLACE = [
         "placeImg": "map_talkingstamp.png",
         "positionInformation": "pop_space_loc_010"
     },
-    { // 우표낙서 Zone
-        "img": "mo_space_exp",
+    { // 141주년 기념 우표 그리기
+        "img": "mo_space_exp2",
         "title": "home_main_space_020",
         "subTitle": "space_detail_046",
         "caption": "space_detail_047",
         "placeImg": "map_exp.png",
         "positionInformation": "pop_space_loc_020"
     },
+    { // 우표 낙서
+        "img": "mo_space_exp",
+        "title": "space_detail_045_1",
+        "subTitle": "space_detail_046_1",
+        "caption": "space_detail_047_1",
+        "placeImg": "map_exp.png",
+        "positionInformation": "pop_space_loc_020"
+    },
+    { // 느리게 가는 편지
+        "img": "mo_space_exp3",
+        "title": "space_detail_045_2",
+        "subTitle": "space_detail_046_2",
+        "caption": "space_detail_047_2",
+        "placeImg": "map_exp.png",
+        "positionInformation": "pop_space_loc_020"
+    },
     { //  세계가 모은 우표 예술의 정수
         "img": "mo_space_exhibt",
-        "title": "home_main_space_027",
+        "title": "home_main_space_026",
         "subTitle": "space_detail_065",
         "caption": "space_detail_066",
         "placeImg": "map_exhibit.png",
@@ -129,7 +145,7 @@ export const PLACE = [
     },
     { // 우체국 쇼핑관 / 믿고 사는 우리 상품
         "img": "mo_space_shopping",
-        "title": "home_main_space_029",
+        "title": "home_main_space_028",
         "subTitle": "space_detail_069",
         "caption": "space_detail_070",
         "placeImg": "map_shopping.png",
@@ -137,7 +153,7 @@ export const PLACE = [
     },
     { // 희귀우표관  / 시간을 담은 진귀한 보물들
         "img": "mo_space_rare",
-        "title": "home_main_space_031",
+        "title": "home_main_space_030",
         "subTitle": 'space_detail_073',
         "caption": `space_detail_074`,
         "placeImg": "map_rare.png",
@@ -154,7 +170,7 @@ export const PLACE = [
     { // 작품관
         "img": "mo_space_exhibt",
         "title": "reco_detail_type1_result1_alt_004",
-        "subTitle": "",
+        "subTitle": "space_detail_065",
         "caption": "reco_detail_type1_result1_alt_005",
         "placeImg": "map_exhibit.png",
         "positionInformation": "pop_space_loc_018"
@@ -210,7 +226,9 @@ export const EXHIBITION = [
         title: "home_main_space_019",
         isActive: false,
         item: PLACE.filter(place => [
-            "home_main_space_020"
+            "home_main_space_020",
+            "space_detail_045_1",
+            "space_detail_045_2"
         ].includes(place.title)),
     },
     {
@@ -218,7 +236,7 @@ export const EXHIBITION = [
         title: "home_main_space_026",
         isActive: false,
         item: PLACE.filter(place => [
-            "home_main_space_027"
+            "home_main_space_026"
         ].includes(place.title)),
 
     },
@@ -227,7 +245,7 @@ export const EXHIBITION = [
         title: "home_main_space_028",
         isActive: false,
         item: PLACE.filter(place => [
-            "home_main_space_031"
+            "home_main_space_028"
         ].includes(place.title)),
     },
     {
@@ -235,7 +253,7 @@ export const EXHIBITION = [
         title: "home_main_space_030",
         isActive: false,
         item: PLACE.filter(place => [
-            "home_main_space_029"
+            "home_main_space_030"
         ].includes(place.title)),
     },
 ]

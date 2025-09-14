@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 
 
 export const useOtp = () => {
-    const OPT_PASSWORD = "0000";
+    const OPT_PASSWORD = "2025";
     const [otp, setOtp] = useState("");
     const [isFailed, setIsFailed] = useState(false);
     const [isActive, setIsActive] = useState(false);

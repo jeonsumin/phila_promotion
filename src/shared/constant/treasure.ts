@@ -1,163 +1,163 @@
 export const TREASURE = [
     {
-        id:1,
+        id: 1,
         title: "tre_detail_type_003",
         src: "/assets/images/img_map_find01.png",
         option: [
             {
                 hint: "tre_detail_result_trd1_004",
-                number: "★NUMBER 150★",
+                number: "★NUMBER 022027",
             },
             {
                 hint: "tre_detail_result_trd2_004",
-                number: "★NUMBER 151★",
+                number: "★NUMBER 022174",
             },
             {
                 hint: "tre_detail_result_trd3_004",
-                number: "★NUMBER 152★",
+                number: "★NUMBER 023026",
             },
             {
                 hint: "tre_detail_result_trd4_004",
-                number: "★NUMBER 153★",
+                number: "★NUMBER 021039",
             },
             {
                 hint: "tre_detail_result_trd5_004",
-                number: "★NUMBER 154★",
+                number: "★NUMBER 024014",
             },
         ]
     },
     {
-        id:2,
+        id: 2,
         title: "tre_detail_type_004",
         src: "/assets/images/img_map_find02.png",
         option: [
             {
                 hint: "tre_detail_result_hty1_004",
-                number: "★NUMBER 155★",
+                number: "★NUMBER 031038",
             },
             {
                 hint: "tre_detail_result_hty2_004",
-                number: "★NUMBER 156★",
+                number: "★NUMBER 034006",
             },
             {
                 hint: "tre_detail_result_hty3_004",
-                number: "★NUMBER 157★",
+                number: "★NUMBER 033035",
             },
             {
                 hint: "tre_detail_result_hty4_004",
-                number: "★NUMBER 158★",
+                number: "★NUMBER 032006",
             },
             {
                 hint: "tre_detail_result_hty5_004",
-                number: "★NUMBER 159★",
+                number: "★NUMBER 033133",
             },
         ]
     },
     {
-        id:3,
+        id: 3,
         title: "tre_detail_type_005",
         src: "/assets/images/img_map_find03.png",
         option: [
             {
                 hint: "tre_detail_result_thm1_004",
-                number: "★NUMBER 160★",
+                number: "★NUMBER 061035",
             },
             {
                 hint: "tre_detail_result_thm2_004",
-                number: "★NUMBER 161★",
+                number: "★NUMBER 062100",
             },
             {
                 hint: "tre_detail_result_thm3_004",
-                number: "★NUMBER 162★",
+                number: "★NUMBER 063051",
             },
             {
                 hint: "tre_detail_result_thm4_004",
-                number: "★NUMBER 163★",
+                number: "★NUMBER 062043",
             },
             {
                 hint: "tre_detail_result_thm5_004",
-                number: "★NUMBER 164★",
+                number: "★NUMBER 061048",
             },
         ]
     },
     {
-        id:4,
+        id: 4,
         title: "tre_detail_type_006",
         src: "/assets/images/img_map_find04.png",
         option: [
             {
                 hint: "tre_detail_result_avt1_004",
-                number: "★NUMBER 165★",
+                number: "★NUMBER 051037",
             },
             {
                 hint: "tre_detail_result_avt2_004",
-                number: "★NUMBER 166★",
+                number: "★NUMBER 051001",
             },
             {
                 hint: "tre_detail_result_avt3_004",
-                number: "★NUMBER 167★",
+                number: "★NUMBER 051082",
             },
             {
                 hint: "tre_detail_result_avt4_004",
-                number: "★NUMBER 168★",
+                number: "★NUMBER 051058",
             },
             {
                 hint: "tre_detail_result_avt5_004",
-                number: "★NUMBER 169★",
+                number: "★NUMBER 051011",
             },
         ]
     },
     {
-        id:5,
+        id: 5,
         title: "tre_detail_type_007",
         src: "/assets/images/img_map_find05.png",
         option: [
             {
                 hint: "tre_detail_result_pht1_004",
-                number: "★NUMBER 170★",
+                number: "★NUMBER 091107",
             },
             {
                 hint: "tre_detail_result_pht2_004",
-                number: "★NUMBER 171★",
+                number: "★NUMBER 091054",
             },
             {
                 hint: "tre_detail_result_pht3_004",
-                number: "★NUMBER 172★",
+                number: "★NUMBER 091064",
             },
             {
                 hint: "tre_detail_result_pht4_004",
-                number: "★NUMBER 173★",
+                number: "★NUMBER 091092",
             },
             {
                 hint: "tre_detail_result_pht5_004",
-                number: "★NUMBER 174★",
+                number: "★NUMBER 091022",
             },
         ]
     },
     {
-        id:6,
+        id: 6,
         title: "tre_detail_type_008",
         src: "/assets/images/img_map_find06.png",
         option: [
             {
                 hint: "tre_detail_result_yth1_004",
-                number: "★NUMBER 175★",
+                number: "★NUMBER 131014",
             },
             {
                 hint: "tre_detail_result_yth2_004",
-                number: "★NUMBER 176★",
+                number: "★NUMBER 132006",
             },
             {
                 hint: "tre_detail_result_yth3_004",
-                number: "★NUMBER 177★",
+                number: "★NUMBER 133008",
             },
             {
                 hint: "tre_detail_result_yth4_004",
-                number: "★NUMBER 178★",
+                number: "★NUMBER 131021",
             },
             {
                 hint: "tre_detail_result_yth5_004",
-                number: "★NUMBER 179★",
+                number: "★NUMBER 133016",
             },
         ]
     },

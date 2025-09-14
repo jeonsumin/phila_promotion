@@ -21,7 +21,7 @@ export const HomePage = () => {
             <Image item={{src: "/assets/images/home_kv.png"}}/>
 
             <div className="flex flex-col gap-[24px] text-center text-[var(--subTxt)] px-5">
-                <h2 className="text-[22px] font-bold text-[var(--bk)] "> {t("home_main_001")}</h2>
+                <h1 className="text-[22px] font-bold text-[var(--bk)] "> {t("home_main_001")}</h1>
                 <div className="flex flex-col gap-[14px] text-[16px] text-center font-light ">
                     <p> {t("home_main_002_1")} </p>
                     <p> {t("home_main_003_1")} </p>
