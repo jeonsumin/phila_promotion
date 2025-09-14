@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {SuccessDimed} from "shared/ui/successDimed";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {useEffect} from "react";
 
 export const MissionItem = (props: any) => {
     const t = useSelector(currentTranslation)

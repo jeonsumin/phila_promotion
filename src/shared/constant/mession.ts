@@ -5,6 +5,7 @@ export const MISSION = [
         stamp:'mission1',
         title: 'stamp_main_014',
         caption:"stamp_detail_003",
+        img:"mo_space_theme",
         step: ['stamp_detail_005','stamp_detail_006'],
     },
     {
@@ -13,6 +14,7 @@ export const MISSION = [
         stamp:'mission2',
         title: 'stamp_main_016',
         caption:"stamp_detail_009",
+        img:"mo_space_mind",
         step: ['stamp_detail_011','stamp_detail_012'],
     },
     {
@@ -21,6 +23,7 @@ export const MISSION = [
         stamp:'mission3',
         title: 'stamp_main_018',
         caption:"stamp_detail_015",
+        img:"mo_space_shopping",
         step: ['stamp_detail_017','stamp_detail_018'],
     },
     {
@@ -29,6 +32,7 @@ export const MISSION = [
         stamp:'mission4',
         title: 'stamp_main_020',
         caption:"stamp_detail_021",
+        img:"mo_space_exp",
         step: ['stamp_detail_023','stamp_detail_024'],
     },
     {
@@ -37,6 +41,7 @@ export const MISSION = [
         stamp:'mission5',
         title: 'stamp_main_022',
         caption:"",
+        img:"",
         step: [],
     },
     {
@@ -45,6 +50,7 @@ export const MISSION = [
         stamp:'bonus',
         title: 'stamp_main_024',
         caption:"stamp_detail_027",
+        img:"",
         step: ['stamp_detail_029','stamp_detail_027'],
     }
 ]

@@ -15,7 +15,7 @@ export const OptionItem = ({label, active, isDescriptive, onClick, className}: P
     return (
         <>
             <Button
-                className={cn(`justify-start px-7.5 font-normal text-[16px] ${isDescriptive && 'hidden'}`, className)}
+                className={cn(`justify-start px-7.5 font-normal text-[16px] text-start ${isDescriptive && 'hidden'}`, className)}
                 color={active ? "default" : "light"}
                 onClick={onClick}
             >

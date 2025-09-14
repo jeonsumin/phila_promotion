@@ -29,7 +29,7 @@ export const MissionPage = () => {
     return (
         <>
             <div className="w-full h-60 ">
-                <img src={`/assets/images/mission/${target}.png`} alt="" className="w-full h-full object-cover"/>
+                <img src={`/assets/images/${mission?.img}.png`} alt="" className="w-full h-full object-cover"/>
             </div>
 
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#DBECF5] gap-5">

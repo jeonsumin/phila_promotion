@@ -55,8 +55,12 @@ export const TreasurePage = () => {
             <div className="flex flex-col px-[20px] py-[40px] w-full justify-center items-center bg-[#DBECF5] gap-5">
                 <h1 className="text-[22px] font-bold text-[var(--phliaBlue)] leading-10">{t('tre_main_006')}</h1>
 
-                <ExhibitionLocationButton className="text-[14px] font-light" title={t("pop_space_loc_019")}
-                                          subTitle={t("pop_tre_main_loc_002")} map={"/assets/images/treasure_map.png"}/>
+                <ExhibitionLocationButton
+                    className="text-[14px] font-light"
+                    title={t("pop_tre_main_loc_001")}
+                    subTitle={t("pop_tre_main_loc_002")}
+                    map={"map_reward.png"}
+                />
 
 
                 <div

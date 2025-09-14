@@ -38,7 +38,7 @@ export const ExhibitionDetailView = (props: Props) => {
                 props.isBg ? "bg-[#F4F4F4]" : ''
             )}>
                 <h1 className="text-[22px] font-bold">{t(item.title)}</h1>
-                <p className="text-[var(--primary)] text-lg font-semibold">{t(item.subTitle)}</p>
+                {/*<p className="text-[var(--primary)] text-lg font-semibold">{t(item.subTitle)}</p>*/}
 
                 <p className="text-base text-[var(--subTxt)]">{t(item.caption)}</p>
             </div>
