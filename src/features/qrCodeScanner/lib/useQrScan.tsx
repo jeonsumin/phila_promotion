@@ -9,6 +9,8 @@ import {currentTranslation} from "features/changeLang";
 import {useTimer} from "shared/utils/useTimer";
 import {useNavigate} from "react-router-dom";
 import {ROUTES} from "shared/config/routes";
+import {TREASURE} from "shared/constant/treasure";
+import {updateTreasure} from "entities/treasure/api/TreasureApi";
 
 export const useQrScan = (props: any) => {
     const t = useSelector(currentTranslation);
@@ -41,12 +43,12 @@ export const useQrScan = (props: any) => {
         } else {
             const treasure = resultUrl.get('treasure')
             const idx = resultUrl.get('idx')
+            const type = t(TREASURE.find(ex => ex.id == Number(treasure))?.title)
 
-            console.log('treasure : ', treasure, ", idx : ", idx);
-            console.log('props.treasure', props.treasure,'props.hit', props.hint);
             if (Number(props.treasure) == Number(treasure) && Number(props.hint) === Number(idx)) {
                 setIsScan(true);
                 await insertCoupon("4");
+                await updateTreasure(type);
                 scannr.stop();
             } else {
                 scannr.stop();

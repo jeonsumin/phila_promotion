@@ -21,6 +21,7 @@ import {TreasureResultPage} from "pages/treasure/detail/TreasureResultPage";
 import {ModalProvider} from "shared/config/ModalProvider";
 import {ProtectedView} from "shared/config/ProtectedView";
 import {Commons} from "shared/utils/commons";
+import {Phila} from "pages/phila";
 
 export const Router = () => (
     <BrowserRouter>
@@ -63,6 +64,9 @@ export const Router = () => (
 
                             <Route element={<CouponPage/>} path={ROUTES.COUPON}/>
                             <Route element={<TreasurePage/>} path={ROUTES.TREASURE_DETAIL}/>
+
+                            <Route element={<Phila/>} path={ROUTES.PHILA}/>
+
                         </Route>
                     </Route>
 

@@ -12,7 +12,7 @@ export const StampList = () => {
     return (
         <div className="w-full sticky h-[245px]">
 
-            {stamp?.length == 5 && <div
+            {stamp?.filter(ex => ex.MISSION !== 'bonus')?.length == 5 && <div
                 className={`absolute w-full h-full left-0 right-0 bg-black/80  backdrop-blur-xs flex justify-center items-center `}>
                 <div className={"w-full px-5"}>
                     <Button

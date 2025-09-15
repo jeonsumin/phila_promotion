@@ -6,10 +6,15 @@ import {TREASURE} from "shared/constant/treasure";
 import {useTopic} from "components/topic/lib/useTopic";
 import {useSelector} from "react-redux";
 import {currentTranslation} from "features/changeLang";
+import {updateTreasure} from "entities/treasure/api/TreasureApi";
 
 export const TopicList = () => {
     const {selectedOption, handleSelect} = useTopic();
     const t = useSelector(currentTranslation);
+    const updateTreasureHandler = () => {
+        const type = t(TREASURE.find(ex => ex.id == selectedOption)?.title)
+        updateTreasure(type)
+    }
     return (
         <div className="py-10 px-5 space-y-5">
             <p className="text-lg font-bold text-center">{t('tre_detail_type_002')}</p>
@@ -29,8 +34,13 @@ export const TopicList = () => {
             </div>
 
             <div className="flex w-full justify-center items-center mt-20">
-                <Button disabled={!selectedOption} color={selectedOption ? "default" : "gray"} variant="rounded"
-                        url={routesBuilder.treasureResult(selectedOption)}>
+                <Button
+                    disabled={!selectedOption}
+                    color={selectedOption ? "default" : "gray"}
+                    variant="rounded"
+                    onClick={updateTreasureHandler}
+                    url={routesBuilder.treasureResult(selectedOption)}
+                >
                     <img src="/assets/images/arrow_left.svg" alt="arrow_left"/>
                 </Button>
             </div>

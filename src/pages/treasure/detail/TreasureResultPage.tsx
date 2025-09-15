@@ -39,7 +39,7 @@ export const TreasureResultPage = () => {
                 <h1 className="text-base font-normal text-[var(--subTxt)]">{t("tre_detail_result_trd1_002").replace("전통", t(treasure.title))}</h1>
             </div>
 
-            <div className="w-full bg-[var(--listBd)] px-12 py-5">
+            <div className="w-full bg-[var(--listBd)] ">
                 <img src={treasure.src} alt=""/>
             </div>
 

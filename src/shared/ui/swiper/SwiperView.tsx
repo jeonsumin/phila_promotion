@@ -39,15 +39,14 @@ export const SwiperView = <T, >({
     const swiperRef = useRef<SwiperCore>(null);
 
     useEffect(() => {
-        if (!swiperRef.current || !idx) return;
 
         const targetIndex = data.findIndex((_, index: number) => index === Number(idx));
         if (targetIndex >= 0) {
-            swiperRef.current.slideTo(targetIndex);
+            swiperRef.current?.slideTo(targetIndex);
+        } else {
+            swiperRef.current?.slideTo(0)
         }
-
-
-    }, [target]);
+    }, [target, data]);
 
     return (
         <Swiper

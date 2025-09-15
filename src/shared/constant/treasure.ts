@@ -2,7 +2,7 @@ export const TREASURE = [
     {
         id: 1,
         title: "tre_detail_type_003",
-        src: "/assets/images/img_map_find01.png",
+        src: "/assets/images/tre_map1_traditional.png",
         option: [
             {
                 hint: "tre_detail_result_trd1_004",
@@ -29,7 +29,7 @@ export const TREASURE = [
     {
         id: 2,
         title: "tre_detail_type_004",
-        src: "/assets/images/img_map_find02.png",
+        src: "/assets/images/tre_map2_postalhistory.png",
         option: [
             {
                 hint: "tre_detail_result_hty1_004",
@@ -56,7 +56,7 @@ export const TREASURE = [
     {
         id: 3,
         title: "tre_detail_type_005",
-        src: "/assets/images/img_map_find03.png",
+        src: "/assets/images/tre_map3_thematic.png",
         option: [
             {
                 hint: "tre_detail_result_thm1_004",
@@ -83,7 +83,7 @@ export const TREASURE = [
     {
         id: 4,
         title: "tre_detail_type_006",
-        src: "/assets/images/img_map_find04.png",
+        src: "/assets/images/tre_map4_aero.png",
         option: [
             {
                 hint: "tre_detail_result_avt1_004",
@@ -110,7 +110,7 @@ export const TREASURE = [
     {
         id: 5,
         title: "tre_detail_type_007",
-        src: "/assets/images/img_map_find05.png",
+        src: "/assets/images/tre_map5_picturepostcard.png",
         option: [
             {
                 hint: "tre_detail_result_pht1_004",
@@ -137,7 +137,7 @@ export const TREASURE = [
     {
         id: 6,
         title: "tre_detail_type_008",
-        src: "/assets/images/img_map_find06.png",
+        src: "/assets/images/tre_map6_youth.png",
         option: [
             {
                 hint: "tre_detail_result_yth1_004",

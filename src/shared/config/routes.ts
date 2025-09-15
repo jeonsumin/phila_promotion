@@ -23,6 +23,7 @@ export const ROUTES = {
 
     COUPON: "/coupon",
 
+    PHILA: "/phila",
 
 
 }
