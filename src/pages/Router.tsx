@@ -1,4 +1,4 @@
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes, useLocation} from "react-router-dom";
 import {BrowserView, MobileView} from "react-device-detect";
 import {ROUTES} from "shared/config/routes";
 import {HomePage} from "pages/home/HomePage";
@@ -23,55 +23,58 @@ import {ProtectedView} from "shared/config/ProtectedView";
 import {Commons} from "shared/utils/commons";
 import {Phila} from "pages/phila";
 
-export const Router = () => (
-    <BrowserRouter>
-        <ModalProvider>
-            <Commons/>
-            <BrowserView>
-                <Routes>
-                    <Route element={<DesktopLayout/>} path={"/"}>
-                        <Route path={"/"} element={<Navigate to={ROUTES.CHECK_IN} replace/>}/>
-                        <Route element={<BetaCheckInPage/>} path={ROUTES.CHECK_IN}/>
-                    </Route>
-                    <Route path={"*"} element={<Navigate to={ROUTES.CHECK_IN} replace/>}
-                    />
-                </Routes>
-            </BrowserView>
+export const Router = () => {
 
-            <MobileView>
-                <Routes>
-                    <Route element={<BetaCheckInScreen/>} path={ROUTES.CHECK_IN}/>
-                    <Route element={<ProtectedView/>}>
-
-                        <Route element={<MobileLayout/>} path={"/"}>
-                            <Route path={"/"} element={<Navigate to={ROUTES.HOME} replace/>}/>
-                            <Route element={<HomePage/>} path={ROUTES.HOME}/>
-                            <Route element={<ExhibitionDetailPages/>} path={ROUTES.PLACE_DETAIL}/>
-
-                            <Route element={<RecommendPage/>} path={ROUTES.RECOMMEND}/>
-                            <Route element={<RecommendResultPage/>} path={ROUTES.RECOMMEND_RESULT}/>
-                            <Route element={<OtherRecommendPage/>} path={ROUTES.RECOMMEND_OTHER}/>
-
-                            <Route element={<SurveyPage/>} path={ROUTES.SURVEY}/>
-                            <Route element={<EventPage/>} path={ROUTES.EVENT}/>
-
-                            <Route element={<StampPage/>} path={ROUTES.STAMP}/>
-                            <Route element={<MissionPage/>} path={ROUTES.STAMP_MISSION}/>
-
-                            <Route element={<TreasurePage/>} path={ROUTES.TREASURE}/>
-                            <Route element={<ChoiceTopicPage/>} path={ROUTES.TREASURE_DETAIL}/>
-                            <Route element={<TreasureResultPage/>} path={ROUTES.TREASURE_RESULT}/>
-
-                            <Route element={<CouponPage/>} path={ROUTES.COUPON}/>
-                            <Route element={<TreasurePage/>} path={ROUTES.TREASURE_DETAIL}/>
-
-                            <Route element={<Phila/>} path={ROUTES.PHILA}/>
-
+    return (
+        <BrowserRouter>
+            <ModalProvider>
+                <Commons/>
+                <BrowserView>
+                    <Routes>
+                        <Route element={<DesktopLayout/>} path={"/"}>
+                            <Route path={"/"} element={<Navigate to={ROUTES.CHECK_IN} replace/>}/>
+                            <Route element={<BetaCheckInPage/>} path={ROUTES.CHECK_IN}/>
                         </Route>
-                    </Route>
+                        <Route path={"*"} element={<Navigate to={ROUTES.CHECK_IN} replace/>}
+                        />
+                    </Routes>
+                </BrowserView>
 
-                </Routes>
-            </MobileView>
-        </ModalProvider>
-    </BrowserRouter>
-);
+                <MobileView>
+                    <Routes>
+                        <Route element={<BetaCheckInScreen/>} path={ROUTES.CHECK_IN}/>
+                        <Route element={<ProtectedView/>}>
+
+                            <Route element={<MobileLayout/>} path={"/"}>
+                                <Route path={"/"} element={<Navigate to={ROUTES.HOME} replace/>}/>
+                                <Route element={<HomePage/>} path={ROUTES.HOME}/>
+                                <Route element={<ExhibitionDetailPages/>} path={ROUTES.PLACE_DETAIL}/>
+
+                                <Route element={<RecommendPage/>} path={ROUTES.RECOMMEND}/>
+                                <Route element={<RecommendResultPage/>} path={ROUTES.RECOMMEND_RESULT}/>
+                                <Route element={<OtherRecommendPage/>} path={ROUTES.RECOMMEND_OTHER}/>
+
+                                <Route element={<SurveyPage/>} path={ROUTES.SURVEY}/>
+                                <Route element={<EventPage/>} path={ROUTES.EVENT}/>
+
+                                <Route element={<StampPage/>} path={ROUTES.STAMP}/>
+                                <Route element={<MissionPage/>} path={ROUTES.STAMP_MISSION}/>
+
+                                <Route element={<TreasurePage/>} path={ROUTES.TREASURE}/>
+                                <Route element={<ChoiceTopicPage/>} path={ROUTES.TREASURE_DETAIL}/>
+                                <Route element={<TreasureResultPage/>} path={ROUTES.TREASURE_RESULT}/>
+
+                                <Route element={<CouponPage/>} path={ROUTES.COUPON}/>
+                                <Route element={<TreasurePage/>} path={ROUTES.TREASURE_DETAIL}/>
+
+                                <Route element={<Phila/>} path={ROUTES.PHILA}/>
+
+                            </Route>
+                        </Route>
+
+                    </Routes>
+                </MobileView>
+            </ModalProvider>
+        </BrowserRouter>
+    )
+};

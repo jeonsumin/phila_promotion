@@ -40,7 +40,7 @@ const buttonVariants = cva(
 
 
 export const Button = (props: Props & VariantProps<typeof buttonVariants>) => {
-    const {url = '#', children, onClick, variant, color, className,disabled = false} = props;
+    const {url = '#', children, onClick, variant, color, className, disabled} = props;
     return (
         <Link to={url}>
             <button
@@ -48,7 +48,7 @@ export const Button = (props: Props & VariantProps<typeof buttonVariants>) => {
                     buttonVariants({variant, color, className})
                     , className)
                 }
-                disabled={disabled}
+                disabled={disabled }
                 onClick={onClick}
             >
                 {children}

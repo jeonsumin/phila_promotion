@@ -27,8 +27,8 @@ export const Otp = (props: any) => {
                 }
             />
             {otp.isFailed && <div className="w-full text-center text-sm text-[var(--primary)]">{t("pop_reward_004")} </div>}
-            <div className="absolute bottom-0 items-center w-full p-5">
-                <Button variant="rounded" color={otp.isActive && !otp.isFailed ? 'default' : 'gray'} disabled={otp.isActive && otp.isFailed}
+            <div className="absolute bottom-0 left-[-50%] translate-x-[50%] items-center w-full p-5">
+                <Button variant="rounded" color={otp.isActive && !otp.isFailed ? 'default' : 'gray'} disabled={!(otp.isActive && !otp.isFailed)}
                         className="mx-auto" onClick={() => otp.onSubmit(props.couponCode)}>
                     <Check size={"40"}/>
                 </Button>

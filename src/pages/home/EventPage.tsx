@@ -9,6 +9,10 @@ export const EventPage = () => {
         routeName: t("event_detail_001"),
         hasFooter: false,
     })
+
+    const onClick = () => {
+        window.open("https://www.instagram.com/p/DOu9NL_j8vU/?img_index=1&igsh=bDA4Z3ozYnNvN296")
+    }
     return (
         <div>
             <div className="w-full h-full bg-gray-500">
@@ -51,7 +55,7 @@ export const EventPage = () => {
                 </div>
             </div>
             <div className="p-5">
-                <Button> {t("event_detail_005")}</Button>
+                <Button onClick={onClick} > {t("event_detail_005")}</Button>
             </div>
         </div>
     )
