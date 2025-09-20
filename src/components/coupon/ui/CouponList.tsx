@@ -12,10 +12,15 @@ export const CouponList = () => {
     const modal = useModal();
 
     const onClick = (code: string) => {
-        modal.showModal({
-            title: t("pop_reward_001"),
-            body: <RewardCodeView couponCode={code}/>,
-        })
+        if(coupon == undefined) return ;
+
+        const checkUseYn = coupon.filter(ex => ex.COUPON == code)[0]
+        console.log(code, checkUseYn);
+        if(checkUseYn)
+            modal.showModal({
+                title: t("pop_reward_001"),
+                body: <RewardCodeView couponCode={code}/>,
+            })
     }
 
     return (

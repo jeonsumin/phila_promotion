@@ -9,7 +9,7 @@ export const CouponItem = (props: any) => {
 
             <SuccessDimed useYn={props.useYn} message={t("coupon_main_014")}/>
 
-            <button className="w-full" onClick={() => (props.useYn == 'N') && props.onClick()}>
+            <button className="w-full" onClick={() => props.onClick()}>
                 <div
                     className={`absolute h-55 left-0 right-0 rounded-2xl flex justify-center items-center ${!props.isActive ? "backdrop-grayscale" : ""} `}/>
 
