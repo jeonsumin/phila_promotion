@@ -7,7 +7,7 @@ export const CouponItem = (props: any) => {
     return (
         <div className="flex flex-col relative w-full justify-center items-center gap-5  z-10">
 
-            <SuccessDimed useYn={props.useYn} message={t("coupon_main_014")}/>
+            {props.useYn && <SuccessDimed message={t("coupon_main_014")}/>}
 
             <button className="w-full" onClick={() => props.onClick()}>
                 <div

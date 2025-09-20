@@ -16,6 +16,7 @@ export const CouponList = () => {
 
         const checkUseYn = coupon.filter(ex => ex.COUPON == code)[0]
 
+        console.log(checkUseYn);
         if(checkUseYn && checkUseYn.USE_YN == "N")
             modal.showModal({
                 title: t("pop_reward_001"),
@@ -23,6 +24,7 @@ export const CouponList = () => {
             })
     }
 
+    if(coupon == undefined) return ;
     return (
         <div className="flex flex-col px-5 relative justify-center gap-3.5 ">
             {COUPON.map((item, index) => (
@@ -32,7 +34,7 @@ export const CouponList = () => {
                     {...item}
                     success={coupon}
                     onClick={() => onClick(item.code)}
-                    useYn={coupon?.filter((f: any) => f.COUPON == item.code).map(x => x.USE_YN)}
+                    useYn={coupon?.filter((f: any) => f.COUPON == item.code)[0]?.USE_YN == "Y"}
                     isActive={coupon?.find((f: any) => f.COUPON == item.code)}
                 />
             ))}
